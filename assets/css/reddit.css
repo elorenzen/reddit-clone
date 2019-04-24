@@ -6,6 +6,10 @@ body {
     padding-top: 10%
 }
 
+.fa-reddit {
+    color: #ff4500;
+}
+
 @media only screen and (max-width: 600px){
     .sidebar-container {
         display: none;
