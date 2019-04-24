@@ -5,9 +5,22 @@ body {
     max-width: 984px;
     padding-top: 10%
 }
+nav {
+    height: 48px;
+}
 
 .fa-reddit {
     color: #ff4500;
+}
+.fa-rocket {
+    color: #0079D3;
+}
+.dropdown-toggle {
+    color: #1c1c1c;
+    width: 270px;
+}
+.dropdown-toggle:hover {
+    border: 1px solid gray;
 }
 
 @media only screen and (max-width: 600px){
