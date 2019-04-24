@@ -1,3 +1,23 @@
 body {
     background: #DAE0E6;
 }
+.container {
+    max-width: 984px;
+    padding-top: 10%
+}
+
+@media only screen and (max-width: 600px){
+    .sidebar-container {
+        display: none;
+
+    }
+}
+
+#posts {
+    background: #ffffff;
+}
+ 
+#sidebar {
+    background: #ffffff;
+    
+}
