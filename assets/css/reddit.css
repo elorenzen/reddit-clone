@@ -7,20 +7,32 @@ body {
 }
 nav {
     height: 48px;
+    background: #ffffff;
 }
-
 .fa-reddit {
     color: #ff4500;
 }
-.fa-rocket {
+.fas {
+    padding-right: 8px;
     color: #0079D3;
 }
-.dropdown-toggle {
+.far {
+    padding-right: 8px;
+}
+.dropdown {
     color: #1c1c1c;
     width: 270px;
+    z-index: 1;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 5px;
 }
-.dropdown-toggle:hover {
-    border: 1px solid gray;
+.dropdown:hover {
+    border-color: #edeff1;
+}
+
+.dropdown-menu {
+    border: none;
 }
 
 @media only screen and (max-width: 600px){
