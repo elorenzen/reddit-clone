@@ -35,11 +35,18 @@ nav {
     border: none;
 }
 
+#navbarDropdownMenuLink {
+    height: 35px;
+}
+
 @media only screen and (max-width: 600px){
     .sidebar-container {
         display: none;
 
     }
+}
+form .nav-item {
+    max-width: 476px;
 }
 
 #posts {
