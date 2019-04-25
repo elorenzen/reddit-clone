@@ -42,7 +42,7 @@
                                 <a class="dropdown-item" href="#"><i class="fas fa-envelope"></i>   Messages</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Create Post</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-coins"></i>  Coins</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-user-tie"></i>   Premium</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-shield-alt"></i>   Premium</a>
                             </ul>
                         </div>
                     </li>
@@ -52,17 +52,48 @@
                             <input class="form-control mr-sm-2" type="search" placeholder="Reddit Search" aria-label="Search">
                         </form>
                     </li>
-                    <!--
-                    <li class="nav-item">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
-                          </li>
-                    -->
+                        
+                    <li class="nav navbar-nav border-right">
+                        <ul class="nav-item">
+                            <a href="#"><i class="fas fa-chart-line"></i></a>
+                            <a href="#"><i class="fas fa-chart-pie"></i></a>
+                            <a href="#" class="border-right"><i class="fas fa-quote-left"></i></a>
+                        </ul>
+                    </li>
+
+                    <li class="nav navbar-nav">
+                        <ul class="nav-item">
+                            <a href="#"><i class="fas fa-comment"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fas fa-edit"></i></a>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <p>MY STUFF</p>
+                                <ul>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-user"></i>My Profile</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-cog"></i>User Settings</a>
+                                </ul>
+                                <p>VIEW OPTIONS</p>
+                                <ul>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-moon"></i>Night Mode</a>
+                                </ul>
+                                <p>MORE STUFF</p>
+                                <ul>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-coins"></i>Reddit Coins</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-shield-alt"></i>Reddit Premium</a>
+                                    <a class="dropdown-item" href="#"><i class="far fa-question-circle"></i>Help Center<small><i class="fas fa-external-link-alt"></i></small></a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-external-link-alt"></i>Visit Old Reddit<small><i class="fas fa-external-link-alt"></i></small></a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+                                </ul>
+                            </div>
+                        </li>
                 </ul>
             </div>
         </nav>
@@ -112,8 +143,52 @@
                     </div>
                 </div>
                 <!-- SIDEBAR -->
-                <div class="card col-md-4 sidebar-container" id="sidebar">
-                    <p>This is where the sidebar will go</p>
+                <div class="col-md-4">
+                    <div class="row justify-content-center">
+                        <div class="card sidebar-container" id="sidebar">
+                            <p>This is where the sidebar home card will go</p>
+                        </div>
+
+                        <div class="card sidebar-container" id="sidebar">
+                            <p>ADVERTISEMENT</p>
+                        </div>
+
+                        <div class="card container-fluid">
+                            <div class="row">
+                                <div class="col-2 m-auto">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="col-6">
+                                    <p><strong>Reddit Premium</p></strong>
+                                    <p>The best Reddit experience, with monthly coins</p>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-sm btn-danger">TRY NOW</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" id="sidebar">
+                            <div class="row">
+                                <div class="col-4">
+                                    <a class="card-text text-decoration-none" href="#">About</a>
+                                    <a class="card-text text-decoration-none" href="#">Careers</a>
+                                    <a class="card-text text-decoration-none" href="#">Press</a>
+                                </div>
+                                <div class="col-4">
+                                    <a class="card-text text-decoration-none" href="#">Advertise</a>
+                                    <a class="card-text text-decoration-none" href="#">Blog</a>
+                                    <a class="card-text text-decoration-none" href="#">Help</a>
+                                </div>
+                                <div class="col-4">
+                                    <a class="card-text text-decoration-none" href="#">The Reddit App</a>      
+                                    <a class="card-text text-decoration-none" href="#">Reddit Coins</a>
+                                    <a class="card-text text-decoration-none" href="#">Reddit Premium</a>
+                                    <a class="card-text text-decoration-none" href="#">Reddit Gifts</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
