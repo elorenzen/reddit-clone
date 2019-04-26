@@ -9,6 +9,10 @@ nav {
     height: 48px;
     background: #ffffff;
 }
+#second-nav {
+    margin-top: 48px;
+    height: 40px;
+}
 .fa-reddit {
     color: #ff4500;
 }
