@@ -135,11 +135,36 @@
         <div class="container">
             <div class='flexbox-content'>
                 <div id='post'>
-                    <div id='post-shoulder'>Item1</div>
+                    <div id='post-shoulder'>
+                        <button class='upvote'><i class="fas fa-arrow-up"></i></button>
+                        <p>25k</p>
+                        <button class='downvote'><i class="fas fa-arrow-down"></i></button>
+                    </div>
                     <div id='post-content'>
                         <small><i class="far fa-circle"></i><strong>r/subredditName</strong> • Posted by username 4 hours ago</small>
                         <h4>Post title</h4>
                         <p>Spicy jalapeno bacon ipsum dolor amet strip steak porchetta beef ribs meatloaf spare ribs filet mignon, leberkas alcatra pork loin. Ham ball tip alcatra pork chop. Tail salami landjaeger sirloin shank pancetta jerky shankle. Pork belly pork chop meatloaf ribeye, beef ribs picanha ham pancetta.</p>
+                        <div class='post-action-icons'>
+                            <div>
+                                <a role='button' href='#'><i class="fas fa-comment-alt"></i>Comments</a>
+                            </div>
+                            <div>
+                                <a href="#" role="button"><i class="fas fa-award"></i>Give award</a>
+                            </div>
+                            <div>
+                                <a href="#" role="button"><i class="fas fa-share"></i>Share</a>
+                            </div>
+                            <div class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">...</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#" role="button"><i class="fas fa-bookmark"></i>Save</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-ban"></i>Hide</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Report</a>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id='sidebar'>Item 2</div>
@@ -178,6 +203,8 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">...</a>
                                     <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#" role="button"><i class="fas fa-bookmark"></i>Save</a>
+                                        <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="#"><i class="fas fa-ban"></i>Hide</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Report</a>

@@ -85,6 +85,18 @@ form .nav-item {
     max-width: 476px;
 }
 
+.post-action-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: #878a8c
+}
+
+.post-action-icons a {
+    color: #878a8c
+}
+
 .flexbox {
     display: flex;
     flex-direction: row;
@@ -98,11 +110,6 @@ form .nav-item {
     justify-content: space-between;
 }
 
-.flexbox-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
 .flexbox-box {
     background: blue;
@@ -156,3 +163,21 @@ form .nav-item {
     width: 312px;
     margin-left: 24px;
 }
+
+.upvote, .downvote {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.upvote:hover {
+    color: #ff0000;
+}
+
+.downvote:hover {
+    color: #0079D3
+}
+
+
