@@ -17,11 +17,11 @@
                 <a class="navbar-brand" href="#">
                     <i class="fab fa-reddit"> reddit</i>
                 </a>
-                <div class="nav-item dropdown">
+                <div class="nav-item dropdown" id='home-dropdown'>
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-rocket"></i> Home
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu" id='nav1-dropdown' aria-labelledby="navbarDropdownMenuLink">
                         <input type="text" placeholder="Filter">
                         <p>REDDIT FEEDS</p>
                         <ul>
@@ -45,14 +45,14 @@
                         </ul>
                     </div>
                 </div>
-                <div class="nav navbar-nav" id='nav-search'>
+                <div class="nav navbar-nav">
                         <form class="nav-item">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Reddit Search" aria-label="Search">
+                            <input class="form-control mr-sm-2" id='nav-search' type="search" placeholder="Search Reddit" aria-label="Search">
                         </form>
                 </div>
                 
              
-                <div class="nav-item">
+                <div class="nav-item" id='nav-icons'>
                     <a href="#"><i class="fas fa-chart-line"></i></a>
                     <a href="#"><i class="fas fa-chart-pie"></i></a>
                     <a href="#" class="border-right"><i class="fas fa-quote-left"></i></a>
@@ -61,11 +61,11 @@
                     <a href="#"><i class="fas fa-edit"></i></a>
                 </div>
                 
-                <div class="nav-item dropdown">
+                <div class="nav-item dropdown" id='profile-dropdown'>
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Username
                     </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="dropdown-menu" id='profile-icons' aria-labelledby="navbarDropdownMenuLink">
                         <p>MY STUFF</p>
                         <ul>
                             <a class="dropdown-item" href="#"><i class="fas fa-user"></i>My Profile</a>
@@ -90,7 +90,7 @@
         </nav>
         
         
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-top flexbox" id="third-nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-top" id="second-nav nav2-flex">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>

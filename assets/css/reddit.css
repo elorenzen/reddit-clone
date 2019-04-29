@@ -13,21 +13,35 @@ nav {
     height: 48px;
     background: #ffffff;
 }
-#second-nav {
+nav #second-nav {
     margin-top: 48px;
-    height: 48px;
-}
-
-#third nav {
-    margin-top: 96px;
     height: 40px;
 }
+
 .fa-reddit {
     color: #ff4500;
 }
-.fas {
-    padding-right: 8px;
-    color: #0079D3;
+
+i {
+    padding: 6px;
+}
+
+#nav-icons i {
+    width: 32px;
+    height: 32px;
+    color: #1a1a1b;
+    border-radius: 2px;
+}
+
+#nav-icons i:hover {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(26, 26, 27, 0.1);
+    margin: auto;
+}
+
+.fa-edit {
+    color: #0079D3 !important;
 }
 .far {
     padding-right: 8px;
@@ -38,7 +52,18 @@ nav {
     z-index: 1;
     border-radius: 4px;
     background: #ffffff;
-    padding: 5px;
+}
+
+#home-dropdown {
+    width: 270px;
+}
+
+#profile-dropdown {
+    width: 240px;
+}
+
+#nav1-dropdown {
+    z-index: 2;
 }
 .dropdown:hover {
     border-color: #edeff1;
@@ -49,7 +74,7 @@ nav {
 }
 
 #navbarDropdownMenuLink {
-    height: 35px;
+    height: 36px;
 }
 
 @media only screen and (max-width: 600px){
@@ -82,6 +107,15 @@ form .nav-item {
 #nav-search {
     width: 315px;
     height: 36px;
+    background-color: #f6f7f8;
+    box-shadow: none;
+    color: #1c1c1c;
+    border-radius: 4px;
+}
+
+#nav-search:hover {
+    border-color: #0079D3;
+    color: #dbf0ff; 
 }
 
 #nav2-flex {
@@ -90,3 +124,8 @@ form .nav-item {
     justify-content: flex-start;
     align-items: center;
 }
+
+#profile-icons i {
+    color: #878a8c
+}
+
