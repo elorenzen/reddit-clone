@@ -43,9 +43,7 @@ i {
 .fa-edit {
     color: #0079D3 !important;
 }
-.far {
-    padding-right: 8px;
-}
+
 .dropdown {
     color: #1c1c1c;
     width: 270px;
@@ -94,6 +92,12 @@ form .nav-item {
     align-items: center;
 }
 
+.flexbox-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .flexbox-col {
     display: flex;
     flex-direction: column;
@@ -129,3 +133,26 @@ form .nav-item {
     color: #878a8c
 }
 
+
+#post {
+    width: 648px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+}
+
+#post-shoulder {
+    width: 40px;
+    background-color: #dbf0ff
+}
+#post-content {
+    background-color: white;
+    width: 608px;
+    padding: 0px 8px 8px;
+}
+
+#sidebar {
+    background-color: green;
+    width: 312px;
+    margin-left: 24px;
+}
