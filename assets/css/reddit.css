@@ -57,19 +57,28 @@ i {
     width: 270px;
 }
 
+#home-dropdown:hover {
+    border: 1px solid #DAE0E6;
+}
+
 #profile-dropdown {
     width: 240px;
 }
 
+#profile-dropdown:hover, #profile-dropdown:active  {
+    border: 1px solid #DAE0E6;
+}
+
 #nav1-dropdown {
-    z-index: 2;
+    z-index: 6;
+    width: 270px;
 }
 .dropdown:hover {
     border-color: #edeff1;
 }
 
-.dropdown-menu {
-    border: none;
+.dropdown-menu:active {
+    border: 1px solid #DAE0E6;
 }
 
 #navbarDropdownMenuLink {
@@ -161,6 +170,10 @@ form .nav-item {
     padding: 0px 8px 8px;
 }
 
+.sidebar-button-primary {
+    background-color: #3293db;
+}
+
 #sidebar-item {
     background-color: white;
     width: 312px;
@@ -168,9 +181,53 @@ form .nav-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     border-radius: 5px 5px 4px 4px;
 }
+
+#sidebar-item button {
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+#sidebar-premium {
+    height: 64px;
+}
+
+#sidebar-premium-icon {
+    color: #ff4500;
+}
+
+#sidebar-premium-content {
+    width: 168px;
+    height: 48px;
+}
+
+#sidebar-premium-content h1 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+#sidebar-premium-content p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+#sidebar-premium-button {
+    background-color: #ff4500;
+    height: 28px;
+}
+
+#sidebar-premium-button:hover {
+    background-color: #ff6a32;
+    border-color: #ff6a32;
+
+}
+
 
 .upvote, .downvote {
     width: 24px;

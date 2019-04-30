@@ -197,7 +197,7 @@
                     <div class='container-fluid' id='sidebar-item'>
                         <h4 class="card-title text-left">Home</h4>
                             <p class="card-body text-justify">Your personal Reddit frontpage. Come here to check in with your favorite communities.</p>
-                            <button class="btn btn-primary" style='margin-bottom: 10px'>CREATE POST</button>
+                            <button class="sidebar-button-primary" style='margin-bottom: 10px'>CREATE POST</button>
                             <button class="btn btn-outline-primary disabled" style='margin-bottom: 10px'>CREATE COMMUNITY</button>
                     </div>
                     
@@ -206,16 +206,16 @@
                     </div>
                     
                     <div class="container-fluid" id='sidebar-item'>
-                        <div class="row">
-                            <div class="col-2 m-auto">
-                                <i class="fas fa-shield-alt"></i>
+                        <div class="flexbox-content" id='sidebar-premium'>
+                            <div class="m-auto">
+                                <i class="fas fa-shield-alt" id='sidebar-premium-icon'></i>
                             </div>
-                            <div class="col-6">
-                                <p><strong>Reddit Premium</p></strong>
+                            <div id='sidebar-premium-content'>
+                                <h1>Reddit Premium</h1>
                                 <p>The best Reddit experience, with monthly coins</p>
                             </div>
-                            <div class="col-4 m-auto">
-                                <button class="btn btn-sm btn-danger">TRY NOW</button>
+                            <div class="m-auto">
+                                <button class="btn btn-sm btn-danger" id='sidebar-premium-button'>TRY NOW</button>
                             </div>
                         </div>
                     </div>
