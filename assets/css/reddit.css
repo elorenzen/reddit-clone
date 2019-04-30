@@ -3,7 +3,7 @@ body {
 }
 .container {
     max-width: 984px;
-    padding-top: 10%
+    padding-top: 2%
 }
 
 .nav-container {
@@ -13,9 +13,9 @@ nav {
     height: 48px;
     background: #ffffff;
 }
-nav #second-nav {
-    margin-top: 48px;
+#second-nav {
     height: 40px;
+    border-top: 1px solid #DAE0E6;
 }
 
 .fa-reddit {
@@ -133,7 +133,7 @@ form .nav-item {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
 }
 
 #profile-icons i {
@@ -159,7 +159,7 @@ form .nav-item {
 }
 
 #sidebar {
-    background-color: green;
+    background-color: white;
     width: 312px;
     margin-left: 24px;
 }
