@@ -9,13 +9,14 @@ body {
 .nav-container {
     max-width: 984px;
 }
-nav {
+#top-nav {
     height: 48px;
     background: #ffffff;
 }
 #second-nav {
     height: 40px;
     border-top: 1px solid #DAE0E6;
+    background: #ffffff;
 }
 
 .fa-reddit {
@@ -94,7 +95,8 @@ form .nav-item {
 }
 
 .post-action-icons a {
-    color: #878a8c
+    color: #878a8c;
+
 }
 
 .flexbox {
@@ -146,6 +148,7 @@ form .nav-item {
     display: flex;
     flex-direction: row;
     border-radius: 4px;
+    max-height: 600px;
 }
 
 #post-shoulder {
@@ -158,10 +161,15 @@ form .nav-item {
     padding: 0px 8px 8px;
 }
 
-#sidebar {
+#sidebar-item {
     background-color: white;
     width: 312px;
     margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-radius: 5px 5px 4px 4px;
 }
 
 .upvote, .downvote {

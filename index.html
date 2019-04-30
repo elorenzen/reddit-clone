@@ -10,9 +10,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
-        
-        
-        <nav>
+        <nav id='top-nav'>
             <div class='flexbox'>
                 <a class="navbar-brand" href="#">
                     <i class="fab fa-reddit"> reddit</i>
@@ -100,23 +98,22 @@
                 </div>
                 <span>SORT</span>
                     <div class="dropdown">
-                      <a class="dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdown08">
-                        <a class="dropdown-item" href="#"><i class="fas fa-splotch"></i>Best</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-fire"></i>Hot</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-paper-plane"></i>New</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-exclamation-circle"></i>Controversial</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-level-up-alt"></i>Top</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-signal"></i>Rising</a>
-                      </div>
+                        <a class="dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown08">
+                            <a class="dropdown-item" href="#"><i class="fas fa-splotch"></i>Best</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fas fa-fire"></i>Hot</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fas fa-paper-plane"></i>New</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fas fa-exclamation-circle"></i>Controversial</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fas fa-level-up-alt"></i>Top</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fas fa-signal"></i>Rising</a>
+                        </div>
                     </div>
             </div>
-            
         </nav>
         <!--
         <nav class="navbar navbar-expand border-top pr-auto" id="second-nav nav2-flex">
@@ -184,19 +181,91 @@
                                 <a href="#" role="button"><i class="fas fa-share"></i>Share</a>
                             </div>
                             <div class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">...</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#" role="button"><i class="fas fa-bookmark"></i>Save</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#"><i class="fas fa-ban"></i>Hide</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Report</a>
-                                    </div>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">...</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#" role="button"><i class="fas fa-bookmark"></i>Save</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-ban"></i>Hide</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Report</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id='sidebar'>Sidebar</div>
+                <div>
+                    <div class='container-fluid' id='sidebar-item'>
+                        <h4 class="card-title text-left">Home</h4>
+                            <p class="card-body text-justify">Your personal Reddit frontpage. Come here to check in with your favorite communities.</p>
+                            <button class="btn btn-primary" style='margin-bottom: 10px'>CREATE POST</button>
+                            <button class="btn btn-outline-primary disabled" style='margin-bottom: 10px'>CREATE COMMUNITY</button>
+                    </div>
+                    
+                    <div class='container-fluid' id='sidebar-item'>
+                        <p class="card-title">ADVERTISEMENT</p>
+                    </div>
+                    
+                    <div class="container-fluid" id='sidebar-item'>
+                        <div class="row">
+                            <div class="col-2 m-auto">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="col-6">
+                                <p><strong>Reddit Premium</p></strong>
+                                <p>The best Reddit experience, with monthly coins</p>
+                            </div>
+                            <div class="col-4 m-auto">
+                                <button class="btn btn-sm btn-danger">TRY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card container-fluid" id='sidebar-item'>
+                        <p class="card-title">TRENDING COMMUNITIES</p>
+                        <div class="card-body list-group">
+                            <a href="#" class="list-group-item border-0">
+                                <i class="far fa-circle"></i>
+                                <p class="mb-1">r/subbredditName</p>
+                                <small class="text-muted">45.7k members</small>
+                                <button class="btn btn-primary">JOIN</button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card container-fluid" id='sidebar-item'>
+                        <p class="card-title">RECENT POSTS</p>
+                    </div>
+
+                    <div class="card container-fluid" id='sidebar-item'>
+                        <p>ADVERTISEMENT</p>
+                    </div>
+
+                    <div class="card container-fluid" id="sidebar-item">
+                        <div class="row">
+                            <div class="col-4">
+                                <a class="card-text text-decoration-none" href="#">About</a>
+                                <a class="card-text text-decoration-none" href="#">Careers</a>
+                                <a class="card-text text-decoration-none" href="#">Press</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="card-text text-decoration-none" href="#">Advertise</a>
+                                <a class="card-text text-decoration-none" href="#">Blog</a>
+                                <a class="card-text text-decoration-none" href="#">Help</a>
+                            </div>
+                            <div class="col-4">
+                                <a class="card-text text-decoration-none" href="#">The Reddit App</a>      
+                                <a class="card-text text-decoration-none" href="#">Reddit Coins</a>
+                                <a class="card-text text-decoration-none" href="#">Reddit Premium</a>
+                                <a class="card-text text-decoration-none" href="#">Reddit Gifts</a>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p><a href="#">Content policy</a> | <a href="#">Privacy policy</a></p>
+                            <p><a href="#">User Agreement</a> | <a href="#">Mod policy</a></p>
+                            <p>© 2019 Reddit, Inc. All rights reserved</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- 
             <div class="row justify-content-center">
@@ -244,8 +313,9 @@
                                 </div>
                                 </a>
                             </div>
-                            <div class="card container-fluid">
-                                <p class="card-title">RECENT POSTS</p>
+                            
+                        <div class="card container-fluid">
+                            <p class="card-title">RECENT POSTS</p>
                         </div>
 
                         <div class="card container-fluid">
