@@ -170,8 +170,34 @@ form .nav-item {
     padding: 0px 8px 8px;
 }
 
-.sidebar-button-primary {
+#sidebar-button-primary {
     background-color: #3293db;
+    font-size: 14px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 32px;
+    border: none;
+    height: 34px;
+    width: 288px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+#sidebar-button-primary:hover {
+    background-color: rgba(0, 121, 211, 0.5);    
+}
+
+
+#sidebar-button-primary-disabled {
+    height: 34px;
+    width: 288px;
+    color: rgba(0, 121, 211, 0.5);
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 121, 211, 0.5);
+    cursor: not-allowed;
+    text-decoration: none;
 }
 
 #sidebar-item {
@@ -190,6 +216,39 @@ form .nav-item {
     line-height: 24px;
     font-size: 12px;
     letter-spacing: .5px;
+}
+
+
+
+#sidebar-home-picture {
+    background: url(https://www.redditstatic.com/desktop2x/img/id-cards/home-banner@2x.png) center center / cover no-repeat #0079d3;
+    border-radius: 4px 4px 0px 0px;
+    margin-left: -15px;
+    height: 34px;
+    width: 312px;
+}
+
+#home-reddit-robot {
+    background: url(https://www.redditstatic.com/desktop2x/img/id-cards/snoo-home@2x.png);
+    z-index: 5;
+}
+
+#home-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-left: 30px; 
+}
+
+#home-content {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: justify;
+    padding: 0px 2px 10px 2px;
+    width: 288px;
+    height: 42px;
+    letter-spacing: 0.5px;
 }
 
 #sidebar-premium {

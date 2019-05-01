@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="./assets/css/reddit.css">
         <!-- FONT AWESOME CDN -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!-- 'NOTO SANS' FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     </head>
     <body>
         <nav id='top-nav'>
@@ -115,49 +117,7 @@
                     </div>
             </div>
         </nav>
-        <!--
-        <nav class="navbar navbar-expand border-top pr-auto" id="second-nav nav2-flex">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse justify-content-md-start" id="navbarsExample08">
-                  <ul class="navbar-nav">
-                    <li class="nav-item disabled">
-                      <a class="nav-link text-muted" href="#">VIEW</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="#"><i class="fas fa-minus"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><i class="fas fa-bars"></i></a>
-                    </li>
-                    <li class="nav-item border-right">
-                        <a class="nav-link" href="#"><i class="fas fa-align-justify"></i></a>
-                    </li>
-                    <li class="nav-item disabled">
-                            <a class="nav-link text-muted" href="#">SORT</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdown08">
-                        <a class="dropdown-item" href="#"><i class="fas fa-splotch"></i>Best</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-fire"></i>Hot</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-paper-plane"></i>New</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-exclamation-circle"></i>Controversial</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-level-up-alt"></i>Top</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-signal"></i>Rising</a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-              -->
+        
         <div class="container">
             <div class='flexbox-content'>
                 <div id='post'>
@@ -194,11 +154,13 @@
                     </div>
                 </div>
                 <div>
-                    <div class='container-fluid' id='sidebar-item'>
-                        <h4 class="card-title text-left">Home</h4>
-                            <p class="card-body text-justify">Your personal Reddit frontpage. Come here to check in with your favorite communities.</p>
-                            <button class="sidebar-button-primary" style='margin-bottom: 10px'>CREATE POST</button>
-                            <button class="btn btn-outline-primary disabled" style='margin-bottom: 10px'>CREATE COMMUNITY</button>
+                    <div class='container-fluid' id='sidebar-item' style='height: 241px;'>
+                        <div id='sidebar-home-picture'></div>
+                        <div id='home-reddit-robot'></div>
+                        <div class="card-title text-left" id='home-title'>Home</div>
+                            <p class="card-body text-justify" id='home-content'>Your personal Reddit frontpage. Come here to check in with your favorite communities.</p>
+                            <button id="sidebar-button-primary" style='margin-bottom: 10px'>CREATE POST</button>
+                            <button id="sidebar-button-primary-disabled" style='margin-bottom: 10px'>CREATE COMMUNITY</button>
                     </div>
                     
                     <div class='container-fluid' id='sidebar-item'>
