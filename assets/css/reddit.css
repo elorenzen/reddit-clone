@@ -222,7 +222,7 @@ form .nav-item {
     text-decoration: none;
 }
 
-#sidebar-item {
+.sidebar-item {
     background-color: white;
     width: 312px;
     margin-left: 24px;
@@ -231,6 +231,7 @@ form .nav-item {
     justify-content: space-between;
     margin-bottom: 16px;
     border-radius: 5px 5px 4px 4px;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 #sidebar-item button {
@@ -308,6 +309,84 @@ form .nav-item {
     border-color: #ff6a32;
 
 }
+
+#sidebar-communities {
+    height: 314px;
+    color: rgb(26, 26, 27);
+    border-radius: 5px 5px 4px 4px;
+}
+
+#communities-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 12px;
+    padding: 0 12px;
+    border-radius: 4px 4px 0 0;
+}
+
+#communities-list {
+    padding: 12px;
+}
+
+.communities-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.communities-item-icon {
+    height: 32px;
+}
+
+.communities-item-content {
+    flex: 1 1 100%;
+    padding-right: 8px;
+}
+
+.communities-item-content-title {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    display: block;
+    width: 132px;
+    color: rgb(26, 26, 27);
+}
+
+.communities-item-content-title:hover {
+    color: rgb(26, 26, 27);
+}
+
+.communities-item-content-members {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    padding-bottom: 4px;
+}
+
+.communities-item-content-join {
+    flex: 0 0 106px;
+}
+
+.communities-item-content-join-button {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    width: 100%;
+    padding: 4px 9px 2px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 121, 211);
+    border: 1px solid rgb(0, 121, 211);
+    border-radius: 4px;
+}
+
+.communities-item-content-join-button:hover {
+    background-color: rgb(50, 147, 219);
+    border-color: rgb(50, 147, 219);
+}
+
 
 #sidebar-sitemap {
     background-color: white;

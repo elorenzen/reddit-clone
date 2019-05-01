@@ -9,7 +9,7 @@
         <!-- FONT AWESOME CDN -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <!-- 'NOTO SANS' FONT -->
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
     </head>
     <body>
         <nav id='top-nav'>
@@ -154,7 +154,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class='container-fluid' id='sidebar-item' style='height: 241px;'>
+                    <div class='container-fluid sidebar-item' style='height: 241px;'>
                         <div id='sidebar-home-picture'></div>
                         <div id='home-reddit-robot'></div>
                         <div class="card-title text-left" id='home-title'>Home</div>
@@ -163,11 +163,11 @@
                             <button id="sidebar-button-primary-disabled" style='margin-bottom: 10px'>CREATE COMMUNITY</button>
                     </div>
                     
-                    <div class='container-fluid' id='sidebar-item'>
+                    <div class='container-fluid sidebar-item'>
                         <p class="card-title">ADVERTISEMENT</p>
                     </div>
                     
-                    <div class="container-fluid" id='sidebar-item'>
+                    <div class="container-fluid sidebar-item">
                         <div class="flexbox-content" id='sidebar-premium'>
                             <div class="m-auto">
                                 <i class="fas fa-shield-alt" id='sidebar-premium-icon'></i>
@@ -182,27 +182,98 @@
                         </div>
                     </div>
                     
-                    <div class="card container-fluid" id='sidebar-item'>
-                        <p class="card-title">TRENDING COMMUNITIES</p>
-                        <div class="card-body list-group">
-                            <a href="#" class="list-group-item border-0">
-                                <i class="far fa-circle"></i>
-                                <p class="mb-1">r/subbredditName</p>
-                                <small class="text-muted">45.7k members</small>
-                                <button class="btn btn-primary">JOIN</button>
-                            </a>
+                    <div class='sidebar-item' id='sidebar-communities'>
+                        <div id='communities-title'>
+                            <p style='padding: 12px 0;'>TRENDING COMMUNITIES</p>    
+                        </div>
+                        
+                        <div id='communities-list'>
+                            <div class='communities-item'>
+                                <div class='communities-item-icon'>
+                                    <i class="fab fa-reddit"></i>
+                                </div>
+                                <div class='communities-item-content'>
+                                    <a href='#' class='communities-item-content-title'>r/AskReddit</a>
+                                    <div class='communities-item-content-members'>
+                                        <p>3.1k members</p>
+                                    </div>
+                                </div>
+                                <div class='communities-item-content-join'>
+                                    <button class='communities-item-content-join-button'>JOIN</button>
+                                </div>
+                            </div>
+                            
+                            <div class='communities-item'>
+                                <div class='communities-item-icon'>
+                                    <i class="fab fa-reddit"></i>
+                                </div>
+                                <div class='communities-item-content'>
+                                    <a href='#' class='communities-item-content-title'>r/DIY</a>
+                                    <div class='communities-item-content-members'>
+                                        <p>47k members</p>
+                                    </div>
+                                </div>
+                                <div class='communities-item-content-join'>
+                                    <button class='communities-item-content-join-button'>JOIN</button>
+                                </div>
+                            </div>
+                            
+                            <div class='communities-item'>
+                                <div class='communities-item-icon'>
+                                    <i class="fab fa-reddit"></i>
+                                </div>
+                                <div class='communities-item-content'>
+                                    <a href='#' class='communities-item-content-title'>r/Bitcoin</a>
+                                    <div class='communities-item-content-members'>
+                                        <p>6.2k members</p>
+                                    </div>
+                                </div>
+                                <div class='communities-item-content-join'>
+                                    <button class='communities-item-content-join-button'>JOIN</button>
+                                </div>
+                            </div>
+                            
+                            <div class='communities-item'>
+                                <div class='communities-item-icon'>
+                                    <i class="fab fa-reddit"></i>
+                                </div>
+                                <div class='communities-item-content'>
+                                    <a href='#' class='communities-item-content-title'>r/lifehacks</a>
+                                    <div class='communities-item-content-members'>
+                                        <p>846 members</p>
+                                    </div>
+                                </div>
+                                <div class='communities-item-content-join'>
+                                    <button class='communities-item-content-join-button'>JOIN</button>
+                                </div>
+                            </div>
+                            
+                            <div class='communities-item'>
+                                <div class='communities-item-icon'>
+                                    <i class="fab fa-reddit"></i>
+                                </div>
+                                <div class='communities-item-content'>
+                                    <a href='#' class='communities-item-content-title'>r/Art</a>
+                                    <div class='communities-item-content-members'>
+                                        <p>6.6k members</p>
+                                    </div>
+                                </div>
+                                <div class='communities-item-content-join'>
+                                    <button class='communities-item-content-join-button'>JOIN</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="card container-fluid" id='sidebar-item'>
+                    <div class="card container-fluid sidebar-item">
                         <p class="card-title">RECENT POSTS</p>
                     </div>
 
-                    <div class="card container-fluid" id='sidebar-item'>
+                    <div class="card container-fluid sidebar-item">
                         <p>ADVERTISEMENT</p>
                     </div>
 
-                    <div id="sidebar-item">
+                    <div class="sidebar-item">
                         <div id='sidebar-sitemap'>
                             <div class="row">
                                 <div class="col-4">
@@ -225,100 +296,12 @@
                             <div class="text-center" id='sitemap-footer'>
                                 <p><a href="#">Content policy</a> | <a href="#">Privacy policy</a></p>
                                 <p><a href="#">User Agreement</a> | <a href="#">Mod policy</a></p>
-                                <p>© 2019 Reddit, Inc. All rights reserved</p>
+                                <p style='font-size: 12px;font-weight: 500; letter-spacing: .1px;'>© 2019 Reddit, Inc. All rights reserved</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- 
-            <div class="row justify-content-center">
-                
-                
-               
-                <div class="col-md-4">
-                    <div class="row justify-content-center flexbox">
-                        <div class="card container-fluid">
-                            <h4 class="card-title text-left">Home</h4>
-                            <p class="card-body text-justify">Your personal Reddit frontpage. Come here to check in with your favorite communities.</p>
-                            <button class="btn btn-primary">CREATE POST</button>
-                            <button class="btn btn-outline-primary disabled">CREATE COMMUNITY</button>
-                        </div>
-
-                        <div class="card container-fluid" id="sidebar">
-                            <p class="card-title">ADVERTISEMENT</p>
-                        </div>
-
-                        <div class="card container-fluid">
-                            <div class="row">
-                                <div class="col-2 m-auto">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-                                <div class="col-6">
-                                    <p><strong>Reddit Premium</p></strong>
-                                    <p>The best Reddit experience, with monthly coins</p>
-                                </div>
-                                <div class="col-4">
-                                    <button class="btn btn-sm btn-danger">TRY NOW</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card container-fluid">
-                            <p class="card-title">TRENDING COMMUNITIES</p>
-                            <div class="card-body list-group">
-                                <a href="#" class="list-group-item border-0">
-                                        <i class="far fa-circle"></i>
-                                    
-                                        <p class="mb-1">r/subbredditName</p>
-                                    
-                                    <small class="text-muted">45.7k members</small>
-                                    <button class="btn btn-primary">JOIN</button>
-                                </div>
-                                </a>
-                            </div>
-                            
-                        <div class="card container-fluid">
-                            <p class="card-title">RECENT POSTS</p>
-                        </div>
-
-                        <div class="card container-fluid">
-                                <p>ADVERTISEMENT</p>
-                        </div>
-
-                        <div class="card container-fluid" id="sidebar">
-                            <div class="row">
-                                <div class="col-4">
-                                    <a class="card-text text-decoration-none" href="#">About</a>
-                                    <a class="card-text text-decoration-none" href="#">Careers</a>
-                                    <a class="card-text text-decoration-none" href="#">Press</a>
-                                </div>
-                                <div class="col-4">
-                                    <a class="card-text text-decoration-none" href="#">Advertise</a>
-                                    <a class="card-text text-decoration-none" href="#">Blog</a>
-                                    <a class="card-text text-decoration-none" href="#">Help</a>
-                                </div>
-                                <div class="col-4">
-                                    <a class="card-text text-decoration-none" href="#">The Reddit App</a>      
-                                    <a class="card-text text-decoration-none" href="#">Reddit Coins</a>
-                                    <a class="card-text text-decoration-none" href="#">Reddit Premium</a>
-                                    <a class="card-text text-decoration-none" href="#">Reddit Gifts</a>
-                                </div>
-                            </div>
-
-                            <div class="text-center">
-                                <p><a href="#">Content policy</a> | <a href="#">Privacy policy</a></p>
-                                <p><a href="#">User Agreement</a> | <a href="#">Mod policy</a></p>
-                                <p>© 2019 Reddit, Inc. All rights reserved</p>
-                            </div>
-                        </div>
-
-                      
-                        </div>
-                    </div>
-                </div>
-            </div>
-            -->
         </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
