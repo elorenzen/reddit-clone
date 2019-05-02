@@ -252,7 +252,7 @@ form .nav-item {
 }
 
 #home-reddit-robot {
-    background: url(https://www.redditstatic.com/desktop2x/img/id-cards/snoo-home@2x.png);
+    background-image: url(https://www.redditstatic.com/desktop2x/img/id-cards/snoo-home@2x.png);
     z-index: 5;
 }
 
@@ -387,6 +387,77 @@ form .nav-item {
     border-color: rgb(50, 147, 219);
 }
 
+#sidebar-recent-posts {
+    width: 312px;
+    height: 269px;
+    margin-top: 16px;
+    color: rgb(26, 26, 27);
+    padding: 12px;
+}
+
+#recent-posts-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 12px;
+    padding-bottom: 4px;
+}
+
+.recent-posts-item {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgb(246, 247, 248);
+    display: flex;
+}
+
+.recent-posts-item-image-frame {
+    display: inline-block;
+    height: 49px;
+    margin-right: 7px;
+    width: 65px;
+    border-radius: 4px;
+    flex: 0 0 65px;
+}
+
+.recent-posts-item-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    flex: 1 1 0%;
+    position: relative;
+    vertical-align: bottom;
+}
+
+.recent-posts-item-image-url {
+    background: blue;
+}
+
+.recent-posts-item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 0%;
+}
+
+.recent-posts-item-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: rgb(28, 28, 28);
+    margin-bottom: 4px;
+    max-height: 36px;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.recent-posts-item-data {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(135, 138, 140);
+    white-space: nowrap;
+    vertical-align: baseline;
+}
 
 #sidebar-sitemap {
     background-color: white;
