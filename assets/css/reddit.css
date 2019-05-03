@@ -170,9 +170,11 @@ body {
     text-decoration: none;
 }
 
-
-
-
+.sort-dropdown-item:hover {
+    background-color: rgb(229, 241, 250);
+    outline: none;
+    color: rgb(28, 28, 28);
+}
 
 .fa-reddit {
     color: #ff4500;
