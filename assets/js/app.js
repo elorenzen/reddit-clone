@@ -15,9 +15,14 @@ $(document).ready(function(){
             console.log('Successfully loaded list');
             for(let i = 0; i < post_list.length; i++){
                 let post = post_list[i].data;
-                let votes = post.score;
+                let votes = post.ups;
                 let title = post.title;
                 $('.post_title').append(title);
+                if(votes === 0){
+                    $('post_title').append('•');
+                } else {
+                    $('.post_votes').append(votes);
+                }
             }
         },
         error: function(){
