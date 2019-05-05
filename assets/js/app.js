@@ -18,8 +18,13 @@ $(document).ready(function(){
                 let votes = post.ups;
                 let title = post.title;
                 let subredditName = post.subreddit_name_prefixed;
+                let username = post.author;
+                //Add post title 
                 $('.post_title').append(title);
+                //Add subreddit name
                 $('.subreddit_name').append(subredditName);
+                //Add username
+                $('.post_author').append(username);
                 
                 if(votes === 0){
                     $('post_title').append('•');

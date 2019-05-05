@@ -269,6 +269,9 @@ form .nav-item {
     text-decoration: none;
     color: #1c1c1c;
 }
+.post_author {
+    color: #1c1c1c;
+}
 
 .flexbox {
     display: flex;
