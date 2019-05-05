@@ -273,6 +273,12 @@ form .nav-item {
     color: #1c1c1c;
 }
 
+.post_content {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .flexbox {
     display: flex;
     flex-direction: row;
