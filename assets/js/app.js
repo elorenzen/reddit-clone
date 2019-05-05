@@ -146,3 +146,41 @@ $('.filter_controversial').click(function(){
         }
     })
 });
+
+$('.filter_top').click(function(){
+    $.ajax('https://www.reddit.com/top/.json?limit=1', {
+        success: data => {
+            let post_list = data.data.children;
+            console.log("Successfully loaded 'top' list");
+            for(let i = 0; i < post_list.length; i++){
+                let post = post_list[i].data;
+                let votes = post.ups;
+                let title = post.title;
+                let subredditName = post.subreddit_name_prefixed;
+                let username = post.author;
+                let commentCount = post.num_comments;
+                let textContent = post.selftext;
+                //Add post title 
+                $('.post_title').text(title);
+                //Add subreddit name
+                $('.subreddit_name').text(subredditName);
+                //Add username
+                $('.post_author').text(username);
+                //Add number of comments
+                $('.post_comments').text(commentCount);
+                //Add content
+                $('.post_content').text(textContent);
+
+                if(votes === 0){
+                    $('post_title').text('•');
+                } else {
+                    $('.post_votes').text(votes);
+                }
+            }
+        }, 
+        error: function(){
+            console.log("Problem loading 'top' list");
+        }
+    })
+});
+
