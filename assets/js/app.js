@@ -17,7 +17,10 @@ $(document).ready(function(){
                 let post = post_list[i].data;
                 let votes = post.ups;
                 let title = post.title;
+                let subredditName = post.subreddit_name_prefixed;
                 $('.post_title').append(title);
+                $('.subreddit_name').append(subredditName);
+                
                 if(votes === 0){
                     $('post_title').append('•');
                 } else {

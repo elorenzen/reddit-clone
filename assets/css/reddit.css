@@ -265,6 +265,11 @@ form .nav-item {
 
 }
 
+.subreddit_name {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
 .flexbox {
     display: flex;
     flex-direction: row;
