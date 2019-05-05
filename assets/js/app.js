@@ -12,7 +12,7 @@ $(document).ready(function(){
     $.ajax("https://www.reddit.com/best/.json?limit=1", {
         success: data => {
             let post_list = data.data.children;
-            console.log('Successfully loaded list');
+            console.log("Successfully loaded 'best' list");
             for(let i = 0; i < post_list.length; i++){
                 let post = post_list[i].data;
                 let votes = post.ups;
@@ -37,7 +37,7 @@ $(document).ready(function(){
             }
         },
         error: function(){
-            console.log('Problem loading data');
+            console.log("Problem loading 'best' list");
         } 
     });
 })
