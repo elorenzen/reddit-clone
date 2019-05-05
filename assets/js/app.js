@@ -19,12 +19,15 @@ $(document).ready(function(){
                 let title = post.title;
                 let subredditName = post.subreddit_name_prefixed;
                 let username = post.author;
+                let commentCount = post.num_comments;
                 //Add post title 
                 $('.post_title').append(title);
                 //Add subreddit name
                 $('.subreddit_name').append(subredditName);
                 //Add username
                 $('.post_author').append(username);
+                //Add number of comments
+                $('.post_comments').append(commentCount);
                 
                 if(votes === 0){
                     $('post_title').append('•');
