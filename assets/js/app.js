@@ -8,7 +8,9 @@ else{
     console.log('not loaded yet');
 }
 
+//Loads list of 'best' reddit posts upon opening file
 $(document).ready(function(){
+    $('.default_list').html('<a class="dropdown-item sort-dropdown-item" href="#"><i class="fas fa-splotch"></i>Best</a>');
     $.ajax("https://www.reddit.com/best/.json?limit=1", {
         success: data => {
             let post_list = data.data.children;
@@ -41,10 +43,11 @@ $(document).ready(function(){
         },
         error: function(){
             console.log("Problem loading 'best' list");
-        } 
+        }
     });
 })
 
+// When second nav dropdown 'hot' is clicked, reddit posts update with said list theme
 $('.filter_hot').click(function(){
     $('.default_list').html('<a class="dropdown-item sort-dropdown-item filter_hot" href="#"><i class="fas fa-fire"></i>Hot</a>')
     $.ajax('https://www.reddit.com/hot/.json?limit=1', {
@@ -80,6 +83,7 @@ $('.filter_hot').click(function(){
     });
 });
 
+// When second nav dropdown 'new' is clicked, reddit posts update with said list theme
 $('.filter_new').click(function(){
     $('.default_list').html('<a class="dropdown-item sort-dropdown-item filter_new" href="#"><i class="fas fa-paper-plane"></i>New</a>');
     $.ajax('https://www.reddit.com/new/.json?limit=1', {
@@ -115,6 +119,7 @@ $('.filter_new').click(function(){
     })
 });
 
+// When second nav dropdown 'controversial' is clicked, reddit posts update with said list theme
 $('.filter_controversial').click(function(){
     $('.default_list').html('<a class="dropdown-item sort-dropdown-item filter_controversial" href="#"><i class="fas fa-exclamation-circle"></i>Controversial</a>');
     $.ajax('https://www.reddit.com/controversial/.json?limit=1', {
@@ -153,6 +158,7 @@ $('.filter_controversial').click(function(){
     })
 });
 
+// When second nav dropdown 'top' is clicked, reddit posts update with said list theme
 $('.filter_top').click(function(){
     $('.default_list').html('<a class="dropdown-item sort-dropdown-item filter_top" href="#"><i class="fas fa-level-up-alt"></i>Top</a>');
     $.ajax('https://www.reddit.com/top/.json?limit=1', {
@@ -200,6 +206,7 @@ $('.filter_top').click(function(){
     })
 });
 
+// When second nav dropdown 'rising' is clicked, reddit posts update with said list theme
 $('.filter_rising').click(function(){
     $('.default_list').html('<a class="dropdown-item sort-dropdown-item filter_rising" href="#"><i class="fas fa-signal"></i>Rising</a>');
     $.ajax('https://www.reddit.com/rising/.json?limit=1', {
