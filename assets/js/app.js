@@ -47,6 +47,43 @@ $(document).ready(function(){
     });
 })
 
+// When top nav dropdown 'all' is clicked, reddit posts will update with said feed theme
+$('.feed_all').click(function(){
+    
+    $.ajax('https://www.reddit.com/r/all.json?limit=1', {
+        success: data => {
+            let post_list = data.data.children;
+            console.log("Successfully loaded 'all' feed");
+            for(let i = 0; i < post_list.length; i++){
+                let post = post_list[i].data;
+                let votes = post.ups;
+                let title = post.title;
+                let subredditName = post.subreddit_name_prefixed;
+                let username = post.author;
+                let commentCount = post.num_comments;
+                //Add post title 
+                $('.post_title').text(title);
+                //Add subreddit name
+                $('.subreddit_name').text(subredditName);
+                //Add username
+                $('.post_author').text(username);
+                //Add number of comments
+                $('.post_comments').text(commentCount);
+
+                if(votes === 0){
+                    $('post_title').text('•');
+                } else {
+                    $('.post_votes').text(votes);
+                }
+            }
+        }, 
+        error: function(){
+            console.log("Problem loading 'all' feed");
+        }
+    });
+});
+
+
 // When second nav dropdown 'hot' is clicked, reddit posts update with said list theme
 $('.filter_hot').click(function(){
     $('.default_list').html('<a class="dropdown-item sort-dropdown-item filter_hot" href="#"><i class="fas fa-fire"></i>Hot</a>')
