@@ -116,6 +116,7 @@ $('.filter_new').click(function(){
 });
 
 $('.filter_controversial').click(function(){
+    $('.default_list').html('<a class="dropdown-item sort-dropdown-item filter_controversial" href="#"><i class="fas fa-exclamation-circle"></i>Controversial</a>');
     $.ajax('https://www.reddit.com/controversial/.json?limit=1', {
         success: data => {
             let post_list = data.data.children;
