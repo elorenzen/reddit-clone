@@ -326,7 +326,44 @@ form .nav-item {
 #profile-icons i {
     color: #878a8c
 }
+/* START OF NEW CODE */
+@media (min-width: 640px){
+    .post {
+        padding-left: 40px;
+        border-radius: 4px;
+    }
+}
 
+.post {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    color: rgb(135, 138, 140);
+    cursor: pointer;
+    border: 1px solid rgb(204, 204, 204);
+    transition: color 0.5 ease 0s, box-shadow 0.5s ease 0s;
+}
+
+.post_shoulder {
+    width: 40px;
+    border-left: 4px solid transparent;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    padding: 8px 4px 8px 0;
+    position: absolute;
+    top: 0;
+}
+
+.post_shoulder_content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+/* END OF NEW CODE */
 #post {
     width: 648px;
     display: flex;
