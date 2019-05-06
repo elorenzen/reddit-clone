@@ -279,6 +279,11 @@ form .nav-item {
     text-overflow: ellipsis;
 }
 
+.subreddit_icon {
+    border-radius: 50%;
+    background-color: blue;
+}
+
 .flexbox {
     display: flex;
     flex-direction: row;

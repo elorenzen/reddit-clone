@@ -20,8 +20,11 @@ $(document).ready(function(){
                 let subredditName = post.subreddit_name_prefixed;
                 let username = post.author;
                 let commentCount = post.num_comments;
+                let subredditIconURL = post.icon_url;
                 //Add post title 
                 $('.post_title').append(title);
+                //Add subreddit icon 
+                $('.subreddit_icon').attr('src', 'subredditIconURL.val()');
                 //Add subreddit name
                 $('.subreddit_name').append(subredditName);
                 //Add username
@@ -43,6 +46,7 @@ $(document).ready(function(){
 })
 
 $('.filter_hot').click(function(){
+    $('.default_list').html('<a class="dropdown-item sort-dropdown-item filter_hot" href="#"><i class="fas fa-fire"></i>Hot</a>')
     $.ajax('https://www.reddit.com/hot/.json?limit=1', {
         success: data => {
             let post_list = data.data.children;
@@ -73,7 +77,7 @@ $('.filter_hot').click(function(){
         error: function(){
             console.log("Problem loading 'hot' list");
         }
-    })
+    });
 });
 
 $('.filter_new').click(function(){
@@ -160,6 +164,9 @@ $('.filter_top').click(function(){
                 let username = post.author;
                 let commentCount = post.num_comments;
                 let textContent = post.selftext;
+                let image_url = post.thumbnail;
+                let image_height = post.thumbnail_height;
+                let image_width = post.thumbnail_width;
                 //Add post title 
                 $('.post_title').text(title);
                 //Add subreddit name
@@ -168,8 +175,14 @@ $('.filter_top').click(function(){
                 $('.post_author').text(username);
                 //Add number of comments
                 $('.post_comments').text(commentCount);
-                //Add content
-                $('.post_content').text(textContent);
+                //Add text or image content
+                if(textContent !== null){
+                    // text content
+                    $('.post_content').text(textContent);
+                } else {
+                    // image content
+                    $('.post_content').html("<img src='image_url'>")
+                }
 
                 if(votes === 0){
                     $('post_title').text('•');
