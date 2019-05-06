@@ -49,7 +49,7 @@ $(document).ready(function(){
 
 // When top nav dropdown 'all' is clicked, reddit posts will update with said feed theme
 $('.feed_all').click(function(){
-    
+    $('.default_feed').html('<a class="dropdown-item feed_all" href="#"><i class="fas fa-chart-pie"></i>All</a>');
     $.ajax('https://www.reddit.com/r/all.json?limit=1', {
         success: data => {
             let post_list = data.data.children;
