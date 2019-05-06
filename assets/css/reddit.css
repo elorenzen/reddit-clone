@@ -597,6 +597,20 @@ form .nav-item {
     text-decoration: none;
 }
 
+.sidebar_ad {
+    margin-top: 16px;
+    width: 312px;
+}
+
+.sidebar_ad_container {
+    padding: 6px;
+    overflow-wrap: break-word;
+    background-color: white;
+    color: rgb(26, 26, 27);
+    border-radius: 5px 5px 4px 4px;
+    overflow: visible;
+}
+
 /* END OF NEW CODE */
 #post {
     width: 648px;
