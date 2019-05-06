@@ -81,6 +81,7 @@ $('.filter_hot').click(function(){
 });
 
 $('.filter_new').click(function(){
+    $('.default_list').html('<a class="dropdown-item sort-dropdown-item filter_new" href="#"><i class="fas fa-paper-plane"></i>New</a>');
     $.ajax('https://www.reddit.com/new/.json?limit=1', {
         success: data => {
             let post_list = data.data.children;
