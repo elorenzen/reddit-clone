@@ -24,20 +24,20 @@ $(document).ready(function(){
                 let commentCount = post.num_comments;
                 let subredditIconURL = post.icon_url;
                 //Add post title 
-                $('.post_title').append(title);
+                $('.post_title').text(title);
                 //Add subreddit icon 
                 $('.subreddit_icon').attr('src', 'subredditIconURL.val()');
                 //Add subreddit name
-                $('.subreddit_name').append(subredditName);
+                $('.subreddit_name').text(subredditName);
                 //Add username
-                $('.post_author').append(username);
+                $('.post_author').text(username);
                 //Add number of comments
-                $('.post_comments').append(commentCount);
+                $('.post_comments').text(commentCount + ' Comments');
                 
                 if(votes === 0){
-                    $('post_title').append('•');
+                    $('post_title').text('•');
                 } else {
-                    $('.post_votes').append(votes);
+                    $('.post_votes').text(votes);
                 }
             }
         },
@@ -75,7 +75,7 @@ $('.feed_all').click(function(){
                 //Add username
                 $('.post_author').text(username);
                 //Add number of comments
-                $('.post_comments').text(commentCount);
+                $('.post_comments').text(commentCount + ' Comments');
 
                 if(votes === 0){
                     $('post_title').text('•');
@@ -110,7 +110,7 @@ $('.feed_oc').click(function(){
                 //Add username
                 $('.post_author').text(username);
                 //Add number of comments
-                $('.post_comments').text(commentCount);
+                $('.post_comments').text(commentCount + ' Comments');
 
                 if(votes === 0){
                     $('post_title').text('•');
@@ -148,7 +148,7 @@ $('.filter_hot').click(function(){
                 //Add username
                 $('.post_author').text(username);
                 //Add number of comments
-                $('.post_comments').text(commentCount);
+                $('.post_comments').text(commentCount + ' Comments');
 
                 if(votes === 0){
                     $('post_title').text('•');
@@ -184,7 +184,7 @@ $('.filter_new').click(function(){
                 //Add username
                 $('.post_author').text(username);
                 //Add number of comments
-                $('.post_comments').text(commentCount);
+                $('.post_comments').text(commentCount + ' Comments');
 
                 if(votes === 0){
                     $('post_title').text('•');
@@ -221,7 +221,7 @@ $('.filter_controversial').click(function(){
                 //Add username
                 $('.post_author').text(username);
                 //Add number of comments
-                $('.post_comments').text(commentCount);
+                $('.post_comments').text(commentCount + ' Comments');
                 //Add content
                 $('.post_content').text(textContent);
 
@@ -263,7 +263,7 @@ $('.filter_top').click(function(){
                 //Add username
                 $('.post_author').text(username);
                 //Add number of comments
-                $('.post_comments').text(commentCount);
+                $('.post_comments').text(commentCount + ' Comments');
                 //Add text or image content
                 if(textContent !== null){
                     // text content
@@ -308,7 +308,7 @@ $('.filter_rising').click(function(){
                 //Add username
                 $('.post_author').text(username);
                 //Add number of comments
-                $('.post_comments').text(commentCount);
+                $('.post_comments').text(commentCount + ' Comments');
                 //Add content
                 $('.post_content').text(textContent);
 
