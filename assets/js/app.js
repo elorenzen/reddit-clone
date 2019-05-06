@@ -154,6 +154,7 @@ $('.filter_controversial').click(function(){
 });
 
 $('.filter_top').click(function(){
+    $('.default_list').html('<a class="dropdown-item sort-dropdown-item filter_top" href="#"><i class="fas fa-level-up-alt"></i>Top</a>');
     $.ajax('https://www.reddit.com/top/.json?limit=1', {
         success: data => {
             let post_list = data.data.children;
