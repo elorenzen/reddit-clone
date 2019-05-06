@@ -135,9 +135,10 @@
             </div>
         </div>
        
-        
-        <div class="container">
-            <div class='flexbox-content'>
+        <!-- START OF NEW CODE -->
+
+        <div class="reddit_container">
+            <!--<div class='flexbox-content'>-->
                 <div class="post">
                     <div class="post_shoulder">
                         <div class="post_shoulder_content">
@@ -150,8 +151,55 @@
                             </button>
                         </div>
                     </div>
+                    <div class="post_content">
+                        <div class="post_content_header">
+                            <div style="flex: 0 0 auto;">
+                                <a class="post_content_header_icon">
+                                    <img class="subreddit_icon">
+                                </a>
+                            </div>
+                            <div class="post_content_header_text">
+                                <div>
+                                    <a class="subreddit_name"></a>
+                                    <span class="post_divider">•</span>
+                                    <a class="post_author"></a>
+                                    <a> 12 hours ago</a>
+                                </div>
+                                <div>
+                                    <button class="post_content_join"><i class="fas fa-plus"></i>Join</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_content_title">
+                            <span style="display: inline; position: relative; text-decoration: none;">
+                                <a class="post_title"></a>
+                            </span>
+                        </div>
+                        <div class="post_content_buttons_container">
+                            <div class="post_content_buttons">
+                                <a class="comment_button">
+                                    <i class="fas fa-comment-alt"></i>
+                                    <span class="post_comments"></span> 
+                                </a>
+                                <div class="share_button_container">
+                                    <button class="share_button">
+                                        <i class="fas fa-share"></i>
+                                        <span style="display: inline-block; line-height: 1; vertical-align: middle;">share</span>
+                                    </button>
+                                </div>
+                                <button class="save_button">
+                                    <i class="fas fa-bookmark"></i>
+                                    <span>save</span>  
+                                </button>
+                            </div>
+                        </div> 
+                    </div>
                 </div>
-                <!-- 
+
+                <!-- END OF NEW CODE -->
+
+                <!-- START OF ORIGINAL CODE
+
                 <div id='post'>
                     
                     <div id='post-shoulder'>
@@ -165,7 +213,7 @@
                         <p class="post_content"></p>
                         <div class='post-action-icons'>
                             <div>
-                                <a role='button' href='#'><i class="fas fa-comment-alt"></i><span class='post_comments'></span> Comments</a>
+                                <a role='button' href='#'><i class="fas fa-comment-alt"></i><span class='post_comments'></span></a>
                             </div>
                             <div>
                                 <a href="#" role="button"><i class="fas fa-award"></i>Give award</a>
@@ -186,215 +234,227 @@
                         </div>
                     </div>
                 </div>
-                -->
-                <div>
-                    <div class='container-fluid sidebar-item' style='height: 241px;'>
-                        <div id='sidebar-home-picture'></div>
-                        <div id='home-reddit-robot'></div>
-                        <div class="card-title text-left" id='home-title'>Home</div>
-                            <p class="card-body text-justify" id='home-content'>Your personal Reddit frontpage. Come here to check in with your favorite communities.</p>
-                            <button id="sidebar-button-primary" style='margin-bottom: 10px'>CREATE POST</button>
-                            <button id="sidebar-button-primary-disabled" style='margin-bottom: 10px'>CREATE COMMUNITY</button>
-                    </div>
-                    
-                    <div class='container-fluid sidebar-item'>
-                        <p class="card-title">ADVERTISEMENT</p>
-                    </div>
-                    
-                    <div class="container-fluid sidebar-item">
-                        <div class="flexbox-content" id='sidebar-premium'>
-                            <div class="m-auto">
-                                <i class="fas fa-shield-alt" id='sidebar-premium-icon'></i>
-                            </div>
-                            <div id='sidebar-premium-content'>
-                                <h1>Reddit Premium</h1>
-                                <p>The best Reddit experience, with monthly coins</p>
-                            </div>
-                            <div class="m-auto">
-                                <button class="btn btn-sm btn-danger" id='sidebar-premium-button'>TRY NOW</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class='sidebar-item' id='sidebar-communities'>
-                        <div id='communities-title'>
-                            <p style='padding: 12px 0;'>TRENDING COMMUNITIES</p>    
-                        </div>
-                        
-                        <div id='communities-list'>
-                            <div class='communities-item'>
-                                <div class='communities-item-icon'>
-                                    <i class="fab fa-reddit"></i>
-                                </div>
-                                <div class='communities-item-content'>
-                                    <a href='#' class='communities-item-content-title'>r/AskReddit</a>
-                                    <div class='communities-item-content-members'>
-                                        <p>3.1k members</p>
-                                    </div>
-                                </div>
-                                <div class='communities-item-content-join'>
-                                    <button class='communities-item-content-join-button'>JOIN</button>
-                                </div>
-                            </div>
-                            
-                            <div class='communities-item'>
-                                <div class='communities-item-icon'>
-                                    <i class="fab fa-reddit"></i>
-                                </div>
-                                <div class='communities-item-content'>
-                                    <a href='#' class='communities-item-content-title'>r/DIY</a>
-                                    <div class='communities-item-content-members'>
-                                        <p>47k members</p>
-                                    </div>
-                                </div>
-                                <div class='communities-item-content-join'>
-                                    <button class='communities-item-content-join-button'>JOIN</button>
-                                </div>
-                            </div>
-                            
-                            <div class='communities-item'>
-                                <div class='communities-item-icon'>
-                                    <i class="fab fa-reddit"></i>
-                                </div>
-                                <div class='communities-item-content'>
-                                    <a href='#' class='communities-item-content-title'>r/Bitcoin</a>
-                                    <div class='communities-item-content-members'>
-                                        <p>6.2k members</p>
-                                    </div>
-                                </div>
-                                <div class='communities-item-content-join'>
-                                    <button class='communities-item-content-join-button'>JOIN</button>
-                                </div>
-                            </div>
-                            
-                            <div class='communities-item'>
-                                <div class='communities-item-icon'>
-                                    <i class="fab fa-reddit"></i>
-                                </div>
-                                <div class='communities-item-content'>
-                                    <a href='#' class='communities-item-content-title'>r/lifehacks</a>
-                                    <div class='communities-item-content-members'>
-                                        <p>846 members</p>
-                                    </div>
-                                </div>
-                                <div class='communities-item-content-join'>
-                                    <button class='communities-item-content-join-button'>JOIN</button>
-                                </div>
-                            </div>
-                            
-                            <div class='communities-item'>
-                                <div class='communities-item-icon'>
-                                    <i class="fab fa-reddit"></i>
-                                </div>
-                                <div class='communities-item-content'>
-                                    <a href='#' class='communities-item-content-title'>r/Art</a>
-                                    <div class='communities-item-content-members'>
-                                        <p>6.6k members</p>
-                                    </div>
-                                </div>
-                                <div class='communities-item-content-join'>
-                                    <button class='communities-item-content-join-button'>JOIN</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="sidebar-item" id='sidebar-recent-posts'>
-                        <h3 id='recent-posts-title'>RECENT POSTS</h3>
-                        <div class='recent-posts-item'>
-                            <div class='recent-posts-item-image-frame' style='background-color: gray;'>
-                                <div class='recent-posts-item-image'>
-                                    <a href='#'>
-                                        <div class='recent-posts-item-image-url'>
-                                            
-                                        </div>
-                                    </a>
-                                </div>    
-                            </div>
-                            <div class='recent-posts-item-content'>
-                                <p class='recent-posts-item-title'>Recent Post Title</p>
-                                <div>
-                                    <span class='recent-posts-item-data'>483 points </span>
-                                    <span class='recent-posts-item-data'>- 12 comments </span>
-                                    <span class='recent-posts-item-data'>- 1d</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class='recent-posts-item'>
-                            <div class='recent-posts-item-image-frame' style='background-color: pink;'>
-                                <div class='recent-posts-item-image'>
-                                    <a href='#'>
-                                        <div class='recent-posts-item-image-url'>
-                                            
-                                        </div>
-                                    </a>
-                                </div>    
-                            </div>
-                            <div class='recent-posts-item-content'>
-                                <p class='recent-posts-item-title'> Another Recent Post Title</p>
-                                <div>
-                                    <span class='recent-posts-item-data'>1.6k points </span>
-                                    <span class='recent-posts-item-data'>- 82 comments </span>
-                                    <span class='recent-posts-item-data'>- 3d</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class='recent-posts-item'>
-                            <div class='recent-posts-item-image-frame' style='background-color: goldenrod;'>
-                                <div class='recent-posts-item-image'>
-                                    <a href='#'>
-                                        <div class='recent-posts-item-image-url'>
-                                            
-                                        </div>
-                                    </a>
-                                </div>    
-                            </div>
-                            <div class='recent-posts-item-content'>
-                                <p class='recent-posts-item-title'>...And One More Post Title</p>
-                                <div>
-                                    <span class='recent-posts-item-data'>12 points </span>
-                                    <span class='recent-posts-item-data'>- 1 comment </span>
-                                    <span class='recent-posts-item-data'>- 2h</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
+                END OF ORIGINAL CODE -->
 
-                    <div class="card container-fluid sidebar-item">
-                        <p>ADVERTISEMENT</p>
-                    </div>
 
-                    <div class="sidebar-item">
-                        <div id='sidebar-sitemap'>
-                            <div class="row">
-                                <div class="col-4">
-                                    <a class="card-text text-decoration-none" href="#">About</a>
-                                    <a class="card-text text-decoration-none" href="#">Careers</a>
-                                    <a class="card-text text-decoration-none" href="#">Press</a>
+                <div class="reddit_sidebar">
+                    <div class="reddit_sidebar_flex">
+
+                        <div class="sidebar_home_container">
+                            <div style="padding: 12px;">
+                            <!--<div class='container-fluid sidebar-item' style='height: 241px;'>-->
+                                <div id='sidebar-home-picture'></div>
+                                <div class="home_header">
+                                    <!-- <div id='home-reddit-robot'></div> -->
+                                    <div class="home_reddit_robot"></div>
+                                    <div class="home_title_container">
+                                        <span class="home_title">Home</span>
+                                    </div>
                                 </div>
-                                <div class="col-4">
-                                    <a class="card-text text-decoration-none" href="#">Advertise</a>
-                                    <a class="card-text text-decoration-none" href="#">Blog</a>
-                                    <a class="card-text text-decoration-none" href="#">Help</a>
+                                <p class="home_content">Your personal Reddit frontpage. Come here to check in with your favorite communities.</p>
+                                <div style="margin-top: 12px;">
+                                    <a href="#" class="home_create_button">Create Post</a>
                                 </div>
-                                <div class="col-4">
-                                    <a class="card-text text-decoration-none" href="#">The Reddit App</a>
-                                    <a class="card-text text-decoration-none" href="#">Reddit Coins</a>
-                                    <a class="card-text text-decoration-none" href="#">Reddit Premium</a>
-                                    <a class="card-text text-decoration-none" href="#">Reddit Gifts</a>
+                                <!-- <div class="card-title text-left" id='home-title'>Home</div> -->
+                                <!-- <p class="card-body text-justify" id='home-content'>Your personal Reddit frontpage. Come here to check in with your favorite communities.</p> -->
+                                <!-- 
+                                <button id="sidebar-button-primary" style='margin-bottom: 10px'>CREATE POST</button>
+                                <button id="sidebar-button-primary-disabled" style='margin-bottom: 10px'>CREATE COMMUNITY</button>
+                                -->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                        
+                        <div class='container-fluid sidebar-item'>
+                            <p class="card-title">ADVERTISEMENT</p>
+                        </div>
+                    
+                        <div class="container-fluid sidebar-item">
+                            <div class="flexbox-content" id='sidebar-premium'>
+                                <div class="m-auto">
+                                    <i class="fas fa-shield-alt" id='sidebar-premium-icon'></i>
+                                </div>
+                                <div id='sidebar-premium-content'>
+                                    <h1>Reddit Premium</h1>
+                                    <p>The best Reddit experience, with monthly coins</p>
+                                </div>
+                                <div class="m-auto">
+                                    <button class="btn btn-sm btn-danger" id='sidebar-premium-button'>TRY NOW</button>
                                 </div>
                             </div>
-                            <div class="text-center" id='sitemap-footer'>
-                                <p><a href="#">Content policy</a> | <a href="#">Privacy policy</a></p>
-                                <p><a href="#">User Agreement</a> | <a href="#">Mod policy</a></p>
-                                <p style='font-size: 12px;font-weight: 500; letter-spacing: .1px;'>© 2019 Reddit, Inc. All rights reserved</p>
+                        </div>
+                    
+                        <div class='sidebar-item' id='sidebar-communities'>
+                            <div id='communities-title'>
+                                <p style='padding: 12px 0;'>TRENDING COMMUNITIES</p>    
+                            </div>
+                        
+                            <div id='communities-list'>
+                                <div class='communities-item'>
+                                    <div class='communities-item-icon'>
+                                        <i class="fab fa-reddit"></i>
+                                    </div>
+                                    <div class='communities-item-content'>
+                                        <a href='#' class='communities-item-content-title'>r/AskReddit</a>
+                                        <div class='communities-item-content-members'>
+                                            <p>3.1k members</p>
+                                        </div>
+                                    </div>
+                                    <div class='communities-item-content-join'>
+                                        <button class='communities-item-content-join-button'>JOIN</button>
+                                    </div>
+                                </div>
+                            
+                                <div class='communities-item'>
+                                    <div class='communities-item-icon'>
+                                        <i class="fab fa-reddit"></i>
+                                    </div>
+                                    <div class='communities-item-content'>
+                                        <a href='#' class='communities-item-content-title'>r/DIY</a>
+                                        <div class='communities-item-content-members'>
+                                            <p>47k members</p>
+                                        </div>
+                                    </div>
+                                    <div class='communities-item-content-join'>
+                                        <button class='communities-item-content-join-button'>JOIN</button>
+                                    </div>
+                                </div>
+                            
+                                <div class='communities-item'>
+                                    <div class='communities-item-icon'>
+                                        <i class="fab fa-reddit"></i>
+                                    </div>
+                                    <div class='communities-item-content'>
+                                        <a href='#' class='communities-item-content-title'>r/Bitcoin</a>
+                                        <div class='communities-item-content-members'>
+                                            <p>6.2k members</p>
+                                        </div>
+                                    </div>
+                                    <div class='communities-item-content-join'>
+                                        <button class='communities-item-content-join-button'>JOIN</button>
+                                    </div>
+                                </div>
+                            
+                                <div class='communities-item'>
+                                    <div class='communities-item-icon'>
+                                        <i class="fab fa-reddit"></i>
+                                    </div>
+                                    <div class='communities-item-content'>
+                                        <a href='#' class='communities-item-content-title'>r/lifehacks</a>
+                                        <div class='communities-item-content-members'>
+                                            <p>846 members</p>
+                                        </div>
+                                    </div>
+                                    <div class='communities-item-content-join'>
+                                        <button class='communities-item-content-join-button'>JOIN</button>
+                                    </div>
+                                </div>
+                            
+                                <div class='communities-item'>
+                                    <div class='communities-item-icon'>
+                                        <i class="fab fa-reddit"></i>
+                                    </div>
+                                    <div class='communities-item-content'>
+                                        <a href='#' class='communities-item-content-title'>r/Art</a>
+                                        <div class='communities-item-content-members'>
+                                            <p>6.6k members</p>
+                                        </div>
+                                    </div>
+                                    <div class='communities-item-content-join'>
+                                        <button class='communities-item-content-join-button'>JOIN</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="sidebar-item" id='sidebar-recent-posts'>
+                            <h3 id='recent-posts-title'>RECENT POSTS</h3>
+                            <div class='recent-posts-item'>
+                                <div class='recent-posts-item-image-frame' style='background-color: gray;'>
+                                    <div class='recent-posts-item-image'>
+                                        <a href='#'>
+                                            <div class='recent-posts-item-image-url'></div>
+                                        </a>
+                                    </div>    
+                                </div>
+                                <div class='recent-posts-item-content'>
+                                    <p class='recent-posts-item-title'>Recent Post Title</p>
+                                    <div>
+                                        <span class='recent-posts-item-data'>483 points </span>
+                                        <span class='recent-posts-item-data'>- 12 comments </span>
+                                        <span class='recent-posts-item-data'>- 1d</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='recent-posts-item'>
+                                <div class='recent-posts-item-image-frame' style='background-color: pink;'>
+                                    <div class='recent-posts-item-image'>
+                                        <a href='#'>
+                                            <div class='recent-posts-item-image-url'></div>
+                                        </a>
+                                    </div>    
+                                </div>
+                                <div class='recent-posts-item-content'>
+                                    <p class='recent-posts-item-title'> Another Recent Post Title</p>
+                                    <div>
+                                        <span class='recent-posts-item-data'>1.6k points </span>
+                                        <span class='recent-posts-item-data'>- 82 comments </span>
+                                        <span class='recent-posts-item-data'>- 3d</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='recent-posts-item'>
+                                <div class='recent-posts-item-image-frame' style='background-color: goldenrod;'>
+                                    <div class='recent-posts-item-image'>
+                                        <a href='#'>
+                                            <div class='recent-posts-item-image-url'></div>
+                                        </a>
+                                    </div>    
+                                </div>
+                                <div class='recent-posts-item-content'>
+                                    <p class='recent-posts-item-title'>...And One More Post Title</p>
+                                    <div>
+                                        <span class='recent-posts-item-data'>12 points </span>
+                                        <span class='recent-posts-item-data'>- 1 comment </span>
+                                        <span class='recent-posts-item-data'>- 2h</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card container-fluid sidebar-item">
+                            <p>ADVERTISEMENT</p>
+                        </div>
+                        <div class="sidebar-item">
+                            <div id='sidebar-sitemap'>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a class="card-text text-decoration-none" href="#">About</a>
+                                        <a class="card-text text-decoration-none" href="#">Careers</a>
+                                        <a class="card-text text-decoration-none" href="#">Press</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="card-text text-decoration-none" href="#">Advertise</a>
+                                        <a class="card-text text-decoration-none" href="#">Blog</a>
+                                        <a class="card-text text-decoration-none" href="#">Help</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="card-text text-decoration-none" href="#">The Reddit App</a>
+                                        <a class="card-text text-decoration-none" href="#">Reddit Coins</a>
+                                        <a class="card-text text-decoration-none" href="#">Reddit Premium</a>
+                                        <a class="card-text text-decoration-none" href="#">Reddit Gifts</a>
+                                    </div>
+                                </div>
+                                <div class="text-center" id='sitemap-footer'>
+                                    <p><a href="#">Content policy</a> | <a href="#">Privacy policy</a></p>
+                                    <p><a href="#">User Agreement</a> | <a href="#">Mod policy</a></p>
+                                    <p style='font-size: 12px;font-weight: 500; letter-spacing: .1px;'>© 2019 Reddit, Inc. All rights reserved</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+           <!--</div>-->
         </div>
         
         <!-- LINK APP.JS FILE -->
