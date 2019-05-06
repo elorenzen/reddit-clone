@@ -49,6 +49,11 @@ $(document).ready(function(){
 
 // === TOP NAV DROPDOWN ===
 
+// When top nav dropdown 'Popular' is clicked, reddit posts will update with said feed theme
+$('.feed_popular').click(function(){
+    $('.default_feed').html('<a class="dropdown-item feed_popular" href="#"><i class="fas fa-chart-line"></i>Popular</a>');
+})
+
 // When top nav dropdown 'all' is clicked, reddit posts will update with said feed theme
 $('.feed_all').click(function(){
     $('.default_feed').html('<a class="dropdown-item feed_all" href="#"><i class="fas fa-chart-pie"></i>All</a>');
