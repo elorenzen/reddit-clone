@@ -508,11 +508,28 @@ form .nav-item {
     margin-left: 40px;
 }
 
+.post_content_title_container {
+    display: inline;
+    position: relative;
+    text-decoration: none;
+    word-break: break-word;
+}
+
 .post_content_title {
     margin: 0px 8px;
     padding: 0; 
     border: 0;
     font-size: 100%;
+}
+
+.post_title {
+    display: inline;
+    color: rgb(34, 34, 34);
+    overflow-wrap: break-word;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    padding-right: 5px;
 }
 
 .post_content_buttons_container {
