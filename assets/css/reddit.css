@@ -497,6 +497,30 @@ form .nav-item {
     margin: 4px 8px;
 }
 
+.media_preview {
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgb(0, 121, 211);
+    box-sizing: border-box;
+    flex: 1 1 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% top;
+}
+
+.media_click_icon {
+    background-color: rgb(0, 121, 211);
+    bottom: 0;
+    border-top-left-radius: 4px;
+    height: 18px;
+    position: absolute;
+    right: 0;
+    width: 18px;
+    display: block;
+}
+
 .post_content_join {
     float: right;
     margin-bottom: 8px;
@@ -574,6 +598,16 @@ form .nav-item {
     flex: 0 0 80px;
     border-radius: 2px;
     padding: 0px 8px;
+}
+
+.media_container {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    flex: 1 1 0%;
+    position: relative;
+    vertical-align: bottom;
+    overflow: hidden;
 }
 
 .post_content_buttons_container {
