@@ -488,6 +488,15 @@ form .nav-item {
     flex: 0 0 auto;
 }
 
+.post_media_url {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    white-space: nowrap;
+    color: rgb(0, 121, 211);
+    margin: 4px 8px;
+}
+
 .post_content_join {
     
     display: flex;
