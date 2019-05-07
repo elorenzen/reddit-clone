@@ -671,6 +671,46 @@ form .nav-item {
     border-color: rgb(50, 147, 219);
 }
 
+.sidebar_sitemap {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    padding: 12px;
+    color: rgb(26, 26, 27);
+    text-decoration: none;
+}
+
+.sitemap_column {
+    width: 33.333%;
+    flex: 0 0 33.333%;
+}
+
+.sitemap_link {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: rgb(26, 26, 27);
+}
+
+.sitemap_footer {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    padding-bottom: 12px;
+    
+}
+
+.sidebar_footer_link {
+    text-transform: capitalize;
+    text-decoration: none;
+    margin: 0px 4px;
+    color: rgb(26, 26, 27);
+}
+
 
 /* END OF NEW CODE */
 #post {
