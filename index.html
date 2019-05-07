@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
     </head>
     <body>
+        <!-- FIRST NAVBAR  -->
         <nav id='top-nav'>
             <div class='flexbox'>
                 <a class="navbar-brand" href="#">
@@ -47,12 +48,12 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="nav navbar-nav">
                         <form class="nav-item">
                             <input class="form-control mr-sm-2" id='nav-search' type="search" placeholder="Search Reddit" aria-label="Search">
                         </form>
                 </div>
-                
              
                 <div class="nav-item" id='nav-icons'>
                     <a href="#"><i class="fas fa-chart-line"></i></a>
@@ -91,6 +92,7 @@
             </div>
         </nav>
         
+        <!-- SECOND NAVBAR -->
         <div class='second-nav'>
             <div class='second-nav-responsive'>
                 <div class='second-nav-container'>
@@ -135,11 +137,9 @@
             </div>
         </div>
        
-        <!-- START OF NEW CODE -->
-
+        <!-- REDDIT PAGE CONTENT -->
         <div class="reddit_container" style="max-width: 100%;">
             <div class="post_container">
-            <!--<div class='flexbox-content'>-->
                 <div class="post_list">
                     <div class="post">
                         <!-- POST SHOULDER -->
@@ -159,12 +159,15 @@
                             <article class="post_content">
                                 <div class="post_content_text">
                                     <div class="post_content_header">
+
+                                        <!-- CODE FOR THE SUBREDDIT ICON IN THE REDDIT POST HEADER-->
                                         <div style="flex: 0 0 auto;">
                                             <a class="post_content_header_icon">
                                                 <img class="subreddit_icon">
                                             </a>   
                                         </div>
 
+                                        <!-- CODE FOR THE HEADER CONTAINING SUBREDDIT NAME POSTED BY USER -->
                                         <div style="flex: 1 1 auto">
                                             <div class="post_content_header_text">
                                                 <div style="display: inline-block; flex: 0 0 auto">
@@ -180,6 +183,7 @@
                                         </div>
                                     </div>
 
+                                    <!-- CODE FOR THE POST TITLE -->
                                     <div style="margin: 0px 8px; display: block;">
                                         <span class="post_content_title_container">
                                             <a href="#" class="post_title_url">
@@ -188,6 +192,7 @@
                                         </span>
                                     </div>
 
+                                    <!-- CODE FOR THE POST MEDIA(IMAGES, VIDEO) URL-->
                                     <div style="display: flex; margin-top: 0px;">
                                         <a href='#' class="post_media_url">https://www.examplesite.com
                                             <i class="fas fa-external-link-alt"></i>
@@ -195,54 +200,14 @@
                                     </div>
 
                                 </div>
-                                <!--
-                                <div class="post_content_header">
-                                    <div style="flex: 0 0 auto;">
-                                        <a class="post_content_header_icon">
-                                            <img class="subreddit_icon">
-                                        </a>
-                                    </div>
-                                    <div class="post_content_header_text">
-                                        <div>
-                                            <a class="subreddit_name"></a>
-                                            <span class="post_divider">•</span>
-                                            <a class="post_author"></a>
-                                            <a> 12 hours ago</a>
-                                        </div>
-                                        <div>
-                                            <button class="post_content_join"><i class="fas fa-plus"></i>Join</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="post_content_title">
-                                    <span style="display: inline; position: relative; text-decoration: none;">
-                                        <a class="post_title"></a>
-                                    </span>
-                                </div>
-                                <div class="post_content_buttons_container">
-                                    <div class="post_content_buttons">
-                                        <a class="comment_button">
-                                            <i class="fas fa-comment-alt"></i>
-                                            <span class="post_comments"></span> 
-                                        </a>
-                                        <div class="share_button_container">
-                                            <button class="share_button">
-                                                <i class="fas fa-share"></i>
-                                                <span style="display: inline-block; line-height: 1; vertical-align: middle;">share</span>
-                                            </button>
-                                        </div>
-                                        <button class="save_button">
-                                            <i class="fas fa-bookmark"></i>
-                                            <span>save</span>  
-                                        </button>
-                                    </div>
-                                </div>
-                                -->
+                                
                             <div class="post_content_media">
+                                <!-- CODE FOR THE 'JOIN' BUTTON -->
                                 <button class="post_content_join">
                                     <i class="fas fa-plus"></i>
                                     Join
                                 </button>
+                                <!-- CODE FOR THE MEDIA -->
                                 <div class="media_container">
                                     <a href='#'>
                                         <div class="media_preview">
@@ -253,8 +218,9 @@
                                     </a>
                                 </div>
                             </div>
-
                             </article>
+
+                            <!-- CODE FOR THE BUTTONS AT BOTTOM OF REDDIT POST-->
                             <div class="post_content_buttons_container">
                                 <div class="post_content_buttons">
                                     <a class="comment_button">
@@ -273,112 +239,40 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </div> <!-- End of "post_content_container -->
+                    </div> <!-- End of "post" --> 
+                </div> <!-- End of "post_list" -->
+            </div> <!-- End of "post_container" -->
 
-                    </div>
-                </div>
-            </div>
-
-                <!-- END OF NEW CODE -->
-
-                <!-- START OF ORIGINAL CODE
-
-                <div id='post'>
-                    
-                    <div id='post-shoulder'>
-                        <button class='upvote'><i class="fas fa-arrow-up"></i></button>
-                        <p class="post_votes"></p>
-                        <button class='downvote'><i class="fas fa-arrow-down"></i></button>
-                    </div>
-                    <div id='post-content'>
-                        <small><img class="subreddit_icon"><a href="#"><strong class="subreddit_name"></strong></a> • Posted by <a href='#' class="post_author"></a> 4 hours ago</small>
-                        <h4 class="post_title"></h4>
-                        <p class="post_content"></p>
-                        <div class='post-action-icons'>
-                            <div>
-                                <a role='button' href='#'><i class="fas fa-comment-alt"></i><span class='post_comments'></span></a>
-                            </div>
-                            <div>
-                                <a href="#" role="button"><i class="fas fa-award"></i>Give award</a>
-                            </div>
-                            <div>
-                                <a href="#" role="button"><i class="fas fa-share"></i>Share</a>
-                            </div>
-                            <div class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">...</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#" role="button"><i class="fas fa-bookmark"></i>Save</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-ban"></i>Hide</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Report</a>
+            <!-- CODE FOR REDDIT PAGE SIDEBAR -->
+            <div class="reddit_sidebar">
+                <div class="reddit_sidebar_flex">
+                    <div class="sidebar_item_container">
+                        <div style="padding: 12px;">
+                            <div id='sidebar-home-picture'></div>
+                            <div class="home_header">
+                                <div class="home_reddit_robot"></div>
+                                <div class="home_title_container">
+                                    <span class="home_title">Home</span>
                                 </div>
+                            </div>
+                            <p class="home_content">Your personal Reddit frontpage. Come here to check in with your favorite communities.</p>
+                            <div style="margin-top: 12px;">
+                                <a href="#" class="home_create_button">Create Post</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                END OF ORIGINAL CODE -->
-
-
-                <div class="reddit_sidebar">
-                    <div class="reddit_sidebar_flex">
-
-                        <div class="sidebar_item_container">
-                            <div style="padding: 12px;">
-                            <!--<div class='container-fluid sidebar-item' style='height: 241px;'>-->
-                                <div id='sidebar-home-picture'></div>
-                                <div class="home_header">
-                                    <!-- <div id='home-reddit-robot'></div> -->
-                                    <div class="home_reddit_robot"></div>
-                                    <div class="home_title_container">
-                                        <span class="home_title">Home</span>
-                                    </div>
-                                </div>
-                                <p class="home_content">Your personal Reddit frontpage. Come here to check in with your favorite communities.</p>
-                                <div style="margin-top: 12px;">
-                                    <a href="#" class="home_create_button">Create Post</a>
-                                </div>
-                                <!-- <div class="card-title text-left" id='home-title'>Home</div> -->
-                                <!-- <p class="card-body text-justify" id='home-content'>Your personal Reddit frontpage. Come here to check in with your favorite communities.</p> -->
-                                <!-- 
-                                <button id="sidebar-button-primary" style='margin-bottom: 10px'>CREATE POST</button>
-                                <button id="sidebar-button-primary-disabled" style='margin-bottom: 10px'>CREATE COMMUNITY</button>
-                                -->
-                                <!--</div>-->
-                            </div>
-                        </div>
                         
-                        <div class="sidebar_item_layout">
-                            <div class="sidebar_item_container">
-                                ADVERTISEMENT
-                            </div>
+                    <!-- CODE FOR ADVERTISEMENT ITEM -->
+                    <div class="sidebar_item_layout">
+                        <div class="sidebar_item_container">
+                            ADVERTISEMENT
                         </div>
-                        <!--
-                        <div class='container-fluid sidebar-item'>
-                            <p class="card-title">ADVERTISEMENT</p>
-                        </div>
-                        -->
-
-                        <div class="sidebar_item_layout">
-                            <div class="sidebar_item_container">
-                                <div class="flexbox-content" id='sidebar-premium'>
-                                    <div class="m-auto">
-                                        <i class="fas fa-shield-alt" id='sidebar-premium-icon'></i>
-                                    </div>
-                                    <div id='sidebar-premium-content'>
-                                        <h1>Reddit Premium</h1>
-                                        <p>The best Reddit experience, with monthly coins</p>
-                                    </div>
-                                    <div class="m-auto">
-                                        <button class="btn btn-sm btn-danger" id='sidebar-premium-button'>TRY NOW</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--
-                        <div class="container-fluid sidebar-item">
+                    </div>
+                        
+                    <!-- CODE FOR REDDIT PREMIUM ITEM -->
+                    <div class="sidebar_item_layout">
+                        <div class="sidebar_item_container">
                             <div class="flexbox-content" id='sidebar-premium'>
                                 <div class="m-auto">
                                     <i class="fas fa-shield-alt" id='sidebar-premium-icon'></i>
@@ -392,8 +286,9 @@
                                 </div>
                             </div>
                         </div>
-                        -->
-                    
+                    </div>
+ 
+                    <!-- CODE FOR TRENDING COMMUNITIES ITEM -->                    
                         <div class="sidebar_item_layout">
                             <div class="sidebar_item_container">
                                 <div class="communities_title_container">
@@ -515,13 +410,200 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
+                            </div> <!-- End of "sidebar_item_container" -->
+                        </div> 
+                        <!-- END OF TRENDING COMMUNITIES ITEM -->
+                        
+                        <!-- CODE FOR ADVERTISEMENT ITEM -->
+                        <div class="sidebar_item_layout">
+                            <div class="sidebar_item_container">
+                                ADVERTISEMENT
                             </div>
-                        </div>  
+                        </div>
+    
+                        <!-- CODE FOR SITEMAP -->
+                        <div class="sidebar_item_layout">
+                            <div class="sidebar_item_container">
+                                <div class="sidebar_sitemap">
+                                    <div class="sitemap_column">
+                                        <div>
+                                            <a href='#' class="sitemap_link">About</a>
+                                            <a href="#" class="sitemap_link">Careers</a>
+                                            <a href="#" class="sitemap_link">Press</a>
+                                        </div>
+                                    </div>
+                                    <div class="sitemap_column">
+                                        <div>
+                                            <a href='#' class="sitemap_link">Advertise</a>
+                                            <a href="#" class="sitemap_link">Blog</a>
+                                            <a href="#" class="sitemap_link">Help</a>
+                                        </div>
+                                    </div>
+                                    <div class="sitemap_column">
+                                        <div>
+                                            <a href='#' class="sitemap_link">The Reddit App</a>
+                                            <a href="#" class="sitemap_link">Reddit Coins</a>
+                                            <a href="#" class="sitemap_link">Reddit Premium</a>
+                                            <a href="#" class="sitemap_link">Reddit Gifts</a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <!--
+                                <div class="sitemap_footer">
+                                    <div>
+                                        <a href="#" class="sidebar_footer_link">content policy</a>
+                                        <span>|</span>
+                                        <a href="#" class="sidebar_footer_link">privacy policy</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="sidebar_footer_link">user agreement</a>
+                                        <span>|</span>
+                                        <a href="#" class="sidebar_footer_link">mod policy</a>
+                                    </div>
+                                    <div>© 2019 Reddit, Inc. All rights reserved</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END OF CODE FOR SITEMAP -->
+                    </div>
+                </div>
+                <!-- End of "reddit_sidebar" -->
+            </div>
+            <!-- End of "reddit_container" -->
+        
+        <!-- LINK APP.JS FILE -->
+        <script type="text/javascript" src="./assets/js/app.js"></script>
+        <!-- BOOTSTRAP CDNs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        
+    </body>
+</html>
+
+<!--
+                                <div class="post_content_header">
+                                    <div style="flex: 0 0 auto;">
+                                        <a class="post_content_header_icon">
+                                            <img class="subreddit_icon">
+                                        </a>
+                                    </div>
+                                    <div class="post_content_header_text">
+                                        <div>
+                                            <a class="subreddit_name"></a>
+                                            <span class="post_divider">•</span>
+                                            <a class="post_author"></a>
+                                            <a> 12 hours ago</a>
+                                        </div>
+                                        <div>
+                                            <button class="post_content_join"><i class="fas fa-plus"></i>Join</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post_content_title">
+                                    <span style="display: inline; position: relative; text-decoration: none;">
+                                        <a class="post_title"></a>
+                                    </span>
+                                </div>
+                                <div class="post_content_buttons_container">
+                                    <div class="post_content_buttons">
+                                        <a class="comment_button">
+                                            <i class="fas fa-comment-alt"></i>
+                                            <span class="post_comments"></span> 
+                                        </a>
+                                        <div class="share_button_container">
+                                            <button class="share_button">
+                                                <i class="fas fa-share"></i>
+                                                <span style="display: inline-block; line-height: 1; vertical-align: middle;">share</span>
+                                            </button>
+                                        </div>
+                                        <button class="save_button">
+                                            <i class="fas fa-bookmark"></i>
+                                            <span>save</span>  
+                                        </button>
+                                    </div>
+                                </div>
+                                -->
+
+<!-- END OF NEW CODE -->
+
+                <!-- START OF ORIGINAL CODE
+
+                <div id='post'>
+                    
+                    <div id='post-shoulder'>
+                        <button class='upvote'><i class="fas fa-arrow-up"></i></button>
+                        <p class="post_votes"></p>
+                        <button class='downvote'><i class="fas fa-arrow-down"></i></button>
+                    </div>
+                    <div id='post-content'>
+                        <small><img class="subreddit_icon"><a href="#"><strong class="subreddit_name"></strong></a> • Posted by <a href='#' class="post_author"></a> 4 hours ago</small>
+                        <h4 class="post_title"></h4>
+                        <p class="post_content"></p>
+                        <div class='post-action-icons'>
+                            <div>
+                                <a role='button' href='#'><i class="fas fa-comment-alt"></i><span class='post_comments'></span></a>
+                            </div>
+                            <div>
+                                <a href="#" role="button"><i class="fas fa-award"></i>Give award</a>
+                            </div>
+                            <div>
+                                <a href="#" role="button"><i class="fas fa-share"></i>Share</a>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">...</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#" role="button"><i class="fas fa-bookmark"></i>Save</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-ban"></i>Hide</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Report</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                END OF ORIGINAL CODE -->
+
+                 <!--<div class='container-fluid sidebar-item' style='height: 241px;'>-->
+
+<!-- <div id='home-reddit-robot'></div> -->
+
+
+ <!-- <div class="card-title text-left" id='home-title'>Home</div> -->
+                                <!-- <p class="card-body text-justify" id='home-content'>Your personal Reddit frontpage. Come here to check in with your favorite communities.</p> -->
+                                <!-- 
+                                <button id="sidebar-button-primary" style='margin-bottom: 10px'>CREATE POST</button>
+                                <button id="sidebar-button-primary-disabled" style='margin-bottom: 10px'>CREATE COMMUNITY</button>
+                                -->
+                                <!--</div>-->
+
+<!--
+                        <div class='container-fluid sidebar-item'>
+                            <p class="card-title">ADVERTISEMENT</p>
+                        </div>
+                        -->
+
+<!--
+                        <div class="container-fluid sidebar-item">
+                            <div class="flexbox-content" id='sidebar-premium'>
+                                <div class="m-auto">
+                                    <i class="fas fa-shield-alt" id='sidebar-premium-icon'></i>
+                                </div>
+                                <div id='sidebar-premium-content'>
+                                    <h1>Reddit Premium</h1>
+                                    <p>The best Reddit experience, with monthly coins</p>
+                                </div>
+                                <div class="m-auto">
+                                    <button class="btn btn-sm btn-danger" id='sidebar-premium-button'>TRY NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+
+<!--
                         <div class='sidebar-item' id='sidebar-communities'>
                             <div id='communities-title'>
                                 <p style='padding: 12px 0;'>TRENDING COMMUNITIES</p>    
@@ -606,64 +688,13 @@
                         </div>
                         -->
 
-
-                        <div class="sidebar_item_layout">
-                            <div class="sidebar_item_container">
-                                ADVERTISEMENT
-                            </div>
-                        </div>
-    
                             <!-- 
                             <div class="card container-fluid sidebar-item">
                                 <p>ADVERTISEMENT</p>
                             </div>
                             -->
-                    
-                        <div class="sidebar_item_layout">
-                            <div class="sidebar_item_container">
-                                <div class="sidebar_sitemap">
-                                    <div class="sitemap_column">
-                                        <div>
-                                            <a href='#' class="sitemap_link">About</a>
-                                            <a href="#" class="sitemap_link">Careers</a>
-                                            <a href="#" class="sitemap_link">Press</a>
-                                        </div>
-                                    </div>
-                                    <div class="sitemap_column">
-                                        <div>
-                                            <a href='#' class="sitemap_link">Advertise</a>
-                                            <a href="#" class="sitemap_link">Blog</a>
-                                            <a href="#" class="sitemap_link">Help</a>
-                                        </div>
-                                    </div>
-                                    <div class="sitemap_column">
-                                        <div>
-                                            <a href='#' class="sitemap_link">The Reddit App</a>
-                                            <a href="#" class="sitemap_link">Reddit Coins</a>
-                                            <a href="#" class="sitemap_link">Reddit Premium</a>
-                                            <a href="#" class="sitemap_link">Reddit Gifts</a>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="sitemap_footer">
-                                    <div>
-                                        <a href="#" class="sidebar_footer_link">content policy</a>
-                                        <span>|</span>
-                                        <a href="#" class="sidebar_footer_link">privacy policy</a>
-                                    </div>
-                                    <div>
-                                        <a href="#" class="sidebar_footer_link">user agreement</a>
-                                        <span>|</span>
-                                        <a href="#" class="sidebar_footer_link">mod policy</a>
-                                    </div>
-                                    <div>© 2019 Reddit, Inc. All rights reserved</div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!--
+ <!--
                         <div class="sidebar-item" id='sidebar-recent-posts'>
                             <h3 id='recent-posts-title'>RECENT POSTS</h3>
                             <div class='recent-posts-item'>
@@ -749,17 +780,3 @@
                             </div>
                         </div>
                         -->
-
-                    </div>
-                </div>
-           <!--</div>-->
-        </div>
-        
-        <!-- LINK APP.JS FILE -->
-        <script type="text/javascript" src="./assets/js/app.js"></script>
-        <!-- BOOTSTRAP CDNs -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-        
-    </body>
-</html>
