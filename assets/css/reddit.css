@@ -349,7 +349,22 @@ form .nav-item {
     flex-direction: row;
     justify-content: center;
     position: relative;
-    
+    margin: 0px auto;
+}
+
+@media (min-width: 960px) {
+    .post_container {
+        width: 648px;
+    }
+}
+
+.post_container {
+    min-width: 0px;
+}
+
+.post_list {
+    min-height: 1000px;
+    width: 100%;
 }
 
 @media (min-width: 640px){
@@ -383,8 +398,6 @@ form .nav-item {
 }
 
 .post_shoulder {
-    width: 40px;
-    border-left: 4px solid transparent;
     align-items: center;
     box-sizing: border-box;
     display: flex;
@@ -400,6 +413,12 @@ form .nav-item {
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+
+.post_votes {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
 }
 
 .post_content_header {
