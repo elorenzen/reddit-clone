@@ -22,30 +22,32 @@ $(document).ready(function(){
                 let subredditName = post.subreddit_name_prefixed;
                 let username = post.author;
                 let commentCount = post.num_comments;
-                let html = `<article class="post_content">
-                <div class="post_content_text">
-                    <div class="post_content_header">
+                let html =  `<article class="post_content">
+                                <div class="post_content_text">
+                                    <div class="post_content_header">
+                                    
+                                    <!-- CODE FOR THE SUBREDDIT ICON IN THE REDDIT POST HEADER-->
+                                    <div style="flex: 0 0 auto;">
+                                        <a class="post_content_header_icon">
+                                            <img class="subreddit_icon">
+                                        </a>   
+                                    </div>
 
-                        <!-- CODE FOR THE SUBREDDIT ICON IN THE REDDIT POST HEADER-->
-                        <div style="flex: 0 0 auto;">
-                            <a class="post_content_header_icon">
-                                <img class="subreddit_icon">
-                            </a>   
-                        </div>
-
-                        <!-- CODE FOR THE HEADER CONTAINING SUBREDDIT NAME POSTED BY USER -->
-                        <div style="flex: 1 1 auto">
-                            <div class="post_content_header_text">
-                                <div style="display: inline-block; flex: 0 0 auto">
-                                    <a class="subreddit_name" style="color: rgb(28, 28, 28);">`;
-                                        html += subredditName;
-                                html +=    `</a>
-                                </div>
-                                <span class="post_divider">•</span>
-                                <span class="posted_by">Posted by</span>
-                                <div style="display: inline-block">
-                                    <a class="post_author"></a>
-                                </div>
+                                    <!-- CODE FOR THE HEADER CONTAINING SUBREDDIT NAME POSTED BY USER -->
+                                    <div style="flex: 1 1 auto">
+                                        <div class="post_content_header_text">
+                                            <div style="display: inline-block; flex: 0 0 auto">
+                                                <a class="subreddit_name" style="color: rgb(28, 28, 28);">`;
+                    html +=                         subredditName;
+                    html +=                     `</a>
+                                            </div>
+                                            <span class="post_divider">•</span>
+                                            <span class="posted_by">Posted by</span>
+                                            <div style="display: inline-block">
+                                                <a class="post_author">`
+                    html +=                         username;                           
+                    html +=                     `</a>
+                                            </div>
                                 <a class="posted_date"> 12 hours ago</a>
                             </div>
                         </div>
