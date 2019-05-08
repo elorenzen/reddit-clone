@@ -245,8 +245,10 @@ $(document).ready(function(){
                                                 </div>
                                             </div>
                                             */
-                                           
-                    html+=              `</div>
+                    html +=                 `<img src="`;
+                    html +=                     image_thumbnail;                       
+                    html +=             `">
+                    </div>
 
                                         <div class="post_content_media">
                                             <!-- CODE FOR THE 'JOIN' BUTTON -->
