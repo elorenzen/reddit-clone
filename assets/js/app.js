@@ -74,9 +74,14 @@ $(document).ready(function(){
                 }
 
                 else if ((currentDateMinutes - createdDateMinutes) > 0) {
-                    timeSincePosting = (currentDateMinutes - createdDateMinutes) + ' minutes ago';
+                    if ((currentDateMinutes - createdDateMinutes) === 1) {
+                        timeSincePosting = (currentDateMinutes - createdDateMinutes) + ' minute ago';
+                    }
+                    else {
+                        timeSincePosting = (currentDateMinutes - createdDateMinutes) + ' minutes ago';
+                    }
                 }
-                
+
                 else if ((currentDateSeconds - createdDateSeconds) > 0) {
                     timeSincePosting = (currentDateSeconds - createdDateSeconds) + ' seconds ago';
                 }
