@@ -24,6 +24,9 @@ $(document).ready(function(){
                 let commentCount = post.num_comments;
 
                 let createdDate = new Date(post.created_utc * 1000);
+                let createdDateYears = createdDate.getFullYear();
+                let createdDateMonths = createdDate.getMonth();
+                let createdDateDays = createdDate.getDay();
                 let createdDateHours = createdDate.getHours();
                 let createdDateMinutes = '0' + createdDate.getMinutes();
                 let createdDateSeconds = '0' + createdDate.getSeconds();
