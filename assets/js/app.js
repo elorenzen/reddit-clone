@@ -22,12 +22,21 @@ $(document).ready(function(){
                 let subredditName = post.subreddit_name_prefixed;
                 let username = post.author;
                 let commentCount = post.num_comments;
+
                 let createdDate = new Date(post.created_utc * 1000);
                 let createdDateHours = createdDate.getHours();
                 let createdDateMinutes = '0' + createdDate.getMinutes();
                 let createdDateSeconds = '0' + createdDate.getSeconds();
                 let createdDateFormattedTime = createdDateHours + ':' + createdDateMinutes + ':' + createdDateSeconds;
                 console.log(createdDate);
+
+                let currentDate = new Date();
+                console.log(currentDate);
+                let currentDateHours = currentDate.getHours();
+                console.log(currentDateHours);
+                let currentDateMinutes = currentDate.getMinutes();
+                
+
                 let html =  `<!-- POST SHOULDER -->
                             <div class="post_shoulder" style="width: 40px; border-left: 4px solid transparent;">
                                 <div class="post_shoulder_content">
@@ -68,7 +77,9 @@ $(document).ready(function(){
                     html +=                                 username;                           
                     html +=                             `</a>
                                                     </div>
-                                                    <a class="posted_date"> 12 hours ago</a>
+                                                    <a class="posted_date">`
+                    html +=                             createdDateFormattedTime;
+                    html +=                         `</a>
                                                 </div>
                                             </div>
                                         </div>
