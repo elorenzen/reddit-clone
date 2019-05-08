@@ -28,14 +28,18 @@ $(document).ready(function(){
                 let createdDateMinutes = '0' + createdDate.getMinutes();
                 let createdDateSeconds = '0' + createdDate.getSeconds();
                 let createdDateFormattedTime = createdDateHours + ':' + createdDateMinutes + ':' + createdDateSeconds;
-                console.log(createdDate);
 
                 let currentDate = new Date();
-                console.log(currentDate);
                 let currentDateHours = currentDate.getHours();
-                console.log(currentDateHours);
                 let currentDateMinutes = currentDate.getMinutes();
-                
+                let currentDateSeconds = currentDate.getSeconds();
+
+                let timeSincePosting;
+
+                if ((currentDateHours - createdDateHours) > 0){
+                    timeSincePosting = (currentDateHours - createdDateHours) + ' hours ago';
+                    console.log(timeSincePosting);
+                }
 
                 let html =  `<!-- POST SHOULDER -->
                             <div class="post_shoulder" style="width: 40px; border-left: 4px solid transparent;">
@@ -78,7 +82,7 @@ $(document).ready(function(){
                     html +=                             `</a>
                                                     </div>
                                                     <a class="posted_date">`
-                    html +=                             createdDateFormattedTime;
+                    html +=                             timeSincePosting;
                     html +=                         `</a>
                                                 </div>
                                             </div>
