@@ -332,6 +332,11 @@ $(document).ready(function(){
                                            /*
                     html +=                 `<img src="${image_thumbnail}" style="width: ${image_thumbnail_width}; height: ${image_thumbnail_height}">`;
                                          */
+                                        
+                    html +=                 `<iframe src="`;
+                    html +=                     video_url;
+                    html +=                 `"></iframe>`;
+            
                     html +=             `</div>
 
                                         <div class="post_content_media">
