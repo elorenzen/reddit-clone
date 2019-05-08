@@ -278,7 +278,7 @@ $(document).ready(function(){
                                     </article>`;
                     }
 
-                // WHEN REDDIT POST MEDIA IS VIDEO
+                // === WHEN REDDIT POST MEDIA IS VIDEO ===
                     else if (post_hint === "rich:video" || post_hint === "hosted:video") {
                         html += `<article class="post_content">
                                         <div class="post_content_text">
