@@ -33,6 +33,9 @@ $(document).ready(function(){
                 let createdDateFormattedTime = createdDateHours + ':' + createdDateMinutes + ':' + createdDateSeconds;
 
                 let currentDate = new Date();
+                let currentDateYears = currentDate.getFullYear();
+                let currentDateMonths = currentDate.getMonth();
+                let currentDateDays = currentDate.getDay();
                 let currentDateHours = currentDate.getHours();
                 let currentDateMinutes = currentDate.getMinutes();
                 let currentDateSeconds = currentDate.getSeconds();
