@@ -22,6 +22,7 @@ $(document).ready(function(){
                 let subredditName = post.subreddit_name_prefixed;
                 let username = post.author;
                 let commentCount = post.num_comments;
+                let media_url = post.url;
 
                 let createdDate = new Date(post.created_utc * 1000);
                 let createdDateYears = createdDate.getFullYear();
@@ -153,8 +154,9 @@ $(document).ready(function(){
 
                                             <!-- CODE FOR THE POST MEDIA(IMAGES, VIDEO) URL-->
                                             <div style="display: flex; margin-top: 0px;">
-                                                <a href='#' class="post_media_url">https://www.examplesite.com
-                                                    <i class="fas fa-external-link-alt"></i>
+                                                <a href='${media_url}' class="post_media_url">`;
+                    html +=                         media_url;
+                    html +=                         `<i class="fas fa-external-link-alt"></i>
                                                 </a>
                                             </div>
                                         </div>

@@ -377,6 +377,7 @@ form .nav-item {
     position: relative;
     word-break: break-word;
     flex: 1 1 100%;
+    text-overflow: ellipsis;
 }
 
 .subreddit_icon {
@@ -493,6 +494,7 @@ form .nav-item {
     position: relative;
     text-decoration: none;
     word-break: break-word;
+    text-overflow: ellipsis;
 }
 
 .post_content_title {
