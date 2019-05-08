@@ -83,7 +83,12 @@ $(document).ready(function(){
                 }
 
                 else if ((currentDateSeconds - createdDateSeconds) > 0) {
-                    timeSincePosting = (currentDateSeconds - createdDateSeconds) + ' seconds ago';
+                    if ((currentDateSeconds - createdDateSeconds) === 1) {
+                        timeSincePosting = (currentDateSeconds - createdDateSeconds) + ' second ago';
+                    }
+                    else {
+                        timeSincePosting = (currentDateSeconds - createdDateSeconds) + ' seconds ago';
+                    }
                 }
 
 
