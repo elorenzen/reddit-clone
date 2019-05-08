@@ -223,8 +223,8 @@ $(document).ready(function(){
                                                     </div>
                                                 </div>
                                             </div>`;
-                                            /*
-                                            <!-- CODE FOR THE POST TITLE -->
+                                            
+                    html +=                 `<!-- CODE FOR THE POST TITLE -->
                                             <div style="margin: 0px 8px; display: block;">
                                                 <span class="post_content_title_container">
                                                     <a href="#" class="post_title_url">
@@ -233,9 +233,9 @@ $(document).ready(function(){
                     html +=                             `</h2>
                                                     </a>
                                                 </span>
-                                            </div>
+                                            </div>`
 
-                                            
+                                            /*
                                             <!-- CODE FOR THE POST MEDIA(IMAGES, VIDEO) URL-->
                                             <div style="display: flex; margin-top: 0px;">
                                                 <div style="background-image: url(`;
@@ -245,10 +245,9 @@ $(document).ready(function(){
                                                 </div>
                                             </div>
                                             */
-                    html +=                 `<img src="`;
-                    html +=                     image_thumbnail;                       
-                    html +=             `">
-                    </div>
+                    html +=                 `<img src="${image_thumbnail}" style="width: ${image_thumbnail_width}; height: ${image_thumbnail_height}">`;
+                                         
+                    html +=             `</div>
 
                                         <div class="post_content_media">
                                             <!-- CODE FOR THE 'JOIN' BUTTON -->
