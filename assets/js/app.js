@@ -42,9 +42,12 @@ $(document).ready(function(){
 
                 let timeSincePosting;
 
-                if ((currentDateHours - createdDateHours) > 0){
+                
+                if ((currentDateYears - createdDateYears) > 0) {
+                    timeSincePosting = (currentDateYears - createdDateYears) + ' years ago';
+                }
+                else if ((currentDateHours - createdDateHours) > 0){
                     timeSincePosting = (currentDateHours - createdDateHours) + ' hours ago';
-                    console.log(timeSincePosting);
                 }
 
                 let html =  `<!-- POST SHOULDER -->
