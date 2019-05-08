@@ -116,6 +116,7 @@ $(document).ready(function(){
                                 <!-- POST CONTENT -->
                                 <div class="post_content_container">`;
 
+                // ==== WHEN REDDIT POST MEDIA IS LINK ===
                     if(post_hint === "link") {
                     html +=         `<article class="post_content">
                                         <div class="post_content_text">
@@ -192,6 +193,8 @@ $(document).ready(function(){
                                         </div>
                                     </article>`;
                     } 
+                
+                // === WHEN REDDIT POST MEDIA IS IMAGE ===
                     else if (post_hint === "image") {
                         html += `<article class="post_content">
                                         <div class="post_content_text">
@@ -273,9 +276,10 @@ $(document).ready(function(){
                                             */
                     html+=              `</div>
                                     </article>`;
-
                     }
-                    else if (post_hint === "rich:video") {
+
+                // WHEN REDDIT POST MEDIA IS VIDEO
+                    else if (post_hint === "rich:video" || post_hint === "hosted:video") {
                         html += `<article class="post_content">
                                         <div class="post_content_text">
                                             <div class="post_content_header">
