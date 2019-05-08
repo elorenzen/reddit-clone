@@ -48,9 +48,19 @@ $(document).ready(function(){
                 else if ((currentDateMonths - createdDateMonths) > 0) {
                     timeSincePosting = (currentDateMonths - createdDateMonths) + 'months ago';
                 }
+                else if ((currentDateDays - createdDateDays) > 0) {
+                    timeSincePosting = (currentDateDays - createdDateDays) + ' days ago';
+                }
                 else if ((currentDateHours - createdDateHours) > 0) {
                     timeSincePosting = (currentDateHours - createdDateHours) + ' hours ago';
                 }
+                else if ((currentDateMinutes - createdDateMinutes) > 0) {
+                    timeSincePosting = (currentDateMinutes - createdDateMinutes) + ' minutes ago';
+                }
+                else ((currentDateSeconds - createdDateSeconds) > 0) {
+                    timeSincePosting = (currentDateSeconds - createdDateSeconds) + ' seconds ago';
+                }
+
 
                 let html =  `<!-- POST SHOULDER -->
                             <div class="post_shoulder" style="width: 40px; border-left: 4px solid transparent;">
