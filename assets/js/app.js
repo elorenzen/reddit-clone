@@ -22,13 +22,24 @@ $(document).ready(function(){
                 let subredditName = post.subreddit_name_prefixed;
                 let username = post.author;
                 let commentCount = post.num_comments;
-                let html = "<i class='fas fa-comment-alt'></i>"
-                html += "<span class='post_comments'>"
-                html += commentCount;
-                html += " Comments";
-                html += "</span>"
+                let html = "<div class='post_content_buttons'><a class='comment_button'><i class='fas fa-comment-alt'></i><span class='post_comments'>"
+                html += `${commentCount} Comments`;
+                
+                html += `</span>
+                    </a>
+                    <div class='share_button_container'>
+                        <button class='share_button'>
+                            <i class='fas fa-share'></i>
+                            <span style='display: inline-block; line-height: 1; vertical-align: middle;'>share</span>
+                        </button>
+                    </div>
+                    <button class='save_button'>
+                        <i class='fas fa-bookmark'></i>
+                        <span>save</span>
+                    </button>
+                </div>`;
 
-                $('.comment_button').append(html);
+                $('.post_content_buttons_container').append(html);
 
                 /* Start of original code
 
