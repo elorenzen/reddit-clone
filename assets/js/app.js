@@ -48,17 +48,19 @@ $(document).ready(function(){
                     html +=                         username;                           
                     html +=                     `</a>
                                             </div>
-                                <a class="posted_date"> 12 hours ago</a>
-                            </div>
-                        </div>
-                    </div>
+                                            <a class="posted_date"> 12 hours ago</a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <!-- CODE FOR THE POST TITLE -->
-                    <div style="margin: 0px 8px; display: block;">
-                        <span class="post_content_title_container">
-                            <a href="#" class="post_title_url">
-                                <h2 class="post_title"></h2>
-                            </a>
+                                <!-- CODE FOR THE POST TITLE -->
+                                <div style="margin: 0px 8px; display: block;">
+                                    <span class="post_content_title_container">
+                                        <a href="#" class="post_title_url">
+                                            <h2 class="post_title">`
+                    html +=                     title;
+                    html +=                         `</h2>
+                                </a>
                         </span>
                     </div>
 
