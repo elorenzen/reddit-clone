@@ -28,7 +28,9 @@ $(document).ready(function(){
                                     <button class="upvote">
                                         <i class="fas fa-arrow-up"></i>
                                     </button>
-                                    <div class="post_votes" style="display: block; color: rgb(26, 26, 27);"></div>
+                                    <div class="post_votes" style="display: block; color: rgb(26, 26, 27);">`
+                    html +=             votes;                
+                    html +=         `</div>
                                     <button class="downvote">
                                         <i class="fas fa-arrow-down"></i>
                                     </button>
