@@ -111,7 +111,10 @@ $(document).ready(function(){
                                     </div>
                                 </div>
                                 <!-- POST CONTENT -->
-                                <div class="post_content_container"><article class="post_content">
+                                <div class="post_content_container">`;
+
+                    if(post_hint === "link") {
+                    html +=         `<article class="post_content">
                                         <div class="post_content_text">
                                             <div class="post_content_header">
                                                 <!-- CODE FOR THE SUBREDDIT ICON IN THE REDDIT POST HEADER-->
@@ -154,6 +157,7 @@ $(document).ready(function(){
                                                 </span>
                                             </div>
 
+                                            
                                             <!-- CODE FOR THE POST MEDIA(IMAGES, VIDEO) URL-->
                                             <div style="display: flex; margin-top: 0px;">
                                                 <a href='${media_url}' class="post_media_url">`;
@@ -173,7 +177,7 @@ $(document).ready(function(){
                                             <div class="media_container">
                                                 <a href='#'>
                                                     <div class="media_preview" style="background-image: url(`;
-                    html +=                             image_thumbnail
+                    html +=                             image_thumbnail;
                     html +=                             `")>
                     
                                                         <div class="media_click_icon">
@@ -184,6 +188,10 @@ $(document).ready(function(){
                                             </div>
                                         </div>
                                     </article>`;
+                    } 
+                                    
+
+                                    // === POST BUTTONS ===
                     html +=         `<div class='post_content_buttons_container'>
                                         <div class='post_content_buttons'>
                                             <a class='comment_button'>
