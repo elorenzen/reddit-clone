@@ -43,11 +43,18 @@ $(document).ready(function(){
                 let timeSincePosting;
 
                 if ((currentDateYears - createdDateYears) > 0) {
-                    timeSincePosting = (currentDateYears - createdDateYears) + ' years ago';
+                    if ((currentDateYears - createdDateYears) === 1) {
+                        timeSincePosting = (currentDateYears - createdDateYears) + ' year ago';
+                    }
+                    else {
+                        timeSincePosting = (currentDateYears - createdDateYears) + ' years ago';
+                    }
                 }
+
                 else if ((currentDateMonths - createdDateMonths) > 0) {
                     timeSincePosting = (currentDateMonths - createdDateMonths) + 'months ago';
                 }
+
                 else if ((currentDateDays - createdDateDays) > 0) {
                     if ((currentDateDays - createdDateDays) === 1) {
                         timeSincePosting = (currentDateDays - createdDateDays) + ' day ago';
@@ -56,6 +63,7 @@ $(document).ready(function(){
                         timeSincePosting = (currentDateDays - createdDateDays) + ' days ago';
                     }
                 }
+
                 else if ((currentDateHours - createdDateHours) > 0) {
                     if ((currentDateHours - createdDateHours) === 1) {
                         timeSincePosting = (currentDateHours - createdDateHours) + ' hour ago';
@@ -64,9 +72,11 @@ $(document).ready(function(){
                         timeSincePosting = (currentDateHours - createdDateHours) + ' hours ago';
                     }
                 }
+
                 else if ((currentDateMinutes - createdDateMinutes) > 0) {
                     timeSincePosting = (currentDateMinutes - createdDateMinutes) + ' minutes ago';
                 }
+                
                 else if ((currentDateSeconds - createdDateSeconds) > 0) {
                     timeSincePosting = (currentDateSeconds - createdDateSeconds) + ' seconds ago';
                 }
