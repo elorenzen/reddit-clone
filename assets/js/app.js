@@ -11,7 +11,7 @@ else{
 //Loads list of 'best' reddit posts upon opening file
 $(document).ready(function(){
     $('.default_list').html('<a class="dropdown-item sort-dropdown-item" href="#"><i class="fas fa-splotch"></i>Best</a>');
-    $.ajax("https://www.reddit.com/best/.json?limit=1", {
+    $.ajax("https://www.reddit.com/best/.json?", {
         success: data => {
             let post_list = data.data.children;
             console.log("Successfully loaded 'best' list");
@@ -57,118 +57,120 @@ $(document).ready(function(){
                 else if ((currentDateMinutes - createdDateMinutes) > 0) {
                     timeSincePosting = (currentDateMinutes - createdDateMinutes) + ' minutes ago';
                 }
-                else ((currentDateSeconds - createdDateSeconds) > 0) {
+                else if ((currentDateSeconds - createdDateSeconds) > 0) {
                     timeSincePosting = (currentDateSeconds - createdDateSeconds) + ' seconds ago';
                 }
 
 
-                let html =  `<!-- POST SHOULDER -->
-                            <div class="post_shoulder" style="width: 40px; border-left: 4px solid transparent;">
-                                <div class="post_shoulder_content">
-                                    <button class="upvote">
-                                        <i class="fas fa-arrow-up"></i>
-                                    </button>
-                                    <div class="post_votes" style="display: block; color: rgb(26, 26, 27);">`
-                    html +=             votes;                
-                    html +=         `</div>
-                                    <button class="downvote">
-                                        <i class="fas fa-arrow-down"></i>
-                                    </button>
+                let html =  `<div class="post">
+                                <!-- POST SHOULDER -->
+                                <div class="post_shoulder" style="width: 40px; border-left: 4px solid transparent;">
+                                    <div class="post_shoulder_content">
+                                        <button class="upvote">
+                                            <i class="fas fa-arrow-up"></i>
+                                        </button>
+                                        <div class="post_votes" style="display: block; color: rgb(26, 26, 27);">`
+                    html +=                 votes;                
+                    html +=             `</div>
+                                        <button class="downvote">
+                                            <i class="fas fa-arrow-down"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- POST CONTENT -->
-                            <div class="post_content_container"><article class="post_content">
-                                    <div class="post_content_text">
-                                        <div class="post_content_header">
-                                            <!-- CODE FOR THE SUBREDDIT ICON IN THE REDDIT POST HEADER-->
-                                            <div style="flex: 0 0 auto;">
-                                                <a class="post_content_header_icon">
-                                                    <img class="subreddit_icon">
-                                                </a>   
-                                            </div>
+                                <!-- POST CONTENT -->
+                                <div class="post_content_container"><article class="post_content">
+                                        <div class="post_content_text">
+                                            <div class="post_content_header">
+                                                <!-- CODE FOR THE SUBREDDIT ICON IN THE REDDIT POST HEADER-->
+                                                <div style="flex: 0 0 auto;">
+                                                    <a class="post_content_header_icon">
+                                                        <img class="subreddit_icon">
+                                                    </a>   
+                                                </div>
 
-                                            <!-- CODE FOR THE HEADER CONTAINING SUBREDDIT NAME POSTED BY USER -->
-                                            <div style="flex: 1 1 auto">
-                                                <div class="post_content_header_text">
-                                                    <div style="display: inline-block; flex: 0 0 auto">
-                                                        <a class="subreddit_name" style="color: rgb(28, 28, 28);">`;
-                    html +=                                 subredditName;
+                                                <!-- CODE FOR THE HEADER CONTAINING SUBREDDIT NAME POSTED BY USER -->
+                                                <div style="flex: 1 1 auto">
+                                                    <div class="post_content_header_text">
+                                                        <div style="display: inline-block; flex: 0 0 auto">
+                                                            <a class="subreddit_name" style="color: rgb(28, 28, 28);">`;
+                    html +=                                     subredditName;
+                    html +=                                 `</a>
+                                                        </div>
+                                                        <span class="post_divider">•</span>
+                                                        <span class="posted_by">Posted by</span>
+                                                        <div style="display: inline-block">
+                                                            <a class="post_author">`
+                    html +=                                     username;                           
+                    html +=                                 `</a>
+                                                        </div>
+                                                        <a class="posted_date">`
+                    html +=                                 timeSincePosting;
                     html +=                             `</a>
                                                     </div>
-                                                    <span class="post_divider">•</span>
-                                                    <span class="posted_by">Posted by</span>
-                                                    <div style="display: inline-block">
-                                                        <a class="post_author">`
-                    html +=                                 username;                           
-                    html +=                             `</a>
-                                                    </div>
-                                                    <a class="posted_date">`
-                    html +=                             timeSincePosting;
-                    html +=                         `</a>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <!-- CODE FOR THE POST TITLE -->
-                                        <div style="margin: 0px 8px; display: block;">
-                                            <span class="post_content_title_container">
-                                                <a href="#" class="post_title_url">
-                                                    <h2 class="post_title">`
-                    html +=                             title;
-                    html +=                         `</h2>
+                                            <!-- CODE FOR THE POST TITLE -->
+                                            <div style="margin: 0px 8px; display: block;">
+                                                <span class="post_content_title_container">
+                                                    <a href="#" class="post_title_url">
+                                                        <h2 class="post_title">`
+                    html +=                                 title;
+                    html +=                             `</h2>
+                                                    </a>
+                                                </span>
+                                            </div>
+
+                                            <!-- CODE FOR THE POST MEDIA(IMAGES, VIDEO) URL-->
+                                            <div style="display: flex; margin-top: 0px;">
+                                                <a href='#' class="post_media_url">https://www.examplesite.com
+                                                    <i class="fas fa-external-link-alt"></i>
                                                 </a>
-                                            </span>
+                                            </div>
                                         </div>
-
-                                        <!-- CODE FOR THE POST MEDIA(IMAGES, VIDEO) URL-->
-                                        <div style="display: flex; margin-top: 0px;">
-                                            <a href='#' class="post_media_url">https://www.examplesite.com
-                                                <i class="fas fa-external-link-alt"></i>
-                                            </a>
-                                        </div>
-                                    </div>
                 
-                                    <div class="post_content_media">
-                                        <!-- CODE FOR THE 'JOIN' BUTTON -->
-                                        <button class="post_content_join">
-                                            <i class="fas fa-plus"></i>
-                                            Join
-                                        </button>
-                                        <!-- CODE FOR THE MEDIA -->
-                                        <div class="media_container">
-                                            <a href='#'>
-                                                <div class="media_preview">
-                                                    <div class="media_click_icon">
-                                                        <i class="fas fa-external-link-alt" style="color: white"></i>
+                                        <div class="post_content_media">
+                                            <!-- CODE FOR THE 'JOIN' BUTTON -->
+                                            <button class="post_content_join">
+                                                <i class="fas fa-plus"></i>
+                                                Join
+                                            </button>
+                                            <!-- CODE FOR THE MEDIA -->
+                                            <div class="media_container">
+                                                <a href='#'>
+                                                    <div class="media_preview">
+                                                        <div class="media_click_icon">
+                                                            <i class="fas fa-external-link-alt" style="color: white"></i>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </a>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>`;
-                    html +=     `<div class='post_content_buttons_container'>
-                                    <div class='post_content_buttons'>
-                                        <a class='comment_button'>
-                                            <i class='fas fa-comment-alt'></i>
-                                            <span class='post_comments'>`;
-                    html +=                     `${commentCount} Comments`;
-                    html +=                 `</span>
-                                        </a>
-                                    <div class='share_button_container'>
-                                        <button class='share_button'>
-                                            <i class='fas fa-share'></i>
-                                            <span style='display: inline-block; line-height: 1; vertical-align: middle;'>share</span>
+                                    </article>`;
+                    html +=         `<div class='post_content_buttons_container'>
+                                        <div class='post_content_buttons'>
+                                            <a class='comment_button'>
+                                                <i class='fas fa-comment-alt'></i>
+                                                <span class='post_comments'>`;
+                    html +=                         `${commentCount} Comments`;
+                    html +=                     `</span>
+                                            </a>
+                                        <div class='share_button_container'>
+                                            <button class='share_button'>
+                                                <i class='fas fa-share'></i>
+                                                <span style='display: inline-block; line-height: 1; vertical-align: middle;'>share</span>
+                                            </button>
+                                        </div>
+                                        <button class='save_button'>
+                                            <i class='fas fa-bookmark'></i>
+                                            <span>save</span>
                                         </button>
                                     </div>
-                                    <button class='save_button'>
-                                        <i class='fas fa-bookmark'></i>
-                                        <span>save</span>
-                                    </button>
                                 </div>
-                            </div>
-                        </div> <!-- End of "post_content_container -->`;
+                            </div> <!-- End of "post_content_container -->
+                        </div> <!-- End of "post" -->`;
 
-                    $('.post').append(html);
+                    $('.post_list').append(html);
 
                 /* Start of original code
 
