@@ -49,7 +49,12 @@ $(document).ready(function(){
                     timeSincePosting = (currentDateMonths - createdDateMonths) + 'months ago';
                 }
                 else if ((currentDateDays - createdDateDays) > 0) {
-                    timeSincePosting = (currentDateDays - createdDateDays) + ' days ago';
+                    if ((currentDateDays - createdDateDays) === 1) {
+                        timeSincePosting = (currentDateDays - createdDateDays) + ' day ago';
+                    }
+                    else {
+                        timeSincePosting = (currentDateDays - createdDateDays) + ' days ago';
+                    }
                 }
                 else if ((currentDateHours - createdDateHours) > 0) {
                     timeSincePosting = (currentDateHours - createdDateHours) + ' hours ago';
