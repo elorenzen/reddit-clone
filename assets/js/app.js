@@ -22,11 +22,18 @@ $(document).ready(function(){
                 let subredditName = post.subreddit_name_prefixed;
                 let username = post.author;
                 let commentCount = post.num_comments;
-                let subredditIconURL = post.icon_url;
+                let html = "<i class='fas fa-comment-alt'></i>"
+                html += "<span class='post_comments'>"
+                html += commentCount;
+                html += " Comments";
+                html += "</span>"
+
+                $('.comment_button').append(html);
+
+                /* Start of original code
+
                 //Add post title 
                 $('.post_title').text(title);
-                //Add subreddit icon 
-                $('.subreddit_icon').attr('src', 'subredditIconURL.val()');
                 //Add subreddit name
                 $('.subreddit_name').text(subredditName);
                 //Add username
@@ -39,7 +46,9 @@ $(document).ready(function(){
                 } else {
                     $('.post_votes').text(votes);
                 }
-            }
+
+                End of original code */ 
+            };
         },
         error: function(){
             console.log("Problem loading 'best' list");
