@@ -42,11 +42,13 @@ $(document).ready(function(){
 
                 let timeSincePosting;
 
-                
                 if ((currentDateYears - createdDateYears) > 0) {
                     timeSincePosting = (currentDateYears - createdDateYears) + ' years ago';
                 }
-                else if ((currentDateHours - createdDateHours) > 0){
+                else if ((currentDateMonths - createdDateMonths) > 0) {
+                    timeSincePosting = (currentDateMonths - createdDateMonths) + 'months ago';
+                }
+                else if ((currentDateHours - createdDateHours) > 0) {
                     timeSincePosting = (currentDateHours - createdDateHours) + ' hours ago';
                 }
 
