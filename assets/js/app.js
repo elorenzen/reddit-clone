@@ -23,6 +23,8 @@ $(document).ready(function(){
                 let username = post.author;
                 let commentCount = post.num_comments;
                 let media_url = post.url;
+                let image_thumbnail = post.thumbnail;
+                let post_hint = post.post_hint;
 
                 let createdDate = new Date(post.created_utc * 1000);
                 let createdDateYears = createdDate.getFullYear();
@@ -170,7 +172,10 @@ $(document).ready(function(){
                                             <!-- CODE FOR THE MEDIA -->
                                             <div class="media_container">
                                                 <a href='#'>
-                                                    <div class="media_preview">
+                                                    <div class="media_preview" style="background-image: url(`;
+                    html +=                             image_thumbnail
+                    html +=                             `")>
+                    
                                                         <div class="media_click_icon">
                                                             <i class="fas fa-external-link-alt" style="color: white"></i>
                                                         </div>
