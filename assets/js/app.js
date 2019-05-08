@@ -27,6 +27,7 @@ $(document).ready(function(){
                 let image_thumbnail_height = post.thumbnail_height;
                 let image_thumbnail_width = post.thumbnail_width;
                 let post_hint = post.post_hint;
+                let video_url = post.media_domain_url;
 
                 let createdDate = new Date(post.created_utc * 1000);
                 let createdDateYears = createdDate.getFullYear();
@@ -270,8 +271,92 @@ $(document).ready(function(){
                                                 </a>
                                             </div>
                                             */
-                    html+=              `</div>`;
-                              //      </article>`;
+                    html+=              `</div>
+                                    </article>`;
+
+                    }
+                    else if (post_hint === "rich:video") {
+                        html += `<article class="post_content">
+                                        <div class="post_content_text">
+                                            <div class="post_content_header">
+                                                <!-- CODE FOR THE SUBREDDIT ICON IN THE REDDIT POST HEADER-->
+                                                <div style="flex: 0 0 auto;">
+                                                    <a class="post_content_header_icon">
+                                                        <img class="subreddit_icon">
+                                                    </a>   
+                                                </div>
+
+                                                <!-- CODE FOR THE HEADER CONTAINING SUBREDDIT NAME POSTED BY USER -->
+                                                <div style="flex: 1 1 auto">
+                                                    <div class="post_content_header_text">
+                                                        <div style="display: inline-block; flex: 0 0 auto">
+                                                            <a class="subreddit_name" style="color: rgb(28, 28, 28);">`;
+                    html +=                                     subredditName;
+                    html +=                                 `</a>
+                                                        </div>
+                                                        <span class="post_divider">•</span>
+                                                        <span class="posted_by">Posted by</span>
+                                                        <div style="display: inline-block">
+                                                            <a class="post_author">`
+                    html +=                                     username;                           
+                    html +=                                 `</a>
+                                                        </div>
+                                                        <a class="posted_date">`
+                    html +=                                 timeSincePosting;
+                    html +=                             `</a>
+                                                    </div>
+                                                </div>
+                                            </div>`;
+                                            
+                    html +=                 `<!-- CODE FOR THE POST TITLE -->
+                                            <div style="margin: 0px 8px; display: block;">
+                                                <span class="post_content_title_container">
+                                                    <a href="#" class="post_title_url">
+                                                        <h2 class="post_title">`
+                    html +=                                 title;
+                    html +=                             `</h2>
+                                                    </a>
+                                                </span>
+                                            </div>`
+
+                                            /*
+                                            <!-- CODE FOR THE POST MEDIA(IMAGES, VIDEO) URL-->
+                                            <div style="display: flex; margin-top: 0px;">
+                                                <div style="background-image: url(`;
+                    html +=                         image_thumbnail;
+
+                    html +=                     `); height: ${image_thumbnail_height}; width: ${image_thumbnail_width};">
+                                                </div>
+                                            </div>
+                                            */
+                                           /*
+                    html +=                 `<img src="${image_thumbnail}" style="width: ${image_thumbnail_width}; height: ${image_thumbnail_height}">`;
+                                         */
+                    html +=             `</div>
+
+                                        <div class="post_content_media">
+                                            <!-- CODE FOR THE 'JOIN' BUTTON -->
+                                            <button class="post_content_join">
+                                                <i class="fas fa-plus"></i>
+                                                Join
+                                            </button>`;
+                                            /*
+                                            <!-- CODE FOR THE MEDIA -->
+                                            <div class="media_container">
+                                                <a href='#'>
+                                                    <div class="media_preview" style="background-image: url(`;
+                    html +=                             image_thumbnail;
+                    html +=                             `")>
+                    
+                                                        <div class="media_click_icon">
+                                                            <i class="fas fa-external-link-alt" style="color: white"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            */
+                    html+=              `</div>
+                                    </article>`;
 
                     }
                                     
