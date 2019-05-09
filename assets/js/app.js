@@ -19,6 +19,8 @@ $(document).ready(function(){
                 let post = post_list[i].data;
                 let votes = post.ups;
                 let title = post.title;
+                let post_text = post.selftext;
+
                 let subredditName = post.subreddit_name_prefixed;
                 let username = post.author;
                 let commentCount = post.num_comments;
@@ -398,9 +400,16 @@ $(document).ready(function(){
                     html +=                             `</a>
                                                     </div>
                                                 </div>
-                                            </div>
-
-                                            <!-- CODE FOR THE POST TITLE -->
+                                            </div>`;
+// NEW CODE FOR POST_TEXT
+                        if (post_text !== "") {
+                    html +=                 `<!-- CODE FOR THE POST TEXT -->
+                                            <div class="post_text">`;
+                    html +=                     post_text;
+                    html +=                 `</div>`;                        
+                        }
+// END OF NEW CODE FOR POST_TEXT
+                    html +=                 `<!-- CODE FOR THE POST TITLE -->
                                             <div style="margin: 0px 8px; display: block;">
                                                 <span class="post_content_title_container">
                                                     <a href="#" class="post_title_url">
