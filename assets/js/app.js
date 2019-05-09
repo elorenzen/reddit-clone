@@ -401,14 +401,7 @@ $(document).ready(function(){
                                                     </div>
                                                 </div>
                                             </div>`;
-// NEW CODE FOR POST_TEXT
-                        if (post_text !== "") {
-                    html +=                 `<!-- CODE FOR THE POST TEXT -->
-                                            <div class="post_text">`;
-                    html +=                     post_text;
-                    html +=                 `</div>`;                        
-                        }
-// END OF NEW CODE FOR POST_TEXT
+
                     html +=                 `<!-- CODE FOR THE POST TITLE -->
                                             <div style="margin: 0px 8px; display: block;">
                                                 <span class="post_content_title_container">
@@ -418,8 +411,18 @@ $(document).ready(function(){
                     html +=                             `</h2>
                                                     </a>
                                                 </span>
-                                            </div>
-                                        </div>
+                                            </div>`;
+
+                    // NEW CODE FOR POST_TEXT
+                        if (post_text !== "") {
+                    html +=                 `<!-- CODE FOR THE POST TEXT -->
+                                            <div class="post_text">`;
+                    html +=                     post_text;
+                    html +=                 `</div>`;                        
+                       }
+                    // END OF NEW CODE FOR POST_TEXT
+
+                    html +=              `</div>
                                     </article>`;
                     }
                                     
