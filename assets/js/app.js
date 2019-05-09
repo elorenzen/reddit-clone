@@ -237,18 +237,21 @@ $(document).ready(function(){
                     html +=                             `</h2>
                                                     </a>
                                                 </span>
-                                            </div>`
+                                            </div>`;
 
-                                            /*
-                                            <!-- CODE FOR THE POST MEDIA(IMAGES, VIDEO) URL-->
+                    /*
+                    html +=                 `<!-- CODE FOR THE POST MEDIA(IMAGES, VIDEO) URL-->
                                             <div style="display: flex; margin-top: 0px;">
-                                                <div style="background-image: url(`;
-                    html +=                         image_thumbnail;
+                                                <a href='${media_url}' class="post_media_url">`;
+                    html +=                         media_url;
 
                     html +=                     `); height: ${image_thumbnail_height}; width: ${image_thumbnail_width};">
                                                 </div>
-                                            </div>
-                                            */
+                                            </div>`
+                       */                     
+
+                    // START OF WORKING CODE
+                        /*
                     html +=                 `<img src="${image_thumbnail}" style="width: ${image_thumbnail_width}; height: ${image_thumbnail_height}">`;
                                          
                     html +=             `</div>
@@ -259,21 +262,17 @@ $(document).ready(function(){
                                                 <i class="fas fa-plus"></i>
                                                 Join
                                             </button>`;
-                                            /*
-                                            <!-- CODE FOR THE MEDIA -->
-                                            <div class="media_container">
-                                                <a href='#'>
-                                                    <div class="media_preview" style="background-image: url(`;
-                    html +=                             image_thumbnail;
-                    html +=                             `")>
+                        */
+                    // END OF WORKING CODE
                     
-                                                        <div class="media_click_icon">
-                                                            <i class="fas fa-external-link-alt" style="color: white"></i>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            */
+                                            
+                    html +=             `<div class="post_content_media">
+                                            <button class="post_content_join">
+                                                <i class="fas fa-plus"></i>
+                                                Join
+                                            </button>`
+                                        
+                                            
                     html+=              `</div>
                                     </article>`;
                     }
