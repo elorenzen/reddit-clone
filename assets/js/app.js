@@ -369,7 +369,7 @@ $(document).ready(function(){
 
                     }
                     else {
-                        html +=         `<article class="post_content">
+                        html +=     `<article class="post_content">
                                         <div class="post_content_text">
                                             <div class="post_content_header">
                                                 <!-- CODE FOR THE SUBREDDIT ICON IN THE REDDIT POST HEADER-->
@@ -410,36 +410,6 @@ $(document).ready(function(){
                     html +=                             `</h2>
                                                     </a>
                                                 </span>
-                                            </div>
-
-                                            
-                                            <!-- CODE FOR THE POST MEDIA(IMAGES, VIDEO) URL-->
-                                            <div style="display: flex; margin-top: 0px;">
-                                                <a href='${media_url}' class="post_media_url">`;
-                    html +=                         media_url;
-                    html +=                         `<i class="fas fa-external-link-alt"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                
-                                        <div class="post_content_media">
-                                            <!-- CODE FOR THE 'JOIN' BUTTON -->
-                                            <button class="post_content_join">
-                                                <i class="fas fa-plus"></i>
-                                                Join
-                                            </button>
-                                            <!-- CODE FOR THE MEDIA -->
-                                            <div class="media_container">
-                                                <a href='#'>
-                                                    <div class="media_preview" style="background-image: url(`;
-                    html +=                             image_thumbnail;
-                    html +=                             `")>
-                    
-                                                        <div class="media_click_icon">
-                                                            <i class="fas fa-external-link-alt" style="color: white"></i>
-                                                        </div>
-                                                    </div>
-                                                </a>
                                             </div>
                                         </div>
                                     </article>`;
