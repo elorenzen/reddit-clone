@@ -423,17 +423,15 @@ $(document).ready(function(){
                     // END OF NEW CODE FOR POST_TEXT
 
 
-                    // NEW CODE FOR THE JOIN BUTTON
-                    html +=                 `<div class="post_content_media">
+                    
+
+                    html +=             `</div>
+                                            <div class="post_content_media">
                                                 <button class="post_content_join">
                                                     <i class="fas fa-plus"></i>
                                                     Join
                                                 </button>
-                                            </div>`
-                                                                      
-                    // END OF NEW CODE FOR THE JOIN BUTTON
-
-                    html +=              `</div>
+                                            </div>
                                     </article>`;
                     }
                                     
