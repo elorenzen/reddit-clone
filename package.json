@@ -1,0 +1,23 @@
+{
+  "name": "reddit-clone",
+  "version": "1.0.0",
+  "description": "REDDIT CLONE",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elorenzen/reddit-clone.git"
+  },
+  "author": "Eric Lorenzen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elorenzen/reddit-clone/issues"
+  },
+  "homepage": "https://github.com/elorenzen/reddit-clone#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
