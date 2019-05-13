@@ -24,7 +24,8 @@ app.get('/reddit-posts', (req, res) => {
         {title: `If you were a citizen of King's Landing, what kind of ruler would you prefer?`,
          subredditName: `r/GOT`,
          upvotes: '1.3k'}
-    ]
+    ];
+    res.render('reddit-posts');
 })
 
 app.listen(port, () => {
