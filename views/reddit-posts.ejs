@@ -1,1 +1,7 @@
 <h1> This is the /reddit-posts page </h1>
+
+<% redditPosts.forEach((post) => { %>
+        <h3> <%= post.title %> </h3>
+        <h4> <%= post.subredditName %> </h4>
+        <p> <% post.upvotes %> </p>
+<% }) %> 

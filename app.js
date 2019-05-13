@@ -25,7 +25,7 @@ app.get('/reddit-posts', (req, res) => {
          subredditName: `r/GOT`,
          upvotes: '1.3k'}
     ];
-    res.render('reddit-posts');
+    res.render('reddit-posts', {redditPosts: redditPosts});
 })
 
 app.listen(port, () => {
