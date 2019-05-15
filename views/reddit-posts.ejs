@@ -90,6 +90,52 @@
                 </div>
             </div>
         </nav>
+
+        <!-- SECOND NAVBAR -->
+        <div class='second-nav'>
+            <div class='second-nav-responsive'>
+                <div class='second-nav-container'>
+                    <div class='second-nav-items-container'>
+                        <div class='second-nav-view-container'>
+                            <div class='second-nav-items-title'>View</div>
+                            <div class='second-nav-view-displays'>
+                                <button>
+                                    <i class="fas fa-minus second-nav-view-displays-options-active"></i>
+                                </button>
+                                <button>
+                                    <i class="fas fa-bars second-nav-view-displays-options"></i>
+                                </button>
+                                <button>
+                                    <i class="fas fa-align-justify second-nav-view-displays-options"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class='second-nav-sort-container'>
+                            <div class='second-nav-items-title'>Sort</div>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class='default_list' style='display: inline-block;'><i class='fas fa-splotch dropdown-item-icon'></i>BEST</span>
+                                </a>
+                                <div class="dropdown-menu sort-dropdown-list" aria-labelledby="dropdown08">
+                                    <a class="dropdown-item sort-dropdown-item" href="#"><i class="fas fa-splotch"></i>Best</a>
+                                    
+                                    <a class="dropdown-item sort-dropdown-item filter_hot" href="#"><i class="fas fa-fire"></i>Hot</a>
+
+                                    <a class="dropdown-item sort-dropdown-item filter_new" href="#"><i class="fas fa-paper-plane"></i>New</a>
+    
+                                    <a class="dropdown-item sort-dropdown-item filter_controversial" href="#"><i class="fas fa-exclamation-circle"></i>Controversial</a>
+    
+                                    <a class="dropdown-item sort-dropdown-item filter_top" href="#"><i class="fas fa-level-up-alt"></i>Top</a>
+    
+                                    <a class="dropdown-item sort-dropdown-item filter_rising" href="#"><i class="fas fa-signal"></i>Rising</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <h1> This is the /reddit-posts page </h1>
 
         <% redditPosts.forEach((post) => { %>
