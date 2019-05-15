@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Reddit Clone</title>
+        <!-- JQUERY CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <!-- BOOTSTRAP CDN -->
+        <link rel="stylesheet" type='text/css' href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- LINK REDDIT.CSS FILE -->
+        <link rel="stylesheet" type='text/css' href="/css/reddit.css">
+        <!-- FONT AWESOME CDN -->
+        <link rel="stylesheet" type='text/css' href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!-- 'NOTO SANS' FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    </head>
+    <body>
+        <!-- FIRST NAVBAR  -->
+        <nav id='top-nav'>
+            <div class='flexbox'>
+                <a class="navbar-brand" href="#">
+                    <i class="fab fa-reddit"> reddit</i>
+                </a>
+                <div class="nav-item dropdown" id='home-dropdown'>
+                    <a class="nav-link dropdown-toggle default_feed" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-rocket"></i> Home
+                    </a>
+                    <div class="dropdown-menu" id='nav1-dropdown' aria-labelledby="navbarDropdownMenuLink">
+                        <input type="text" placeholder="Filter">
+                        <p>REDDIT FEEDS</p>
+                        <ul>
+                            <a class="dropdown-item feed_home" href="#"><i class="fas fa-rocket"></i>Home</a>
+                            <a class="dropdown-item feed_popular" href="#"><i class="fas fa-chart-line"></i>Popular</a>
+                            <a class="dropdown-item feed_all" href="#"><i class="fas fa-chart-pie"></i>All</a>
+                            <a class="dropdown-item feed_oc" href="#"><i class="fas fa-quote-left"></i>Original Content</a>
+                        </ul>
+                        <p>MY COMMUNITIES</p>
+                        <ul>
+                            <a class="dropdown-item" href="#"><i class="far fa-circle"></i>r/askReddit</a>
+                            <a class="dropdown-item" href="#"><i class="far fa-circle"></i>r/travel</a>
+                            <a class="dropdown-item" href="#"><i class="far fa-circle"></i>r/Showerthoughts</a>
+                        </ul>
+                        <p>OTHER</p>
+                        <ul>
+                            <a class="dropdown-item" href="#"><i class="fas fa-user-cog"></i>User Settings</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-envelope"></i>   Messages</a>                                <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Create Post</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-coins"></i>  Coins</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-shield-alt"></i>   Premium</a>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="nav navbar-nav">
+                        <form class="nav-item">
+                            <input class="form-control mr-sm-2" id='nav-search' type="search" placeholder="Search Reddit" aria-label="Search">
+                        </form>
+                </div>
+                 
+                <div class="nav-item" id='nav-icons'>
+                    <a href="#"><i class="fas fa-chart-line"></i></a>
+                    <a href="#"><i class="fas fa-chart-pie"></i></a>
+                    <a href="#" class="border-right"><i class="fas fa-quote-left"></i></a>
+                    <a href="#"><i class="fas fa-comment"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fas fa-edit"></i></a>
+                </div>
+                    
+                <div class="nav-item dropdown" id='profile-dropdown'>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Username
+                    </a>
+                    <div class="dropdown-menu" id='profile-icons' aria-labelledby="navbarDropdownMenuLink">
+                        <p>MY STUFF</p>
+                        <ul>
+                            <a class="dropdown-item" href="#"><i class="fas fa-user"></i>My Profile</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-cog"></i>User Settings</a>
+                        </ul>
+                        <p>VIEW OPTIONS</p>
+                        <ul>
+                            <a class="dropdown-item" href="#"><i class="fas fa-moon"></i>Night Mode</a>
+                        </ul>
+                        <p>MORE STUFF</p>
+                        <ul>
+                            <a class="dropdown-item" href="#"><i class="fas fa-coins"></i>Reddit Coins</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-shield-alt"></i>Reddit Premium</a>
+                            <a class="dropdown-item" href="#"><i class="far fa-question-circle"></i>Help Center<small><i class="fas fa-external-link-alt"></i></small></a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-external-link-alt"></i>Visit Old Reddit<small><i class="fas fa-external-link-alt"></i></small></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
