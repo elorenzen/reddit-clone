@@ -4,7 +4,7 @@
   "description": "REDDIT CLONE",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "nodemon": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "express": "^4.16.4",
     "jquery": "^3.4.1",
     "jsdom": "^15.0.0",
+    "mongodb": "^3.2.4",
     "requirejs": "^2.3.6"
   },
   "devDependencies": {
