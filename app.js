@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/reddit-posts', (req, res) => {
+  /*  
     let redditPosts = [
         {title: `The world now runs on video game logic, what's the first thing you do?`,
          subredditName: `r/AskReddit`,
@@ -25,7 +26,8 @@ app.get('/reddit-posts', (req, res) => {
          subredditName: `r/GOT`,
          upvotes: '1.3k'}
     ];
-    res.render('reddit-posts', {redditPosts: redditPosts});
+    */
+    res.render('reddit-posts'/*, {redditPosts: redditPosts}*/);
 })
 
 app.listen(port, () => {
