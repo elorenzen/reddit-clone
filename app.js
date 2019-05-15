@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+
 const port = process.env.PORT || 3000;
 
+app.use(bodyParser.urlencoded({extended: true}));
 // Code to remove need to include '.ejs' after <filename>
 app.set('view engine', 'ejs');
 
