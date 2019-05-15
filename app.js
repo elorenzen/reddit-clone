@@ -30,6 +30,10 @@ app.get('/reddit-posts', (req, res) => {
     res.render('reddit-posts'/*, {redditPosts: redditPosts}*/);
 })
 
+app.post('/reddit-posts', (req, res) => {
+    res.send('This is the post route');
+})
+
 app.listen(port, () => {
     console.log(`app.listen on port ${port}`);
 })
