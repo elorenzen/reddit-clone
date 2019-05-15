@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 3000;
-
+// Code to use body-parser 
 app.use(bodyParser.urlencoded({extended: true}));
 // Code to remove need to include '.ejs' after <filename>
 app.set('view engine', 'ejs');
@@ -35,6 +35,10 @@ app.get('/reddit-posts', (req, res) => {
 
 app.post('/reddit-posts', (req, res) => {
     res.send('This is the post route');
+})
+
+app.get('/reddit-posts/new', (req, res) => {
+    res.render('new');
 })
 
 app.listen(port, () => {
