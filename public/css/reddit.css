@@ -871,3 +871,12 @@ form .nav-item {
 .downvote:hover {
     color: #0079D3
 }
+
+/* NEW.EJS CSS */
+.new_post_textarea {
+    color: rgb(28, 28, 28);
+    caret-color: rgb(0, 121, 211);
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgb(237, 239, 241);
+}
