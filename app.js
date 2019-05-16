@@ -26,7 +26,23 @@ let redditPostSchema = new mongoose.Schema({
 });
 
 // Create a model using variable from SCHEMA SETUP
-let redditPost = mongoose.model('redditPost', redditPostSchema);
+let RedditPost = mongoose.model('RedditPost', redditPostSchema);
+
+RedditPost.create(
+    {
+    title: `The world now runs on video game logic, what's the first thing you do?`,
+    subredditName: `r/AskReddit`,
+    upvotes: 5700
+    }, (err, redditPost) => {
+        if(err){
+            console.log(err);
+        }
+        else {
+            console.log('Newly created Reddit Post!');
+            console.log(redditPost);
+        }
+    }
+);
 
 
 app.get('/', (req, res) => {
@@ -49,7 +65,16 @@ app.get('/reddit-posts', (req, res) => {
          upvotes: '1.3k'}
     ];
     */
-    res.render('reddit-posts'/*, {redditPosts: redditPosts}*/);
+   // res.render('reddit-posts'/*, {redditPosts: redditPosts}*/);
+
+   // Get all Reddit Posts from database
+   RedditPost.find({}, (err, allRedditPosts) => {
+       if(err) {
+            console.log(err);
+       } else {
+            res.render('reddit-posts'/*, {redditPosts: allRedditPosts}*/)
+       }
+   })
 })
 
 app.post('/reddit-posts', (req, res) => {
