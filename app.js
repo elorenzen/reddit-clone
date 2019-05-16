@@ -1,8 +1,9 @@
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'),
+      mongoose   = require('mongoose')
+      express    = require('express'),
+      port       = process.env.PORT || 3000,
+      app        = express();
 
-const port = process.env.PORT || 3000;
 // Code to use body-parser 
 app.use(bodyParser.urlencoded({extended: true}));
 // Code to remove need to include '.ejs' after <filename>
