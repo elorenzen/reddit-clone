@@ -81,8 +81,16 @@ app.post('/reddit-posts', (req, res) => {
     // Get inputted data from 'new.ejs' form and add to reddit-posts array
     let title = req.body.title;
     let text = req.body.text;
-    // Redirect to 'reddit-posts.ejs' 
-    res.redirect('/reddit-posts');
+    let newPost = {title: title, text: text}
+    // Create new Reddit post and save to DB 
+    RedditPost.create(newPost, (err, newlyCreated) => {
+        if(err) {
+            console.log(err);
+        } else {
+            // Redirect to 'reddit-posts.ejs' 
+            res.redirect('/reddit-posts');
+        }
+    })
 })
 
 app.get('/reddit-posts/new', (req, res) => {
