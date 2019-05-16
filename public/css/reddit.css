@@ -873,10 +873,32 @@ form .nav-item {
 }
 
 /* NEW.EJS CSS */
-.new_post_textarea {
+.new_post_title_textarea {
     color: rgb(28, 28, 28);
     caret-color: rgb(0, 121, 211);
     margin-bottom: 8px;
     padding: 8px 16px;
     border: 1px solid rgb(237, 239, 241);
+}
+
+.new_post_text_container {
+    border-radius: 4px;
+    border: 1px solid rgb(237, 239, 241);
+    position: relative;
+}
+
+.new_post_text_editor {
+    word-wrap: break-word;
+    color: rgb(28, 28, 28);
+    caret-color: rgb(0, 121, 211);
+    background-color: white;
+    font-family: "Noto Sans", Arial, sans-serif;
+    height: unset;
+    min-height: 122px;
+    resize: vertical;
+    overflow: hidden;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    
 }
