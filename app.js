@@ -34,7 +34,11 @@ app.get('/reddit-posts', (req, res) => {
 })
 
 app.post('/reddit-posts', (req, res) => {
-    res.send('This is the post route');
+    // Get inputted data from 'new.ejs' form and add to reddit-posts array
+    let title = req.body.title;
+    let text = req.body.text;
+    // Redirect to 'reddit-posts.ejs' 
+    res.redirect('/reddit-posts');
 })
 
 app.get('/reddit-posts/new', (req, res) => {
