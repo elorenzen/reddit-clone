@@ -27,10 +27,11 @@ else{
     console.log('jQuery not loaded yet');
 }
 
+
 //Loads list of 'best' reddit posts upon opening file
 $(document).ready(function(){
     $('.default_list').html('<a class="dropdown-item sort-dropdown-item" href="#"><i class="fas fa-splotch"></i>Best</a>');
-    $.ajax("https://www.reddit.com/best/.json?", {
+    $.ajax("https://www.reddit.com/best/.json?limit=10", {
         success: data => {
             let post_list = data.data.children;
             console.log("Successfully loaded 'best' list");
