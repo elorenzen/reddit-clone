@@ -4,6 +4,8 @@ const bodyParser = require('body-parser'),
       port       = process.env.PORT || 3000,
       app        = express();
 
+// Connect to database
+mongoose.connect('mongodb://localhost/reddit_clone', {useNewUrlParser: true} /* <-- Removes deprecation warning in terminal */ );
 // Code to use body-parser 
 app.use(bodyParser.urlencoded({extended: true}));
 // Code to remove need to include '.ejs' after <filename>
