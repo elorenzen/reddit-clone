@@ -3,10 +3,15 @@
     <div style="margin: 16px;">
         <form action="/reddit-posts" method="POST">
             <div>
-                <textarea type="text" placeholder="Title" maxlength="300" class="new_post_title_textarea" style="height: 39px;"></textarea>
+                <textarea type="text" name="title" class="new_post_title_textarea" placeholder="Title" maxlength="300" style="height: 39px;"></textarea>
             </div>
             <div class="new_post_text_container">
-                <input class="new_post_text_editor" type="text" placeholder="Text (optional)">
+                <input type="text" name="text" class="new_post_text_editor" placeholder="Text (optional)">
+            </div>
+            <div class="new_post_button_container">
+                <button class="new_post_post_button">
+                    post
+                </button>
             </div>
         </form>
     </div>
