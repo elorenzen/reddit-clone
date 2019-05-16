@@ -72,7 +72,7 @@ app.get('/reddit-posts', (req, res) => {
        if(err) {
             console.log(err);
        } else {
-            res.render('reddit-posts'/*, {redditPosts: allRedditPosts}*/)
+            res.render('reddit-posts', {redditPosts: allRedditPosts});
        }
    })
 })
