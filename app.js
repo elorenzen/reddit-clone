@@ -13,6 +13,22 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
 
+// SCHEMA SETUP
+let redditPostSchema = new mongoose.Schema({
+    title: String,
+    upvotes: Number,
+    author: String,
+    subredditName: String,
+    text: String,
+    commentCount: Number,
+    image_url: String,
+    video_url: String
+});
+
+// Create a model using variable from SCHEMA SETUP
+let redditPost = mongoose.model('redditPost', redditPostSchema);
+
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 })
