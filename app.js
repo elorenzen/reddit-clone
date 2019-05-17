@@ -82,7 +82,7 @@ app.get('/reddit-posts', (req, res) => {
        if(err) {
             console.log(err);
        } else {
-            res.render('reddit-posts', {redditPosts: allRedditPosts});
+            res.render('redditpost/reddit-posts', {redditPosts: allRedditPosts});
        }
    })
 })
@@ -106,7 +106,7 @@ app.post('/reddit-posts', (req, res) => {
 
 // === NEW ===
 app.get('/reddit-posts/new', (req, res) => {
-    res.render('new');
+    res.render('redditpost/new');
 })
 
 // === SHOW ===
@@ -118,7 +118,7 @@ app.get('/reddit-posts/:id', (req, res) => {
         } else {
             console.log(foundPost);
             // Render show template with that Reddit Post
-            res.render('show', {post: foundPost});
+            res.render('redditpost/show', {post: foundPost});
         }
     })
 });
@@ -128,7 +128,7 @@ app.get('/reddit-posts/:id', (req, res) => {
 // ===== REDDIT POST ROUTES =====
 // === INDEX ===
 app.get('/reddit-posts/:id/comments/new', (req, res) => {
-    res.send('This will be comment form');
+    res.render('comments/new');
 })
 
 // =============================================================================
