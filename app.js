@@ -111,10 +111,11 @@ app.get('/reddit-posts/new', (req, res) => {
 // === SHOW ===
 app.get('/reddit-posts/:id', (req, res) => {
     // Find Reddit post with provided ID
-    RedditPost.findById(req.params.id, (err, foundPost) => {
+    RedditPost.findById(req.params.id).populate('comments').exec((err, foundPost) => {
         if(err) {
             console.log(err);
         } else {
+            console.log(foundPost);
             // Render show template with that Reddit Post
             res.render('show', {post: foundPost});
         }
