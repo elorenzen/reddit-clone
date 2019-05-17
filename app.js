@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
 
-
+/*
 RedditPost.create(
     {
     title: `The world now runs on video game logic, what's the first thing you do?`,
@@ -47,11 +47,12 @@ RedditPost.create(
         }
     }
 );
+*/
 
 
 // =============================================================================
 
-// ===== ROUTES =====
+// ===== REDDIT POST ROUTES =====
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
@@ -123,8 +124,14 @@ app.get('/reddit-posts/:id', (req, res) => {
 });
 
 // =============================================================================
+
+// ===== REDDIT POST ROUTES =====
+// === INDEX ===
+app.get('/reddit-posts/:id/comments/new', (req, res) => {
+    res.send('This will be comment form');
+})
+
+// =============================================================================
 app.listen(port, () => {
     console.log(`app.listen on port ${port}`);
 })
-
-//module.exports = app;
