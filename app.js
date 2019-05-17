@@ -1,9 +1,13 @@
 const bodyParser = require('body-parser'),
-      RedditPost = require('./models/reddit-posts');
-      mongoose   = require('mongoose')
+      mongoose   = require('mongoose'),
       express    = require('express'),
       port       = process.env.PORT || 3000,
-      app        = express();
+      app        = express(),
+      //MODELS
+      RedditPost = require('./models/reddit-posts'),
+      Comment    = require('./models/comment'),
+      User       = require('./models/user');
+
 
 // Connect to database
 mongoose.connect('mongodb://localhost/reddit_clone', {useNewUrlParser: true} /* <-- Removes deprecation warning in terminal */ );
