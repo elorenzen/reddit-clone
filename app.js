@@ -19,7 +19,6 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'))
 
 
-/*
 RedditPost.create(
     {
     title: `The world now runs on video game logic, what's the first thing you do?`,
@@ -31,11 +30,24 @@ RedditPost.create(
         }
         else {
             console.log('Newly created Reddit Post!');
-            console.log(redditPost);
+            // Create a comment
+            Comment.create(
+                {
+                    text: 'This is a cool post. Thanks for sharing',
+                    author: 'someRedditUser'
+                }, (err, comment) => {
+                    if(err) {
+                        console.log(err);
+                    } else {
+                        redditPost.comments.push(comment);
+                        redditPost.save();
+                        console.log('Created new comment!');
+                    }
+                })
         }
     }
 );
-*/
+
 
 // =============================================================================
 
