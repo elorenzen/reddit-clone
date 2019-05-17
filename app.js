@@ -1,4 +1,5 @@
 const bodyParser = require('body-parser'),
+      RedditPost = require('./models/reddit-posts');
       mongoose   = require('mongoose')
       express    = require('express'),
       port       = process.env.PORT || 3000,
@@ -13,20 +14,6 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
 
-// SCHEMA SETUP
-let redditPostSchema = new mongoose.Schema({
-    title: String,
-    upvotes: Number,
-    author: String,
-    subredditName: String,
-    text: String,
-    commentCount: Number,
-    image_url: String,
-    video_url: String
-});
-
-// Create a model using variable from SCHEMA SETUP
-let RedditPost = mongoose.model('RedditPost', redditPostSchema);
 
 /*
 RedditPost.create(
