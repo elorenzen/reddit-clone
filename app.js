@@ -28,6 +28,7 @@ let redditPostSchema = new mongoose.Schema({
 // Create a model using variable from SCHEMA SETUP
 let RedditPost = mongoose.model('RedditPost', redditPostSchema);
 
+/*
 RedditPost.create(
     {
     title: `The world now runs on video game logic, what's the first thing you do?`,
@@ -43,6 +44,7 @@ RedditPost.create(
         }
     }
 );
+*/
 
 // =============================================================================
 
@@ -105,7 +107,10 @@ app.get('/reddit-posts/new', (req, res) => {
 
 // === SHOW ===
 app.get('/reddit-posts/:id', (req, res) => {
-    res.send('This will be the show route');
+    // Find Reddit post with provided ID
+
+    // Render show template with that Reddit Post
+    res.render('show');
 })
 
 // =============================================================================
