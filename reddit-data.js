@@ -9,17 +9,20 @@ let post_list = data.data.children;
 post_list.forEach((post) => {
     let votes = post.data.ups;
 
-    console.log(votes);
+    console.log(`upvotes: ${votes}`);
 
     let title = post.data.title;
-    console.log(title);
+    console.log(`title: ${title}`);
     let post_text = post.data.selftext;
-    console.log(post_text);
+    console.log(`Post text(if applicable): ${post_text}`);
     let subredditName = post.data.subreddit_name_prefixed;
-    console.log(subredditName);
-    let username = post.author;
-    let commentCount = post.num_comments;
-    let media_url = post.url;
+    console.log(`Subreddit Name: ${subredditName}`);
+    let author = post.data.author;
+    console.log(`Post author: ${author}`);
+    let commentCount = post.data.num_comments;
+    console.log(`Number of comments: ${commentCount}`);
+    let media_url = post.data.url;
+    console.log(`Media URL: ${media_url}`);
     let image_thumbnail = post.thumbnail;
     let image_thumbnail_height = post.thumbnail_height;
     let image_thumbnail_width = post.thumbnail_width;
