@@ -44,11 +44,15 @@ RedditPost.create(
     }
 );
 
+// =============================================================================
+
+// ===== ROUTES =====
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 })
 
+// === INDEX ===
 app.get('/reddit-posts', (req, res) => {
   /*  
     let redditPosts = [
@@ -77,6 +81,7 @@ app.get('/reddit-posts', (req, res) => {
    })
 })
 
+// === CREATE ===
 app.post('/reddit-posts', (req, res) => {
     // Get inputted data from 'new.ejs' form and add to reddit-posts array
     let title = req.body.title;
@@ -93,10 +98,17 @@ app.post('/reddit-posts', (req, res) => {
     })
 })
 
+// === NEW ===
 app.get('/reddit-posts/new', (req, res) => {
     res.render('new');
 })
 
+// === SHOW ===
+app.get('/reddit-posts/:id', (req, res) => {
+    res.send('This will be the show route');
+})
+
+// =============================================================================
 app.listen(port, () => {
     console.log(`app.listen on port ${port}`);
 })
