@@ -1,1 +1,21 @@
-<h1>New comments form</h1>
+<% include ../partials/header %>
+
+<div style="background-color: white; margin-bottom: 15px; border-radius: 5px;"> 
+    <div style="margin: 16px;">Create new comment for: <strong>"<%= post.title %>"</strong>
+        <form action="/reddit-posts/<%= post._id %>/comments" method="POST">
+            <div>
+                <textarea type="text" name="title" class="new_post_title_textarea" placeholder="Title" maxlength="300" style="height: 39px;"></textarea>
+            </div>
+            <div class="new_post_text_container">
+                <input type="text" name="text" class="new_post_text_editor" placeholder="Text (optional)">
+            </div>
+            <div class="new_post_button_container">
+                <button class="new_post_post_button">
+                    post
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer %>
