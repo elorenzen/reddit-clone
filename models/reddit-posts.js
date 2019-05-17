@@ -8,7 +8,13 @@ let redditPostSchema = new mongoose.Schema({
     text: String,
     commentCount: Number,
     image_url: String,
-    video_url: String
+    video_url: String,
+    comments: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Comment'
+        }
+    ]
 });
 
 // Create a model using variable from SCHEMA SETUP
