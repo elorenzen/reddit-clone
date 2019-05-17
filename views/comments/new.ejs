@@ -4,10 +4,10 @@
     <div style="margin: 16px;">Create new comment for: <strong>"<%= post.title %>"</strong>
         <form action="/reddit-posts/<%= post._id %>/comments" method="POST">
             <div>
-                <textarea type="text" name="title" class="new_post_title_textarea" placeholder="Title" maxlength="300" style="height: 39px;"></textarea>
+                <textarea type="text" name="comment[author]" class="new_post_title_textarea" placeholder="Author" maxlength="300" style="height: 39px;" required></textarea>
             </div>
             <div class="new_post_text_container">
-                <input type="text" name="text" class="new_post_text_editor" placeholder="Text (optional)">
+                <input type="text" name="comment[text]" class="new_post_text_editor" placeholder="Text" required>
             </div>
             <div class="new_post_button_container">
                 <button class="new_post_post_button">
