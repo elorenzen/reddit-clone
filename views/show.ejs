@@ -1,2 +1,6 @@
 <h1>This is the show template</h1>
-<p><%= post.title %></p>
+<h3><%= post.title %></h3>
+
+<% post.comments.forEach((comment) => { %>
+    <p><strong><%= comment.author %></strong> - <%= comment.text %></p>
+<% }) %>
