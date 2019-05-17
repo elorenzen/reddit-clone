@@ -108,10 +108,15 @@ app.get('/reddit-posts/new', (req, res) => {
 // === SHOW ===
 app.get('/reddit-posts/:id', (req, res) => {
     // Find Reddit post with provided ID
-
-    // Render show template with that Reddit Post
-    res.render('show');
-})
+    RedditPost.findById(req.params.id, (err, foundPost) => {
+        if(err) {
+            console.log(err);
+        } else {
+            // Render show template with that Reddit Post
+            res.render('show', {post: foundPost});
+        }
+    })
+});
 
 // =============================================================================
 app.listen(port, () => {
