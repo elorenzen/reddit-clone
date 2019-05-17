@@ -128,7 +128,14 @@ app.get('/reddit-posts/:id', (req, res) => {
 // ===== REDDIT POST ROUTES =====
 // === INDEX ===
 app.get('/reddit-posts/:id/comments/new', (req, res) => {
-    res.render('comments/new');
+    // Find Reddit Post by ID
+    RedditPost.findById(req.params.id, (err, foundPost) => {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render('comments/new', {post: foundPost});
+        }
+    });
 })
 
 // =============================================================================
