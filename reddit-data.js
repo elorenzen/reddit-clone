@@ -119,7 +119,8 @@ post_list.forEach((post) => {
         currentDateDays: createdDate.getDay(),
         currentDateHours: currentDate.getHours(),
         currentDateMinutes: currentDate.getMinutes(),
-        currentDateSeconds: currentDate.getSeconds()
+        currentDateSeconds: currentDate.getSeconds(),
+        timeSincePosting: timeSincePosting
     })
 });
 
