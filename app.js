@@ -125,7 +125,7 @@ app.get('/reddit-posts/:id', (req, res) => {
 
 // =============================================================================
 
-// ===== REDDIT POST ROUTES =====
+// ===== REDDIT POST COMMENTS ROUTES =====
 // === INDEX ===
 app.get('/reddit-posts/:id/comments/new', (req, res) => {
     // Find Reddit Post by ID
