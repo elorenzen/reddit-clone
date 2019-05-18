@@ -6,7 +6,9 @@ const bodyParser = require('body-parser'),
       //MODELS
       RedditPost = require('./models/reddit-posts'),
       Comment    = require('./models/comment'),
-      User       = require('./models/user');
+      User       = require('./models/user'),
+      // Imported JSON data
+      data = require('./reddit-data.json');
 
 
 // Connect to database
