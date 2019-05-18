@@ -92,8 +92,12 @@ post_list.forEach((post) => {
     // For every object in array, use .create() method for every object in the model.
 RedditPost.create(
     {
+        votes: post.data.ups,
         title: post.data.title,
-        subredditName: post.data.ups
+        post_text: post.data.selftext,
+        subredditName: post.data.subreddit_name_prefixed,
+        author: post.data.author,
+        
     })
 console.log(RedditPost);
 });
