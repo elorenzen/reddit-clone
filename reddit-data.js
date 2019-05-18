@@ -23,9 +23,12 @@ post_list.forEach((post) => {
     console.log(`Number of comments: ${commentCount}`);
     let media_url = post.data.url;
     console.log(`Media URL: ${media_url}`);
-    let image_thumbnail = post.thumbnail;
-    let image_thumbnail_height = post.thumbnail_height;
-    let image_thumbnail_width = post.thumbnail_width;
+    let image_thumbnail = post.data.thumbnail;
+    console.log(`Image thumbnail: ${image_thumbnail}`);
+    let image_thumbnail_height = post.data.thumbnail_height;
+    console.log(`Image Thumbnail Height: ${image_thumbnail_height}`);
+    let image_thumbnail_width = post.data.thumbnail_width;
+    console.log(`Image Thumbnail Width: ${image_thumbnail_width}`);
     let post_hint = post.post_hint;
     let video_url = post.media;
 
