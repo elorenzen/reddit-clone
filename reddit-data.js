@@ -97,8 +97,13 @@ RedditPost.create(
         post_text: post.data.selftext,
         subredditName: post.data.subreddit_name_prefixed,
         author: post.data.author,
-        
+        commentCount: post.data.num_comments,
+        media_url: post.data.url,
+        image_thumbnail: post.data.image_thumbnail,
+        image_thumbnail_height: post.data.image_thumbnail_height,
+        image_thumbnail_width: post.data.image_thumbnail_width,
+        post_hint: post.data.post_hint,
+        video_url: post.data.media
     })
-console.log(RedditPost);
 });
 
