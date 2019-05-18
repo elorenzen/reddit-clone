@@ -103,7 +103,15 @@ RedditPost.create(
         image_thumbnail_height: post.data.image_thumbnail_height,
         image_thumbnail_width: post.data.image_thumbnail_width,
         post_hint: post.data.post_hint,
-        video_url: post.data.media
+        video_url: post.data.media,
+
+        createdDate: new Date(post.data.created_utc * 1000),
+        createdDateYears: createdDate.getFullYear(),
+        createdDateMonths: createdDate.getMonth(),
+        createdDateDays: createdDate.getDay(),
+        createdDateHours: createdDate.getHours(),
+        createdDateMinutes: createdDate.getMinutes(),
+        createdDateSeconds: createdDate.getSeconds()
     })
 });
 
