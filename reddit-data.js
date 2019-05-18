@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/reddit_clone', {useNewUrlParser: true} /* <-- Removes deprecation warning in terminal */ );
 // Import JSON data
 const data = require('./reddit-data.json');
+// Import model for RedditPost
+RedditPost = require('./models/reddit-posts');
 
+// Iterate across each object contained in JSON data list
 let post_list = data.data.children;
 post_list.forEach((post) => {
     let votes = post.data.ups;
@@ -86,9 +89,12 @@ post_list.forEach((post) => {
             timeSincePosting = (currentDateSeconds - createdDateSeconds) + ' seconds ago';
         }
     }
+    // For every object in array, use .create() method for every object in the model.
+RedditPost.create(
+    {
+        title: post.data.title,
+        subredditName: post.data.ups
+    })
+console.log(RedditPost);
 });
-// Import model for RedditPost
 
-// Iterate across each object contained in JSON data list
-
-// For every object in array, use .create() method for every object in the model.
