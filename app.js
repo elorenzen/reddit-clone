@@ -133,6 +133,7 @@ post_list.forEach((post) => {
             timeSincePosting = (currentDateSeconds - createdDateSeconds) + ' seconds ago';
         }
     }
+    /*
     // For every object in array, use .create() method for every object in the model.
     RedditPost.create(
     {
@@ -172,6 +173,7 @@ post_list.forEach((post) => {
             console.log('Newly created Reddit Post!');
         }
     })
+    */
 });
 
 
