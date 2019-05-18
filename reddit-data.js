@@ -29,10 +29,13 @@ post_list.forEach((post) => {
     console.log(`Image Thumbnail Height: ${image_thumbnail_height}`);
     let image_thumbnail_width = post.data.thumbnail_width;
     console.log(`Image Thumbnail Width: ${image_thumbnail_width}`);
-    let post_hint = post.post_hint;
-    let video_url = post.media;
+    let post_hint = post.data.post_hint;
+    console.log(`Post type: ${post_hint}`);
+    let video_url = post.data.media;
+    console.log(`Video URL: ${video_url}`);
 
-                let createdDate = new Date(post.created_utc * 1000);
+                let createdDate = new Date(post.data.created_utc * 1000);
+                console.log(`Created Date: ${createdDate}`);
                 let createdDateYears = createdDate.getFullYear();
                 let createdDateMonths = createdDate.getMonth();
                 let createdDateDays = createdDate.getDay();
