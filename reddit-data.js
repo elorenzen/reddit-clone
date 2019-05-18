@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/reddit_clone', {useNewUrlParser: true} /* <-- Removes deprecation warning in terminal */ );
 // Import JSON data
 const data = require('./reddit-data.json');
-console.log(data);
 
 let post_list = data.data.children;
 post_list.forEach((post) => {
