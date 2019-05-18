@@ -1,14 +1,37 @@
 const mongoose = require('mongoose');
 
 let redditPostSchema = new mongoose.Schema({
+    votes: Number,
     title: String,
-    upvotes: Number,
-    author: String,
+    post_text: String, 
     subredditName: String,
-    text: String,
+    author: String,
     commentCount: Number,
-    image_url: String,
+    media_url: String,
+    image_thumbnail: String,
+    image_thumbnail_height: Number,
+    image_thumbnail_width: Number,
+    post_hint: String,
     video_url: String,
+    
+    createdDate: Object,
+    createdDateYears: Number,
+    createdDateMonths: Number,
+    createdDateDays: Number,
+    createdDateHours: Number,
+    createdDateMinutes: Number,
+    createdDateSeconds: Number,
+    createdDateFormattedTime: String,
+
+    currentDate: Object,
+    currentDateYears: Number,
+    currentDateMonths: Number,
+    currentDateDays: Number,
+    currentDateHours: Number,
+    currentDateMinutes: Number,
+    currentDateSeconds: Number,
+
+    timeSincePosting: String,
     comments: [
         {
             type: mongoose.Schema.Types.ObjectId,
