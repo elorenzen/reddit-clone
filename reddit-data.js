@@ -90,7 +90,7 @@ post_list.forEach((post) => {
         }
     }
     // For every object in array, use .create() method for every object in the model.
-RedditPost.create(
+    RedditPost.create(
     {
         votes: post.data.ups,
         title: post.data.title,
@@ -111,7 +111,15 @@ RedditPost.create(
         createdDateDays: createdDate.getDay(),
         createdDateHours: createdDate.getHours(),
         createdDateMinutes: createdDate.getMinutes(),
-        createdDateSeconds: createdDate.getSeconds()
+        createdDateSeconds: createdDate.getSeconds(),
+
+        currentDate: new Date(),
+        currentDateYears: currentDate.getFullYear(),
+        currentDateMonths: currentDate.getMonth(),
+        currentDateDays: createdDate.getDay(),
+        currentDateHours: currentDate.getHours(),
+        currentDateMinutes: currentDate.getMinutes(),
+        currentDateSeconds: currentDate.getSeconds()
     })
 });
 
