@@ -92,7 +92,9 @@
                                                             <%= post.author %>
                                                         </a>
                                                     </div>
-                                                    <a class="posted_date"></a>
+                                                    <a class="posted_date">
+                                                        <%= post.timeSincePosting %>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -140,7 +142,9 @@
                                     <div class='post_content_buttons'>
                                         <a class='comment_button'>
                                             <i class='fas fa-comment-alt'></i>
-                                            <span class='post_comments'>Comments</span>
+                                            <span class='post_comments'>
+                                                <%= post.commentCount %> Comments
+                                            </span>
                                         </a>
                                         <div class='share_button_container'>
                                             <button class='share_button'>
