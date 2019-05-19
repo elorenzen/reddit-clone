@@ -13,6 +13,10 @@ const LocalStrategy = require('passport-local'),
       // Imported JSON data
       data = require('./reddit-data.json');
 
+      //ROUTES
+const commentRoutes = require('./routes/comments'), 
+      postRoutes    = require('./routes/posts'),
+      authRoutes    = require('./routes/auth');
 
 // Connect to database
 mongoose.connect('mongodb://localhost/reddit_clone', {useNewUrlParser: true} /* <-- Removes deprecation warning in terminal */ );
