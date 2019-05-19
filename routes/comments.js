@@ -1,12 +1,12 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router({mergeParams: true});
 
 const RedditPost = require('../models/reddit-posts'),
       Comment    = require('../models/comment');
 
 
 // === INDEX ===
-router.get('/reddit-posts/:id/comments/new', isLoggedIn, (req, res) => {
+router.get('/new', isLoggedIn, (req, res) => {
     // Find Reddit Post by ID
     RedditPost.findById(req.params.id, (err, foundPost) => {
         if(err) {
@@ -18,7 +18,7 @@ router.get('/reddit-posts/:id/comments/new', isLoggedIn, (req, res) => {
 });
 
 // === CREATE ===
-router.post('/reddit-posts/:id/comments', isLoggedIn, (req, res) => {
+router.post('/', isLoggedIn, (req, res) => {
     // Lookup Reddit post using ID
     RedditPost.findById(req.params.id, (err, foundPost) => {
         if(err){
