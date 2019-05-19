@@ -47,7 +47,7 @@ app.use((req, res, next) => {
 // ===== END OF PASSPORT CONFIG =====
 
 app.use(authRoutes);
-app.use(postRoutes);
+app.use('/reddit-posts', postRoutes);
 app.use(commentRoutes);
 
 // Iterate across each object contained in JSON data list
