@@ -286,12 +286,25 @@ app.get('/login', (req, res) => {
     res.render('login');
 });
 
+// Handles logic for logging in
 app.post('/login', passport.authenticate('local', {
     successRedirect: '/reddit-posts',
     failureRedirect: '/login'
-}), (req, res) => {
-
+    }), (req, res) => {
 });
+
+// Logout route
+app.get('/logout', (req, res) => {
+    req.logout();
+    res.redirect('/reddit-posts');
+});
+
+function isLoggedIn(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect('/login');
+}
 
 // =============================================================================
 app.listen(port, () => {
