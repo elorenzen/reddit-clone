@@ -114,7 +114,7 @@
                                             
                                             <!-- CODE FOR THE POST MEDIA(IMAGES, VIDEO) URL-->
                                             <div style="display: flex; margin-top: 0px;">
-                                                <a href=`${media_url}` class="post_media_url">
+                                                <a href="<%= post.media_url %>" class="post_media_url">
                                                     <i class="fas fa-external-link-alt"></i>
                                                 </a>
                                             </div>
@@ -178,7 +178,7 @@
                                             <!-- CODE FOR THE POST TITLE -->
                                             <div style="margin: 0px 8px; display: block;">
                                                 <span class="post_content_title_container">
-                                                    <a href="#" class="post_title_url">
+                                                    <a href="/reddit-posts/<%= post._id %>" class="post_title_url">
                                                         <h2 class="post_title">
                                                             <%= post.title %>
                                                         </h2>
@@ -186,7 +186,7 @@
                                                 </span>
                                             </div>
                                             <!-- START OF WORKING CODE -->
-                                            <img src="${image_thumbnail}">     
+                                            <img src="<%= post.image_thumbnail %>">     
                                         </div> <!-- End of 'post_content_text'-->
                                         <div class="post_content_media">
                                             <!-- CODE FOR THE 'JOIN' BUTTON -->
@@ -235,14 +235,14 @@
                                             <!-- CODE FOR THE POST TITLE -->
                                             <div style="margin: 0px 8px; display: block;">
                                                 <span class="post_content_title_container">
-                                                    <a href="#" class="post_title_url">
+                                                    <a href="/reddit-posts/<%= post._id %>" class="post_title_url">
                                                         <h2 class="post_title">
                                                             <%= post.title %>
                                                         </h2>
                                                     </a>
                                                 </span>
                                             </div>
-                                            <iframe src="video_url"></iframe>
+                                            <iframe src="<%= post.video_url %>"></iframe>
                                         </div>
                                         <div class="post_content_media">
                                             <!-- CODE FOR THE 'JOIN' BUTTON -->
@@ -289,7 +289,7 @@
                                             <!-- CODE FOR THE POST TITLE -->
                                             <div style="margin: 0px 8px; display: block;">
                                                 <span class="post_content_title_container">
-                                                    <a href="#" class="post_title_url">
+                                                    <a href="/reddit-posts/<%= post._id %>" class="post_title_url">
                                                         <h2 class="post_title">
                                                             <%= post.title %>
                                                         </h2>
