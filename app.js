@@ -202,7 +202,7 @@ app.post('/reddit-posts', (req, res) => {
 })
 
 // === NEW ===
-app.get('/reddit-posts/new', (req, res) => {
+app.get('/reddit-posts/new', isLoggedIn, (req, res) => {
     res.render('redditpost/new');
 })
 
@@ -223,7 +223,7 @@ app.get('/reddit-posts/:id', (req, res) => {
 // ===== REDDIT POST COMMENTS ROUTES =====
 
 // === INDEX ===
-app.get('/reddit-posts/:id/comments/new', (req, res) => {
+app.get('/reddit-posts/:id/comments/new', isLoggedIn, (req, res) => {
     // Find Reddit Post by ID
     RedditPost.findById(req.params.id, (err, foundPost) => {
         if(err) {
