@@ -6,4 +6,7 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
+// Add passport-local-mongoose packages to User
+userSchema.plugin(passportLocalMongoose);
+
 module.exports = mongoose.model("User", userSchema);
