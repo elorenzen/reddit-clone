@@ -22,11 +22,67 @@
                             </button>
                         </div>
                     </div>
-                    <p><strong><%= comment.author %></strong> - <%= comment.text %></p>
-                </div>
+
+                    <!-- COMMENT CONTENT -->
+                    <div class="post_content_container">
+                        <article class="post_content">
+                            <div class="post_content_text">
+                                <div class="post_content_header">
+                                    <!-- CODE FOR THE HEADER CONTAINING SUBREDDIT NAME POSTED BY USER -->
+                                    <div style="flex: 1 1 auto">
+                                        <div class="post_content_header_text">
+                                            <div style="display: inline-block; flex: 0 0 auto">
+                                                <a class="subreddit_name" style="color: rgb(28, 28, 28); padding-right: 2px;">
+                                                    <%= comment.author %> 
+                                                </a>
+                                            </div>
+                                            
+                                            <div style="display: inline-block">
+                                                (X) points
+                                            </div>
+                                            <span class="post_divider">•</span>
+                                            <a class="posted_date">
+                                                <%= post.timeSincePosting %>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div> <!-- End of 'post_content_header' -->
+                                
+                                <!-- CODE FOR THE POST TITLE -->
+                                <div style="margin: 0px 8px; display: block;">
+                                    <span class="post_content_title_container">
+                                        <p> <%= comment.text %> </p>
+                                    </span>
+                                </div>
+                            </div> <!-- End of 'post_content_text' -->
+                        </article>
+                    </div>
+
+                    <!-- POST BUTTONS -->
+                    <div class='post_content_buttons_container'>
+                        <div class='post_content_buttons'>
+                            <a href="/reddit-posts/<%= post._id %>" style="text-decoration: none; color: inherit;" class='comment_button'>
+                                <i class='fas fa-comment-alt'></i>
+                                <span class='post_comments'>
+                                    Reply
+                                </span>
+                            </a>
+                            <div class='share_button_container'>
+                                <button class='share_button'>
+                                    <i class='fas fa-share'></i>
+                                    <span style='display: inline-block; line-height: 1; vertical-align: middle;'>share</span>
+                                </button>
+                            </div>
+                            <button class='save_button'>
+                                <i class='fas fa-bookmark'></i>
+                                <span>save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div> <!-- End of 'post' -->
             <% }) %>
-        </div>
-    </div>
-</div>
+        </div> <!-- End of 'post_list' -->
+    </div> <!-- End of 'post_container' -->
+</div> <!-- End of 'reddit_container' -->
 
 <% include ../partials/footer %>
