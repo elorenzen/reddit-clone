@@ -164,11 +164,11 @@
                                                             <span class="posted_by">Posted by</span>
                                                             <div style="display: inline-block">
                                                                 <a class="post_author">
-                                                                    username;                           
+                                                                    <%= post.author %>                           
                                                                 </a>
                                                             </div>
                                                             <a class="posted_date">
-                                                                timeSincePosting
+                                                                <%= post.timeSincePosting %>
                                                             </a>
                                                         </div>
                                                         <div class="header_join_button">
@@ -186,7 +186,7 @@
                                                 <span class="post_content_title_container">
                                                     <a href="#" class="post_title_url">
                                                         <h2 class="post_title">
-                                                            title
+                                                            <%= post.title %>
                                                         </h2>
                                                     </a>
                                                 </span>
