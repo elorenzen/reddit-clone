@@ -4,7 +4,7 @@ const router = express.Router();
 const RedditPost = require('../models/reddit-posts');
 
 // === INDEX ===
-router.get('/reddit-posts', (req, res) => {
+router.get('/', (req, res) => {
     // Get all Reddit Posts from database
     RedditPost.find({}, (err, allRedditPosts) => {
         if(err) {
@@ -16,7 +16,7 @@ router.get('/reddit-posts', (req, res) => {
 })
 
 // === CREATE ===
-router.post('/reddit-posts', (req, res) => {
+router.post('/', (req, res) => {
     // Get inputted data from 'new.ejs' form and add to reddit-posts array
     let title = req.body.title;
     let text = req.body.text;
@@ -27,18 +27,18 @@ router.post('/reddit-posts', (req, res) => {
             console.log(err);
         } else {
             // Redirect to 'reddit-posts.ejs' 
-            res.redirect('/reddit-posts');
+            res.redirect('/');
         }
     })
 })
 
 // === NEW ===
-router.get('/reddit-posts/new', isLoggedIn, (req, res) => {
+router.get('/new', isLoggedIn, (req, res) => {
     res.render('redditpost/new');
 })
 
 // === SHOW ===
-router.get('/reddit-posts/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     // Find Reddit post with provided ID
     RedditPost.findById(req.params.id).populate('comments').exec((err, foundPost) => {
         if(err) {
