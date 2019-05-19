@@ -267,6 +267,19 @@ app.get('/register', (req, res) => {
     res.render('register');
 });
 
+app.post('/register', (req, res) => {
+    let newUser = new User({username: req.body.username});
+    User.register(newUser, req.body.password, (err, user) => {
+        if(err) {
+            console.log(err);
+            res.render('register');
+        }
+        passport.authenticate("local")(req, res, function(){
+            res.redirect('/reddit-posts');
+        });
+    });
+});
+
 // =============================================================================
 app.listen(port, () => {
     console.log(`app.listen on port ${port}`);
