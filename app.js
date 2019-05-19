@@ -31,7 +31,11 @@ app.use(require('express-session')({
 }))
 app.use(passport.initialize());
 app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
+// ===== END OF PASSPORT CONFIG =====
 
 // Iterate across each object contained in JSON data list
 let post_list = data.data.children;
