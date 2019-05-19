@@ -1,6 +1,32 @@
+<% include ../partials/header %>
+
 <h1>This is the show template</h1>
 <h3><%= post.title %></h3>
 
-<% post.comments.forEach((comment) => { %>
-    <p><strong><%= comment.author %></strong> - <%= comment.text %></p>
-<% }) %>
+<div class="reddit_container">
+    <div class="post_container">
+        <div class="post_list">
+            <% post.comments.forEach((comment) => { %>
+                <div class="post">
+                    <!-- POST SHOULDER -->
+                    <div class="post_shoulder" style="width: 40px; border-left: 4px solid transparent;">
+                        <div class="post_shoulder_content">
+                            <button class="upvote">
+                                <i class="fas fa-arrow-up"></i>
+                            </button>
+                            <div class="post_votes" style="display: block; color: rgb(26, 26, 27);">
+                                                    
+                            </div>
+                            <button class="downvote">
+                                <i class="fas fa-arrow-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p><strong><%= comment.author %></strong> - <%= comment.text %></p>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
