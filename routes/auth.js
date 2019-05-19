@@ -1,6 +1,8 @@
+const express = require('express');
+const router = express.Router();
 
 // ===== ROOT ROUTE =====
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 })
 // =============================================================================
@@ -8,12 +10,12 @@ app.get('/', (req, res) => {
 // ===== AUTHENTICATION ROUTES =====
 
 // Show register form
-app.get('/register', (req, res) => {
+router.get('/register', (req, res) => {
     res.render('register');
 });
 
 // Handles logic to create user
-app.post('/register', (req, res) => {
+router.post('/register', (req, res) => {
     let newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, (err, user) => {
         if(err) {
@@ -27,19 +29,19 @@ app.post('/register', (req, res) => {
 });
 
 // Show login form
-app.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
     res.render('login');
 });
 
 // Handles logic for logging in
-app.post('/login', passport.authenticate('local', {
+router.post('/login', passport.authenticate('local', {
     successRedirect: '/reddit-posts',
     failureRedirect: '/login'
     }), (req, res) => {
 });
 
 // Logout route
-app.get('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/reddit-posts');
 });
@@ -53,3 +55,5 @@ function isLoggedIn(req, res, next){
     }
     res.redirect('/login');
 }
+
+module.exports = router;

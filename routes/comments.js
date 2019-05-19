@@ -1,7 +1,8 @@
-// ===== REDDIT POST COMMENTS ROUTES =====
+const express = require('express');
+const router = express.Router();
 
 // === INDEX ===
-app.get('/reddit-posts/:id/comments/new', isLoggedIn, (req, res) => {
+router.get('/reddit-posts/:id/comments/new', isLoggedIn, (req, res) => {
     // Find Reddit Post by ID
     RedditPost.findById(req.params.id, (err, foundPost) => {
         if(err) {
@@ -13,7 +14,7 @@ app.get('/reddit-posts/:id/comments/new', isLoggedIn, (req, res) => {
 });
 
 // === CREATE ===
-app.post('/reddit-posts/:id/comments', isLoggedIn, (req, res) => {
+router.post('/reddit-posts/:id/comments', isLoggedIn, (req, res) => {
     // Lookup Reddit post using ID
     RedditPost.findById(req.params.id, (err, foundPost) => {
         if(err){
@@ -36,3 +37,5 @@ app.post('/reddit-posts/:id/comments', isLoggedIn, (req, res) => {
         }
     });
 })
+
+module.exports = router;
