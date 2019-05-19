@@ -3,9 +3,6 @@
 <div style="background-color: white; margin-bottom: 15px; border-radius: 5px;"> 
     <div style="margin: 16px;">Create new comment for: <strong>"<%= post.title %>"</strong>
         <form action="/reddit-posts/<%= post._id %>/comments" method="POST">
-            <div>
-                <textarea type="text" name="comment[author]" class="new_post_title_textarea" placeholder="Author" maxlength="300" style="height: 39px;" required></textarea>
-            </div>
             <div class="new_post_text_container">
                 <input type="text" name="comment[text]" class="new_post_text_editor" placeholder="Text" required>
             </div>
