@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 })
 
 // === CREATE ===
-router.post('/', (req, res) => {
+router.post('/', isLoggedIn, (req, res) => {
     // Get inputted data from 'new.ejs' form and add to reddit-posts array
     let title = req.body.title;
     let text = req.body.text;
