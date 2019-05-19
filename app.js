@@ -267,6 +267,7 @@ app.get('/register', (req, res) => {
     res.render('register');
 });
 
+// Handles logic to create user
 app.post('/register', (req, res) => {
     let newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, (err, user) => {
@@ -278,6 +279,11 @@ app.post('/register', (req, res) => {
             res.redirect('/reddit-posts');
         });
     });
+});
+
+// Show login form
+app.get('/login', (req, res) => {
+    res.render('login');
 });
 
 // =============================================================================
