@@ -49,9 +49,9 @@
                 </div>
     
                 <div class="nav navbar-nav">
-                        <form class="nav-item">
-                            <input class="form-control mr-sm-2" id='nav-search' type="search" placeholder="Search Reddit" aria-label="Search">
-                        </form>
+                    <form class="nav-item">
+                        <input class="form-control mr-sm-2" id='nav-search' type="search" placeholder="Search Reddit" aria-label="Search">
+                    </form>
                 </div>
                  
                 <div class="nav-item" id='nav-icons'>
@@ -63,40 +63,43 @@
                     <a href="#"><i class="fas fa-edit"></i></a>
                 </div>
                 
+            <% if(!currentUser) { %>
                 <div class="nav-item">
                     <a href="/login">Login</a>                                      
                 </div>
                 <div class="nav-item">
                     <a href="/register">Sign Up</a>
                 </div>
+            <% } else {%>
                 <div class="nav-item">
                     <a href="/logout">Logout</a>
                 </div>                  
-
+        
                 <div class="nav-item dropdown" id='profile-dropdown'>
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Username
                     </a>
                     <div class="dropdown-menu" id='profile-icons' aria-labelledby="navbarDropdownMenuLink">
                         <p>MY STUFF</p>
-                        <ul>
-                            <a class="dropdown-item" href="#"><i class="fas fa-user"></i>My Profile</a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-cog"></i>User Settings</a>
-                        </ul>
-                        <p>VIEW OPTIONS</p>
-                        <ul>
-                            <a class="dropdown-item" href="#"><i class="fas fa-moon"></i>Night Mode</a>
-                        </ul>
-                        <p>MORE STUFF</p>
-                        <ul>
-                            <a class="dropdown-item" href="#"><i class="fas fa-coins"></i>Reddit Coins</a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-shield-alt"></i>Reddit Premium</a>
-                            <a class="dropdown-item" href="#"><i class="far fa-question-circle"></i>Help Center<small><i class="fas fa-external-link-alt"></i></small></a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-external-link-alt"></i>Visit Old Reddit<small><i class="fas fa-external-link-alt"></i></small></a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Log Out</a>
-                        </ul>
+                            <ul>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user"></i>My Profile</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog"></i>User Settings</a>
+                            </ul>
+                            <p>VIEW OPTIONS</p>
+                            <ul>
+                                <a class="dropdown-item" href="#"><i class="fas fa-moon"></i>Night Mode</a>
+                            </ul>
+                            <p>MORE STUFF</p>
+                            <ul>
+                                <a class="dropdown-item" href="#"><i class="fas fa-coins"></i>Reddit Coins</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-shield-alt"></i>Reddit Premium</a>
+                                <a class="dropdown-item" href="#"><i class="far fa-question-circle"></i>Help Center<small><i class="fas fa-external-link-alt"></i></small></a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-external-link-alt"></i>Visit Old Reddit<small><i class="fas fa-external-link-alt"></i></small></a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                <% } %>
             </div>
         </nav>
