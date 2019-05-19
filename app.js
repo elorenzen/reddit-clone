@@ -20,36 +20,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
 
-/*
-RedditPost.create(
-    {
-    title: `The world now runs on video game logic, what's the first thing you do?`,
-    subredditName: `r/AskReddit`,
-    upvotes: 5700
-    }, (err, redditPost) => {
-        if(err){
-            console.log(err);
-        }
-        else {
-            console.log('Newly created Reddit Post!');
-            // Create a comment
-            Comment.create(
-                {
-                    text: 'This is a cool post. Thanks for sharing',
-                    author: 'someRedditUser'
-                }, (err, comment) => {
-                    if(err) {
-                        console.log(err);
-                    } else {
-                        redditPost.comments.push(comment);
-                        redditPost.save();
-                        console.log('Created new comment!');
-                    }
-                })
-        }
-    }
-);
-*/
+
 // Iterate across each object contained in JSON data list
 let post_list = data.data.children;
 post_list.forEach((post) => {
@@ -187,23 +158,6 @@ app.get('/', (req, res) => {
 
 // === INDEX ===
 app.get('/reddit-posts', (req, res) => {
-  /*  
-    let redditPosts = [
-        {title: `The world now runs on video game logic, what's the first thing you do?`,
-         subredditName: `r/AskReddit`,
-         upvotes: '5.7k'},
-
-        {title: `Exclusive: Amazon rolls out machines that pack orders and replace jobs`,
-         subredditName: `r/news`,
-         upvotes: '476'},
-
-        {title: `If you were a citizen of King's Landing, what kind of ruler would you prefer?`,
-         subredditName: `r/GOT`,
-         upvotes: '1.3k'}
-    ];
-    */
-   // res.render('reddit-posts'/*, {redditPosts: redditPosts}*/);
-
    // Get all Reddit Posts from database
    RedditPost.find({}, (err, allRedditPosts) => {
        if(err) {
@@ -243,7 +197,6 @@ app.get('/reddit-posts/:id', (req, res) => {
         if(err) {
             console.log(err);
         } else {
-            console.log(foundPost);
             // Render show template with that Reddit Post
             res.render('redditpost/show', {post: foundPost});
         }
@@ -251,8 +204,8 @@ app.get('/reddit-posts/:id', (req, res) => {
 });
 
 // =============================================================================
-
 // ===== REDDIT POST COMMENTS ROUTES =====
+
 // === INDEX ===
 app.get('/reddit-posts/:id/comments/new', (req, res) => {
     // Find Reddit Post by ID
