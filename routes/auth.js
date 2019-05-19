@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const User = require('../models/user');
+
 // ===== ROOT ROUTE =====
 router.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');

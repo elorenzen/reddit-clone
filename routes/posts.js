@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const RedditPost = require('../models/reddit-posts');
+
 // === INDEX ===
 router.get('/reddit-posts', (req, res) => {
     // Get all Reddit Posts from database
@@ -47,5 +49,14 @@ router.get('/reddit-posts/:id', (req, res) => {
         }
     })
 });
+
+// =============================================================================
+
+function isLoggedIn(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect('/login');
+}
 
 module.exports = router;
