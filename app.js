@@ -169,15 +169,7 @@ post_list.forEach((post) => {
     */
 });
 
-
 // =============================================================================
-
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-})
-
-// =============================================================================
-
 
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
