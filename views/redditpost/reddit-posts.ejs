@@ -275,18 +275,18 @@
                                                     <div class="post_content_header_text">
                                                         <div style="display: inline-block; flex: 0 0 auto">
                                                             <a class="subreddit_name" style="color: rgb(28, 28, 28);">
-                                                                subredditName
+                                                                <%= post.subredditName %>
                                                             </a>
                                                         </div>
                                                         <span class="post_divider">•</span>
                                                         <span class="posted_by">Posted by</span>
                                                         <div style="display: inline-block">
                                                             <a class="post_author">
-                                                                username;                           
+                                                                <%= post.author %>                           
                                                             </a>
                                                         </div>
                                                         <a class="posted_date">
-                                                            timeSincePosting;
+                                                            <%= post.timeSincePosting %>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -297,7 +297,7 @@
                                                 <span class="post_content_title_container">
                                                     <a href="#" class="post_title_url">
                                                         <h2 class="post_title">
-                                                            title
+                                                            <%= post.title %>
                                                         </h2>
                                                     </a>
                                                 </span>
@@ -306,7 +306,7 @@
                                             <% if (post.post_text !== "") { %>
                                             <!-- CODE FOR THE POST TEXT -->
                                             <div class="post_text">
-                                                post_text
+                                                <%= post.post_text %>
                                             </div>                        
                                             <% } %>
 
