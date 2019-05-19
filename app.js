@@ -235,7 +235,7 @@ app.get('/reddit-posts/:id/comments/new', isLoggedIn, (req, res) => {
 });
 
 // === CREATE ===
-app.post('/reddit-posts/:id/comments', (req, res) => {
+app.post('/reddit-posts/:id/comments', isLoggedIn, (req, res) => {
     // Lookup Reddit post using ID
     RedditPost.findById(req.params.id, (err, foundPost) => {
         if(err){
