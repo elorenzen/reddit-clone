@@ -5,7 +5,14 @@ let redditPostSchema = new mongoose.Schema({
     title: String,
     post_text: String, 
     subredditName: String,
-    author: String,
+    // author: String, <---- OLD CODE FOR PASSING AUTHOR REDDIT JSON DATA
+    author: {
+        id: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User'
+        },
+        username: String
+    },
     commentCount: Number,
     media_url: String,
     image_thumbnail: String,
