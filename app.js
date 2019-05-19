@@ -48,7 +48,7 @@ app.use((req, res, next) => {
 
 app.use(authRoutes);
 app.use('/reddit-posts', postRoutes);
-app.use(commentRoutes);
+app.use('/reddit-posts/:id/comments', commentRoutes);
 
 // Iterate across each object contained in JSON data list
 let post_list = data.data.children;
