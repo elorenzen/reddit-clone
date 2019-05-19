@@ -30,6 +30,11 @@ router.post('/', isLoggedIn, (req, res) => {
                 if(err) {
                     console.log(err);
                 } else {
+                    // Add username and ID to 'comment'
+                    comment.author.username = req.user.username;
+                    comment.author.id = req.user._id;
+                    // Save comment
+                    comment.save();
                     // Connect comment to Reddit post
                     foundPost.comments.push(comment._id);
                     foundPost.save(); 
