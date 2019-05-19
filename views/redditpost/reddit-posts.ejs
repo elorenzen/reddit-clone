@@ -138,8 +138,72 @@
                                             </div>
                                         </div>
                                     </article>
-                                <% } %>
 
+                                <!-- === WHEN REDDIT POST MEDIA IS IMAGE === -->
+                                <% } else if (post.post_hint === "image") { %>
+                                    <article class="post_content">
+                                        <div class="post_content_text">
+                                            <div class="post_content_header">
+                                                <!-- CODE FOR THE SUBREDDIT ICON IN THE REDDIT POST HEADER-->
+                                                <div style="flex: 0 0 auto;">
+                                                    <a class="post_content_header_icon">
+                                                        <img class="subreddit_icon">
+                                                    </a>   
+                                                </div>
+                        
+                                                <!-- CODE FOR THE HEADER CONTAINING SUBREDDIT NAME POSTED BY USER -->
+                                                <div style="flex: 1 1 auto">
+                                                    <div class="post_content_header_text">
+                                                        <div class="header_text_flex">
+                                                            <div style="display: inline-block; flex: 0 0 auto">
+                                                                <a class="subreddit_name" style="color: rgb(28, 28, 28);">
+                                                                    <%= post.subredditName %>
+                                                                </a>
+                                                            </div>
+                                                            <span class="post_divider">•</span>
+                                                            <span class="posted_by">Posted by</span>
+                                                            <div style="display: inline-block">
+                                                                <a class="post_author">
+                                                                    username;                           
+                                                                </a>
+                                                            </div>
+                                                            <a class="posted_date">
+                                                                timeSincePosting
+                                                            </a>
+                                                        </div>
+                                                        <div class="header_join_button">
+                                                            <button class="post_content_join" style="float: right;">
+                                                                <i class="fas fa-plus"></i>
+                                                                Join
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- End of 'post_content_header' -->
+                                                
+                                            <!-- CODE FOR THE POST TITLE -->
+                                            <div style="margin: 0px 8px; display: block;">
+                                                <span class="post_content_title_container">
+                                                    <a href="#" class="post_title_url">
+                                                        <h2 class="post_title">
+                                                            title
+                                                        </h2>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <!-- START OF WORKING CODE -->
+                                            <img src="${image_thumbnail}">     
+                                        </div> <!-- End of 'post_content_text'-->
+                                        <div class="post_content_media">
+                                            <!-- CODE FOR THE 'JOIN' BUTTON -->
+                                            <button class="post_content_join">
+                                                <i class="fas fa-plus"></i>
+                                                Join
+                                            </button>
+                                            <!-- END OF WORKING CODE -->                
+                                        </div>
+                                    </article>
+                                <% } %>
                                 <!-- POST BUTTONS -->
                                 <div class='post_content_buttons_container'>
                                     <div class='post_content_buttons'>
@@ -171,4 +235,135 @@
             
     
 <% include ../partials/footer %>
+
+
+
+
+    
+    
+
+    
+    <!-- === WHEN REDDIT POST MEDIA IS VIDEO === -->
+    else if (post_hint === "rich:video" || post_hint === "hosted:video") {
+                <article class="post_content">
+                        <div class="post_content_text">
+                            <div class="post_content_header">
+                                <!-- CODE FOR THE SUBREDDIT ICON IN THE REDDIT POST HEADER-->
+                                <div style="flex: 0 0 auto;">
+                                    <a class="post_content_header_icon">
+                                        <img class="subreddit_icon">
+                                    </a>   
+                                </div>
+    
+                                <!-- CODE FOR THE HEADER CONTAINING SUBREDDIT NAME POSTED BY USER -->
+                                <div style="flex: 1 1 auto">
+                                    <div class="post_content_header_text">
+                                        <div style="display: inline-block; flex: 0 0 auto">
+                                            <a class="subreddit_name" style="color: rgb(28, 28, 28);">
+                                                subredditName
+                                            </a>
+                                        </div>
+                                        <span class="post_divider">•</span>
+                                        <span class="posted_by">Posted by</span>
+                                        <div style="display: inline-block">
+                                            <a class="post_author">
+                                                username                       
+                                            </a>
+                                        </div>
+                                        <a class="posted_date">
+                                            timeSincePosting;
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- CODE FOR THE POST TITLE -->
+                            <div style="margin: 0px 8px; display: block;">
+                                <span class="post_content_title_container">
+                                    <a href="#" class="post_title_url">
+                                        <h2 class="post_title">
+                                            title
+                                        </h2>
+                                    </a>
+                                </span>
+                            </div>
+    
+                            <iframe src="video_url"></iframe>
+                        </div>
+    
+                        <div class="post_content_media">
+                            <!-- CODE FOR THE 'JOIN' BUTTON -->
+                            <button class="post_content_join">
+                                <i class="fas fa-plus"></i>
+                                Join
+                            </button>
+                            
+                        </div>
+                    </article>
+    
+    }
+    else {
+                    <article class="post_content">
+                        <div class="post_content_text">
+                            <div class="post_content_header">
+                                <!-- CODE FOR THE SUBREDDIT ICON IN THE REDDIT POST HEADER-->
+                                <div style="flex: 0 0 auto;">
+                                    <a class="post_content_header_icon">
+                                        <img class="subreddit_icon">
+                                    </a>   
+                                </div>
+    
+                                <!-- CODE FOR THE HEADER CONTAINING SUBREDDIT NAME POSTED BY USER -->
+                                <div style="flex: 1 1 auto">
+                                    <div class="post_content_header_text">
+                                        <div style="display: inline-block; flex: 0 0 auto">
+                                            <a class="subreddit_name" style="color: rgb(28, 28, 28);">
+                                                subredditName
+                                            </a>
+                                        </div>
+                                        <span class="post_divider">•</span>
+                                        <span class="posted_by">Posted by</span>
+                                        <div style="display: inline-block">
+                                            <a class="post_author">
+                                                username;                           
+                                            </a>
+                                        </div>
+                                        <a class="posted_date">
+                                            timeSincePosting;
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- CODE FOR THE POST TITLE -->
+                            <div style="margin: 0px 8px; display: block;">
+                                <span class="post_content_title_container">
+                                    <a href="#" class="post_title_url">
+                                        <h2 class="post_title">
+                                            title
+                                        </h2>
+                                    </a>
+                                </span>
+                            </div>
+    
+    <!-- NEW CODE FOR POST_TEXT -->
+        if (post_text !== "") {
+                            <!-- CODE FOR THE POST TEXT -->
+                            <div class="post_text">
+                                post_text
+                            </div>                        
+       }
+    <!-- END OF NEW CODE FOR POST_TEXT -->
+    
+                        </div>
+                            <div class="post_content_media">
+                                <button class="post_content_join">
+                                    <i class="fas fa-plus"></i>
+                                    Join
+                                </button>
+                            </div>
+                    </article>
+    }
+
+
 
