@@ -23,6 +23,15 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
 
+// ===== PASSPORT CONFIG =====
+app.use(require('express-session')({
+    secret: "Don't tell the secret",
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Iterate across each object contained in JSON data list
 let post_list = data.data.children;
