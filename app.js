@@ -44,8 +44,11 @@ app.use((req, res, next) => {
     res.locals.currentUser = req.user;
     next();
 });
-
 // ===== END OF PASSPORT CONFIG =====
+
+app.use(authRoutes);
+app.use(postRoutes);
+app.use(commentRoutes);
 
 // Iterate across each object contained in JSON data list
 let post_list = data.data.children;
