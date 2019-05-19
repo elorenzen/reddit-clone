@@ -35,6 +35,12 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// Middleware to pass currentUser into every rendered template
+app.use((req, res, next) => {
+    res.locals.currentUser = req.user;
+    next();
+});
+
 // ===== END OF PASSPORT CONFIG =====
 
 // Iterate across each object contained in JSON data list
