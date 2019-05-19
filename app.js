@@ -174,14 +174,14 @@ app.get('/', (req, res) => {
 
 // === INDEX ===
 app.get('/reddit-posts', (req, res) => {
-   // Get all Reddit Posts from database
-   RedditPost.find({}, (err, allRedditPosts) => {
-       if(err) {
+    // Get all Reddit Posts from database
+    RedditPost.find({}, (err, allRedditPosts) => {
+        if(err) {
             console.log(err);
-       } else {
-            res.render('redditpost/reddit-posts', {redditPosts: allRedditPosts});
-       }
-   })
+        } else {
+            res.render('redditpost/reddit-posts', {redditPosts: allRedditPosts, currentUser: req.user});
+        }
+    })
 })
 
 // === CREATE ===
