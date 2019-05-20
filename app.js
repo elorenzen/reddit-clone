@@ -26,7 +26,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 // Code to remove need to include '.ejs' after <filename>
 app.set('view engine', 'ejs');
 
-app.use(express.static('public'))
+app.use(express.static('public'));
+app.use(methodOverride('_method'));
 
 // ===== PASSPORT CONFIG =====
 app.use(require('express-session')({
