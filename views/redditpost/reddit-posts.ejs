@@ -91,7 +91,11 @@
                                                         <span class="posted_by">Posted by</span>
                                                         <div style="display: inline-block">
                                                             <a class="post_author">
-                                                                <%= post.author %>
+                                                                <% if (post.author.username !== 'null') { %>
+                                                                    <%= post.author %>
+                                                                <% } else { %>
+                                                                    <%= post.author.username %>
+                                                                <% } %>
                                                             </a>
                                                         </div>
                                                         <a class="posted_date">
@@ -164,7 +168,11 @@
                                                             <span class="posted_by">Posted by</span>
                                                             <div style="display: inline-block">
                                                                 <a class="post_author">
-                                                                    <%= post.author %>                           
+                                                                    <% if (post.author.username !== 'null') { %>
+                                                                        <%= post.author %>
+                                                                    <% } else { %>
+                                                                        <%= post.author.username %>
+                                                                    <% } %>                        
                                                                 </a>
                                                             </div>
                                                             <a class="posted_date">
@@ -222,7 +230,11 @@
                                                         <span class="posted_by">Posted by</span>
                                                         <div style="display: inline-block">
                                                             <a class="post_author">
-                                                                <%= post.author %>                       
+                                                                <% if (post.author.username !== 'null') { %>
+                                                                    <%= post.author %>
+                                                                <% } else { %>
+                                                                    <%= post.author.username %>
+                                                                <% } %>                       
                                                             </a>
                                                         </div>
                                                         <a class="posted_date">
@@ -276,7 +288,11 @@
                                                         <span class="posted_by">Posted by</span>
                                                         <div style="display: inline-block">
                                                             <a class="post_author">
-                                                                <%= post.author %>                           
+                                                                <% if (post.author.username !== 'null') { %>
+                                                                    <%= post.author %>
+                                                                <% } else { %>
+                                                                    <%= post.author.username %>
+                                                                <% } %>                   
                                                             </a>
                                                         </div>
                                                         <a class="posted_date">
