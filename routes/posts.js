@@ -20,14 +20,18 @@ router.post('/', isLoggedIn, (req, res) => {
     // Get inputted data from 'new.ejs' form and add to reddit-posts array
     let title = req.body.title;
     let text = req.body.text;
-    let newPost = {title: title, text: text}
+    let author = {
+        id: req.user._id,
+        username: req.user.username
+    };
+    let newPost = {title: title, text: text, author: author};
     // Create new Reddit post and save to DB 
     RedditPost.create(newPost, (err, newlyCreated) => {
         if(err) {
             console.log(err);
         } else {
             // Redirect to 'reddit-posts.ejs' 
-            res.redirect('/');
+            res.redirect('reddit-posts');
         }
     })
 })
