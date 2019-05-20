@@ -5,9 +5,11 @@ const passport = require('passport'),
 const User = require('../models/user');
 
 // ===== ROOT ROUTE =====
+/*
 router.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 })
+*/
 // =============================================================================
 
 // ===== AUTHENTICATION ROUTES =====
