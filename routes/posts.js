@@ -56,7 +56,13 @@ router.get('/:id', (req, res) => {
 
 // === EDIT ===
 router.get('/:id/edit', (req, res) => {
-    res.render('redditpost/edit');
+    RedditPost.findById(req.params.id, (err, foundPost) => {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render('redditpost/edit', {post: foundPost});
+        }
+    })
 });
 
 // === UPDATE ===
