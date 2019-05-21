@@ -58,6 +58,17 @@ router.get('/:comment_id/edit', (req, res) => {
     })
 })
 
+// === UPDATE ===
+router.put('/:comment_id', (req, res) => {
+    Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, (err, updatedComment) => {
+        if (err) {
+            res.redirect('back');
+        } else {
+            res.redirect(`/reddit-posts/${req.params.id}`);
+        }
+    });
+});
+
 
 // =============================================================================
 
