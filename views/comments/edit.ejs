@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+
+<div style="background-color: white; margin-bottom: 15px; border-radius: 5px;"> 
+    <div style="margin: 16px;">Edit comment
+        <form action="/reddit-posts/<%= post_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+            <div class="new_post_text_container">
+                <input type="text" name="comment[text]" class="new_post_text_editor" value="<%= comment.text %>" required>
+            </div>
+            <div class="new_post_button_container">
+                <button class="new_post_post_button">
+                    update
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer %>
