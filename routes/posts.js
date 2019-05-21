@@ -66,7 +66,18 @@ router.get('/:id/edit', (req, res) => {
 });
 
 // === UPDATE ===
-
+router.put('/:id', (req, res) => {
+    // Find and update correct post
+    RedditPost.findByIdAndUpdate(req.params.id, req.body.post, (err, updatedPost) => {
+        if (err) {
+            console.log(err);
+            res.redirect('reddit-posts');
+        } else {
+            // Redirect to show page
+            res.redirect(`/reddit-posts/${req.params.id}`);
+        }
+    })
+});
 
 // =============================================================================
 
