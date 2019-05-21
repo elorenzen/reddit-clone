@@ -79,6 +79,19 @@ router.put('/:id', (req, res) => {
     })
 });
 
+// === DELETE ===
+router.delete('/:id', (req, res) => {
+    // Find and delete correct post
+    RedditPost.findByIdAndDelete(req.params.id, (err) => {
+        if(err) {
+            console.log(err);
+            res.redirect('/reddit-posts');
+        } else {
+            res.redirect('/reddit-posts');
+        }
+    });
+});
+
 // =============================================================================
 
 function isLoggedIn(req, res, next){
