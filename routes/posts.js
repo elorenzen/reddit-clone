@@ -62,7 +62,7 @@ router.get('/:id/edit', checkPostOwner, (req, res) => {
 });
 
 // === UPDATE ===
-router.put('/:id', (req, res) => {
+router.put('/:id', checkPostOwner, (req, res) => {
     // Find and update correct post
     RedditPost.findByIdAndUpdate(req.params.id, req.body.post, (err, updatedPost) => {
         if (err) {
@@ -76,7 +76,7 @@ router.put('/:id', (req, res) => {
 });
 
 // === DELETE ===
-router.delete('/:id', (req, res) => {
+router.delete('/:id', checkPostOwner, (req, res) => {
     // Find and delete correct post
     RedditPost.findByIdAndDelete(req.params.id, (err) => {
         if(err) {
