@@ -56,13 +56,24 @@ router.get('/:id', (req, res) => {
 
 // === EDIT ===
 router.get('/:id/edit', (req, res) => {
-    RedditPost.findById(req.params.id, (err, foundPost) => {
-        if(err) {
-            console.log(err);
-        } else {
-            res.render('redditpost/edit', {post: foundPost});
-        }
-    })
+    // Check if user is logged in
+    if(req.isAuthenticated()) {
+        RedditPost.findById(req.params.id, (err, foundPost) => {
+            if(err) {
+                console.log(err);
+            } else {
+                // If user owns post, allow edits
+                if(foundPost.author.id.equals(req.user._id)) {
+                    res.render('redditpost/edit', {post: foundPost});
+                } else {
+                    res.send('Only the owner of the post can make changes');
+                }
+            }
+        })
+    // If user isn't logged in, redirect
+    } else {
+        res.send('You must be logged in to make edits!');
+    }
 });
 
 // === UPDATE ===
@@ -90,7 +101,7 @@ router.delete('/:id', (req, res) => {
             res.redirect('/reddit-posts');
         }
     });
-});
+}); 
 
 // =============================================================================
 
