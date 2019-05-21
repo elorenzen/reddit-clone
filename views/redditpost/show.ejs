@@ -4,6 +4,13 @@
 <h3><%= post.title %></h3>
 
 <button>
+    <a href="/reddit-posts/<%= post._id %>/edit">
+        <i class='fas fa-edit'></i>
+        <span>Edit</span>
+    </a>
+</button>
+
+<button>
     <a href="/reddit-posts/<%= post._id %>/comments/new">
         Add new comment
     </a>
