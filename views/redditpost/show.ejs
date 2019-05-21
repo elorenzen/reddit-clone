@@ -3,16 +3,19 @@
 <h1>This is the show template</h1>
 <h3><%= post.title %></h3>
 
-<button>
-    <a href="/reddit-posts/<%= post._id %>/edit">
-        <i class='fas fa-edit'></i>
-        <span>Edit</span>
-    </a>
-</button>
+<% if(currentUser && post.author.id.equals(currentUser._id)) { %>
+    <button>
+        <a href="/reddit-posts/<%= post._id %>/edit">
+            <i class='fas fa-edit'></i>
+            <span>Edit</span>
+        </a>
+    </button>
+        
+    <form action="/reddit-posts/<%= post._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-danger">Delete</button>
+    </form>
+<% } %>
 
-<form action="/reddit-posts/<%= post._id %>?_method=DELETE" method="POST">
-    <button class="btn btn-danger">Delete</button>
-</form>
 
 <button>
     <a href="/reddit-posts/<%= post._id %>/comments/new">
