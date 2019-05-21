@@ -100,7 +100,13 @@
                             <a href="/reddit-posts/<%= post._id %>/comments/<%= comment._id %>/edit" style="text-decoration: none; color: inherit;">
                                 <i class='fas fa-edit'></i>
                                 <span>Edit</span>
-                            </a>
+                            </a>                
+                            <form action="/reddit-posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">  
+                                <button>
+                                    <i class="far fa-trash-alt"></i>
+                                    <span>Delete</span>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div> <!-- End of 'post' -->
