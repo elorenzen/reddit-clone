@@ -54,6 +54,14 @@ router.get('/:id', (req, res) => {
     })
 });
 
+// === EDIT ===
+router.get('/:id/edit', (req, res) => {
+    res.render('redditpost/edit');
+});
+
+// === UPDATE ===
+
+
 // =============================================================================
 
 function isLoggedIn(req, res, next){
